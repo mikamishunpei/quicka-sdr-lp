@@ -14,12 +14,12 @@ const solutionTabs = [
   {
     value: "tab-1",
     icon: <Send className="h-auto w-4 shrink-0" />,
-    label: "アウトバウンド",
+    label: "新規リードの獲得",
     content: {
-      badge: "Automation",
-      title: "月3,000件のフォーム営業を完全自動化",
+      badge: "Lead Generation",
+      title: "月3,000件のアプローチで新規リードを自動獲得",
       description:
-        "AIが企業ごとに文面を最適化し、問い合わせフォームへ自動投稿。IPローテーション技術で確実に到達させます。手作業のコピペ作業からチームを解放します。",
+        "AIがターゲット企業ごとに最適な文面を生成し、問い合わせフォームへ自動アプローチ。枯渇しがちな新規リードを毎月安定的に獲得し、商談機会を最大化します。",
       buttonText: "詳細を見る",
       visual: <OutboundAnimation />,
     },
