@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
             <div className="pp-heading-2">■外部サービスとの連携について</div>
             <div className="pp-text">当サービスは、Zoom Video Communications, Inc.が提供するサービス（以下「Zoom」）等の外部サービスと連携して機能を提供します。</div>
             
-            <div class="pp-heading-3">1. Zoom連携機能について</div>
+            <div className="pp-heading-3">1. Zoom連携機能について</div>
             <div className="pp-list">
               <div className="pp-list-item"><strong>取得する情報：</strong>ZoomミーティングのURL、パスワード、ホストおよび参加者の情報</div>
               <div className="pp-list-item"><strong>利用目的：</strong>商談予約完了時にZoomミーティングを自動作成し、予約者に通知するため</div>

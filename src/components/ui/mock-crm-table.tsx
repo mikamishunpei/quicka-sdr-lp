@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, Filter, MoreHorizontal, CheckCircle2, Circle, Clock, Mail, Calendar } from "lucide-react";
+import { Search, Filter, MoreHorizontal, CheckCircle2, Clock, Mail, Calendar } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 export function MockCRMTableUI() {

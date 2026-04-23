@@ -18,7 +18,15 @@ export function MockKanbanUI() {
     return () => window.removeEventListener('resize', updateScale);
   }, []);
 
-  const columns = [
+  type CardType = {
+    company: string;
+    person: string;
+    time: string;
+    active?: boolean;
+    highlight?: boolean;
+  };
+
+  const columns: { title: string; count: number; color: string; headerColor: string; cards: CardType[] }[] = [
     {
       title: "送信済み",
       count: 145,

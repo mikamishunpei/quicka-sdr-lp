@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { Send, MessageCircle, Bot, Calendar, DollarSign, Clock, TrendingUp, ArrowUpRight, ArrowDownRight } from "lucide-react";
+
+import { Send, MessageCircle, Bot, Calendar, DollarSign, Clock, TrendingUp, ArrowUpRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 export function MockDashboardUI() {

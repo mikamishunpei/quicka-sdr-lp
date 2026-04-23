@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Archive, Moon, AlertTriangle } from "lucide-react";
+import { Clock, Archive, Moon } from "lucide-react";
 
 const problems = [
   {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Building2, BrainCircuit, MessageSquare, Clock, ArrowRight, RefreshCw, CheckCircle2, Database } from "lucide-react";
+import { Send, Building2, MessageSquare, Clock, CheckCircle2, Database } from "lucide-react";
 
 export const OutboundAnimation = () => {
   return (
