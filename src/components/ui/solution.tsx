@@ -82,7 +82,7 @@ export function SolutionSection() {
       {/* 新しいタブUI (Feature108) を上部に配置 */}
       <Feature108 
         badge="解決策"
-        heading="営業のファーストタッチをAIに任せる"
+        heading={<>営業のファーストタッチを<br className="block sm:hidden" />AIに任せる</>}
         description="リスト作成・送信・返信・追客。人間が疲弊する反復作業を、AIが24時間365日、トップセールスの品質で代行します。"
         tabs={solutionTabs}
       />

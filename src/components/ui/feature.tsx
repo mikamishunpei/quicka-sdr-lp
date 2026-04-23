@@ -18,7 +18,7 @@ export function HowItWorksSection() {
             仕組み
           </p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6 text-[#0a0d0c]">
-            AIは自ら新規リードを生み出し、育てます
+            AIは自ら新規リードを<br className="block sm:hidden" />生み出し、育てます
           </h2>
           <p className="text-[#666] text-lg max-w-2xl mx-auto leading-relaxed tracking-wide">
             待っているだけのアシスタントではありません。AIが能動的にアプローチを開始し、毎月の新規リード獲得から商談化までを全自動で実行します。

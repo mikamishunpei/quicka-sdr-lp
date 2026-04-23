@@ -23,7 +23,7 @@ interface Tab {
 
 interface Feature108Props {
   badge?: string;
-  heading?: string;
+  heading?: React.ReactNode;
   description?: string;
   tabs?: Tab[];
 }

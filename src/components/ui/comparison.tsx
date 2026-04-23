@@ -33,7 +33,7 @@ export function ComparisonSection() {
             人間の営業マンとの比較
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed tracking-wide">
-            この差で、この価格なら──試さない理由がありません。
+            この差で、この価格なら──<br className="block sm:hidden" />試さない理由がありません。
           </p>
         </motion.div>
 

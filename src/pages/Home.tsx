@@ -63,7 +63,7 @@ function Home() {
             <div className="h-px w-full max-w-[320px] bg-white/30 mb-8 md:mb-10"></div>
             
             <p className="text-xl lg:text-2xl mb-6 font-bold text-white/95">
-              24時間365日、決して休まないトップセールス。
+              24時間365日、<br className="block sm:hidden" />決して休まないトップセールス。
             </p>
             
             <div className="mb-8 md:mb-10 max-w-[420px]">
