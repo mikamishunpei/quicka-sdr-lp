@@ -99,12 +99,13 @@ function Home() {
               
               {/* Video Element */}
               <video 
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover bg-[#1a1a1a]"
                 style={{ objectPosition: 'center 15%' }}
                 autoPlay 
                 loop 
                 muted 
                 playsInline
+                preload="auto"
                 src="/Man_in_business_suit_smiling_delpmaspu_.mp4" 
               />
 
