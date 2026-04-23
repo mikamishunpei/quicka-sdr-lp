@@ -106,6 +106,7 @@ function Home() {
                 muted 
                 playsInline
                 preload="auto"
+                poster="/hero-poster.jpg"
                 src="/Man_in_business_suit_smiling_delpmaspu_.mp4" 
               />
 
