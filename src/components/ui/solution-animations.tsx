@@ -8,23 +8,25 @@ export const OutboundAnimation = () => {
     <div className="relative w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
       {/* Central AI Node (Salesman Video) */}
       <motion.div
-        className="absolute z-20 w-[100px] h-[100px] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(0,122,255,0.5)] border-2 border-white/20 overflow-hidden bg-slate-800"
-        style={{ left: "50%", top: "50%", x: -50, y: -50, WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}
+        className="absolute z-20 w-[100px] h-[100px] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(0,122,255,0.5)] border-2 border-white/20 bg-slate-800"
+        style={{ left: "50%", top: "50%", x: -50, y: -50 }}
         animate={{
           boxShadow: ["0 0 20px rgba(0,122,255,0.4)", "0 0 70px rgba(0,122,255,0.8)", "0 0 20px rgba(0,122,255,0.4)"],
         }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <video 
-          className="w-full h-full object-cover scale-[1.15]"
-          style={{ objectPosition: 'center 15%' }}
-          src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-        />
-        <div className="absolute inset-0 bg-[#007AFF]/10 mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+          <video 
+            className="w-full h-full object-cover scale-[1.15]"
+            style={{ objectPosition: 'center 15%' }}
+            src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          />
+          <div className="absolute inset-0 bg-[#007AFF]/10 mix-blend-overlay pointer-events-none"></div>
+        </div>
       </motion.div>
 
       {/* Target Nodes arranged in an oval */}
@@ -115,16 +117,18 @@ export const KnowledgeAnimation = () => {
           transition={{ duration: 0.5, delay: 2.5 }}
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-white/20 bg-slate-800 shrink-0 shadow-md" style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}>
-              <video 
-                className="w-full h-full object-cover scale-[1.15]"
-                style={{ objectPosition: 'center 15%' }}
-                src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-              />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-white/20 bg-slate-800 shrink-0 shadow-md relative">
+              <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+                <video 
+                  className="w-full h-full object-cover scale-[1.15]"
+                  style={{ objectPosition: 'center 15%' }}
+                  src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                />
+              </div>
             </div>
             <span className="text-base sm:text-lg font-bold text-white">AI営業マン</span>
           </div>
@@ -182,13 +186,15 @@ export const NurturingAnimation = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-brand-gold/50 shrink-0 shadow-md" style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}>
-                <video 
-                  className="w-full h-full object-cover scale-[1.15]"
-                  style={{ objectPosition: 'center 15%' }}
-                  src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
-                  autoPlay loop muted playsInline
-                />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-brand-gold/50 shrink-0 shadow-md relative">
+                <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+                  <video 
+                    className="w-full h-full object-cover scale-[1.15]"
+                    style={{ objectPosition: 'center 15%' }}
+                    src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+                    autoPlay loop muted playsInline
+                  />
+                </div>
               </div>
               <span className="text-base sm:text-lg font-bold text-brand-gold">AIが自動再アプローチ</span>
             </div>
