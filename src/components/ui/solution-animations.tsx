@@ -20,6 +20,7 @@ export const OutboundAnimation = () => {
             className="w-full h-full object-cover scale-[1.15]"
             style={{ objectPosition: 'center 15%' }}
             src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+            poster="/Man_in_business_suit_smiling_delpmaspu_.mp4.png"
             autoPlay 
             loop 
             muted 
@@ -123,6 +124,7 @@ export const KnowledgeAnimation = () => {
                   className="w-full h-full object-cover scale-[1.15]"
                   style={{ objectPosition: 'center 15%' }}
                   src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+                  poster="/Man_in_business_suit_smiling_delpmaspu_.mp4.png"
                   autoPlay 
                   loop 
                   muted 
@@ -192,6 +194,7 @@ export const NurturingAnimation = () => {
                     className="w-full h-full object-cover scale-[1.15]"
                     style={{ objectPosition: 'center 15%' }}
                     src="/Man_in_business_suit_smiling_delpmaspu_.mp4"
+                    poster="/Man_in_business_suit_smiling_delpmaspu_.mp4.png"
                     autoPlay loop muted playsInline
                   />
                 </div>
