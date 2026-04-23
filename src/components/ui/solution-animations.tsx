@@ -5,7 +5,7 @@ import { Send, Building2, MessageSquare, Clock, CheckCircle2, Database } from "l
 
 export const OutboundAnimation = () => {
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
       {/* Central AI Node (Salesman Video) */}
       <motion.div
         className="absolute z-20 w-[100px] h-[100px] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(0,122,255,0.5)] border-2 border-white/20 bg-slate-800"
@@ -15,7 +15,7 @@ export const OutboundAnimation = () => {
         }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+        <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)', WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}>
           <video 
             className="w-full h-full object-cover scale-[1.15]"
             style={{ objectPosition: 'center 15%' }}
@@ -56,7 +56,7 @@ export const OutboundAnimation = () => {
 
           {/* Flying message */}
           <motion.div
-            className="absolute z-15 w-6 h-6 bg-[#007AFF] rounded-full flex items-center justify-center shadow-lg"
+            className="absolute z-10 w-6 h-6 bg-[#007AFF] rounded-full flex items-center justify-center shadow-lg"
             style={{ left: "50%", top: "50%" }}
             initial={{ x: -12, y: -12, opacity: 0, scale: 0 }}
             animate={{
@@ -85,7 +85,7 @@ export const OutboundAnimation = () => {
 
 export const KnowledgeAnimation = () => {
   return (
-    <div className="relative w-full h-full bg-slate-50 flex items-center justify-center overflow-hidden p-4 sm:p-6 md:p-10">
+    <div className="absolute inset-0 bg-slate-50 flex items-center justify-center overflow-hidden p-4 sm:p-6 md:p-10">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-5 relative z-10">
         
         {/* User Question */}
@@ -118,7 +118,7 @@ export const KnowledgeAnimation = () => {
         >
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-white/20 bg-slate-800 shrink-0 shadow-md relative">
-              <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+              <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)', WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}>
                 <video 
                   className="w-full h-full object-cover scale-[1.15]"
                   style={{ objectPosition: 'center 15%' }}
@@ -151,7 +151,7 @@ export const KnowledgeAnimation = () => {
 
 export const NurturingAnimation = () => {
   return (
-    <div className="relative w-full h-full bg-slate-900 flex items-center justify-center overflow-hidden p-6 md:p-10">
+    <div className="absolute inset-0 bg-slate-900 flex items-center justify-center overflow-hidden p-6 md:p-10">
       <div className="w-full max-w-sm flex flex-col relative z-10">
         
         {/* State 1: Sleeping */}
@@ -187,7 +187,7 @@ export const NurturingAnimation = () => {
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-brand-gold/50 shrink-0 shadow-md relative">
-                <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)' }}>
+                <div className="absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'translateZ(0)', WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}>
                   <video 
                     className="w-full h-full object-cover scale-[1.15]"
                     style={{ objectPosition: 'center 15%' }}
