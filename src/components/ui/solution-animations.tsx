@@ -5,7 +5,7 @@ import { Send, Building2, MessageSquare, Clock, CheckCircle2, Database } from "l
 
 export const OutboundAnimation = () => {
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+    <div className="relative w-full aspect-square bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
       {/* Central AI Node (Salesman Video) */}
       <motion.div
         className="absolute z-20 w-[100px] h-[100px] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(0,122,255,0.5)] border-2 border-white/20 bg-slate-800"
@@ -85,7 +85,7 @@ export const OutboundAnimation = () => {
 
 export const KnowledgeAnimation = () => {
   return (
-    <div className="absolute inset-0 bg-slate-50 flex items-center justify-center overflow-hidden p-4 sm:p-6 md:p-10">
+    <div className="relative w-full bg-slate-50 flex items-center justify-center overflow-hidden p-4 sm:p-6 md:p-10">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-5 relative z-10">
         
         {/* User Question */}
@@ -151,7 +151,7 @@ export const KnowledgeAnimation = () => {
 
 export const NurturingAnimation = () => {
   return (
-    <div className="absolute inset-0 bg-slate-900 flex items-center justify-center overflow-hidden p-6 md:p-10">
+    <div className="relative w-full bg-slate-900 flex items-center justify-center overflow-hidden p-6 md:p-10">
       <div className="w-full max-w-sm flex flex-col relative z-10">
         
         {/* State 1: Sleeping */}

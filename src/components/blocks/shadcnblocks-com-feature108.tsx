@@ -124,14 +124,14 @@ const Feature108 = ({
                     {tab.content.buttonText}
                   </Button> */}
                 </div>
-                <div className="w-full aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-gray-50 flex items-center justify-center relative">
+                <div className="w-full rounded-xl overflow-hidden shadow-md bg-gray-50 relative">
                   {tab.content.visual ? (
                     tab.content.visual
                   ) : (
                     <img
                       src={tab.content.imageSrc}
                       alt={tab.content.imageAlt}
-                      className="w-full h-full object-cover"
+                      className="w-full aspect-square lg:aspect-[4/3] object-cover"
                     />
                   )}
                 </div>
