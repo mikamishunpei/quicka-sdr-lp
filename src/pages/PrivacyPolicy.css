@@ -1,0 +1,80 @@
+/* 全体をリセット */
+.pp-wrapper { 
+    font-family: inherit; 
+    line-height: 1.6; 
+    color: #333; 
+    text-align: left;
+}
+
+/* コンテナのデザイン */
+.pp-container { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 40px 60px; 
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+}
+
+/* 見出しの代わり（divを使用） */
+.pp-title { 
+    font-size: 28px; 
+    font-weight: 700; 
+    text-align: center; 
+    margin-bottom: 40px; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 20px; 
+    display: block;
+}
+.pp-heading-2 { 
+    font-size: 22px; 
+    font-weight: 600; 
+    margin-top: 40px; 
+    margin-bottom: 15px; 
+    padding-bottom: 8px; 
+    border-bottom: 1px solid #eaeaea; 
+    display: block;
+}
+.pp-heading-3 { 
+    font-size: 18px; 
+    font-weight: 600; 
+    margin-top: 25px; 
+    margin-bottom: 10px; 
+    color: #333; 
+    display: block;
+}
+
+/* 本文とリストの代わり */
+.pp-text { 
+    margin-top: 0; 
+    margin-bottom: 1em; 
+    display: block;
+}
+.pp-list { 
+    margin-top: 0; 
+    margin-bottom: 1em; 
+    padding-left: 20px; 
+    display: block;
+}
+.pp-list-item { 
+    display: list-item; 
+    margin-bottom: 0.5em; 
+    list-style-type: disc; 
+    margin-left: 1em;
+}
+
+/* フッター */
+.pp-footer { 
+    text-align: right; 
+    margin-top: 50px; 
+    color: #555; 
+    font-size: 0.9em; 
+    display: block;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .pp-container { padding: 20px; margin: 20px; }
+    .pp-title { font-size: 20px; font-weight: 600; }
+    .pp-heading-2 { font-size: 20px; }
+}
