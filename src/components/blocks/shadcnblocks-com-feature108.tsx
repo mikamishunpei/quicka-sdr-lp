@@ -124,7 +124,7 @@ const Feature108 = ({
                     {tab.content.buttonText}
                   </Button> */}
                 </div>
-                <div className="w-full aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-gray-50 flex items-center justify-center relative">
+                <div className="w-full min-h-[520px] sm:aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-gray-50 flex items-center justify-center relative">
                   {tab.content.visual ? (
                     tab.content.visual
                   ) : (
