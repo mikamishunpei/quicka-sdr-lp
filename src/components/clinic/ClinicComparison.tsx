@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Check, X, ArrowRight } from "lucide-react";
 
 export function ClinicComparison() {
   return (
@@ -95,6 +95,19 @@ export function ClinicComparison() {
             </ul>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16 flex justify-center"
+        >
+          <a href="/contact" className="bg-brand-gold text-white px-10 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-opacity flex items-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+            無料で試す
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </motion.div>
 
       </div>
     </section>
