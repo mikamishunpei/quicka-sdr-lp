@@ -55,33 +55,32 @@ export const BentoGridShowcase = ({
       viewport={{ once: true }}
       className={cn(
         "grid w-full grid-cols-1 gap-6 md:grid-cols-3",
-        "md:grid-rows-3",
-        "auto-rows-[minmax(200px,auto)]",
+        "auto-rows-auto", // 高さはコンテンツに合わせる
         className
       )}
     >
-      <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-1 h-full">
-        {integrations}
+      <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-1 h-full">
+        {mainFeature}
       </motion.div>
 
-      <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-3 h-full">
-        {mainFeature}
+      <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-1 h-full">
+        {statistic}
       </motion.div>
 
       <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-1 h-full">
         {featureTags}
       </motion.div>
 
-      <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-1 h-full">
+      <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-1 h-full">
         {secondaryFeature}
       </motion.div>
 
-      <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-2 h-full">
-        {statistic}
+      <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-1 h-full">
+        {journey}
       </motion.div>
 
       <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-1 h-full">
-        {journey}
+        {integrations}
       </motion.div>
     </motion.section>
   );

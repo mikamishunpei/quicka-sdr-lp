@@ -43,7 +43,10 @@ function Home() {
             </a>
           </div>
           
-
+          <div className="hidden md:flex items-center gap-8 text-[15px] font-bold">
+             <a href="/" className="text-white hover:text-white transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-white after:rounded-full">BtoB 営業支援</a>
+             <a href="/clinic" className="text-white/60 hover:text-white transition-colors">美容クリニック集客</a>
+          </div>
 
           <div>
             <button className="bg-white text-black px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-white/90 transition-colors">

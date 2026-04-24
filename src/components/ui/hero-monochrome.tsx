@@ -169,8 +169,8 @@ const AnimatedGlyph = ({ variant = "signal", theme = "dark" }) => {
 interface HeroMonochromeProps {
   title?: React.ReactNode;
   description?: React.ReactNode;
-  badge?: string;
-  subBadge?: string;
+  badge?: React.ReactNode;
+  subBadge?: React.ReactNode;
   imageSrc?: string;
   imageAlt?: string;
   imageCaption?: string;
@@ -181,13 +181,14 @@ interface HeroMonochromeProps {
   steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string }[];
   layout?: "split" | "centered";
   hideThemeToggle?: boolean;
+  forceTheme?: "light" | "dark";
 }
 
 export function HeroMonochrome({
   title = "Launch monochrome experiences with precision and calm energy.",
   description = "Built for component libraries that demand focus: subtle motion, tonal discipline, and theme-aware surfaces extend naturally across product canvases.",
   badge = "Canvas",
-  subBadge = "Hero / Monochrome",
+  subBadge,
   imageSrc,
   imageAlt = "Futuristic monochrome interface composition with orbital typography",
   imageCaption = "Archive Capture",
@@ -198,8 +199,11 @@ export function HeroMonochrome({
   steps,
   layout = "split",
   hideThemeToggle = false,
+  forceTheme,
 }: HeroMonochromeProps) {
-  const [theme, setTheme] = useThemeSync();
+  const [syncedTheme, setTheme] = useThemeSync();
+  const theme = forceTheme || syncedTheme;
+  const isDark = theme === "dark";
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -363,7 +367,8 @@ export function HeroMonochrome({
       <section
         ref={sectionRef}
         className={cn(
-          "relative flex w-full flex-col gap-16 px-6 py-20 lg:py-28 transition-opacity duration-700 md:gap-20 mx-auto max-w-7xl",
+          "relative flex w-full flex-col px-6 py-20 lg:py-28 transition-opacity duration-700 mx-auto max-w-7xl",
+          layout === "split" ? "gap-16 md:gap-20" : "gap-8 md:gap-10",
           visible ? "motion-safe:animate-[hero1-intro_1s_cubic-bezier(.25,.9,.3,1)_forwards]" : "opacity-0"
         )}
       >
@@ -450,10 +455,10 @@ export function HeroMonochrome({
             )}
           </header>
         ) : (
-          <header className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8 mb-8 mt-12">
-            <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em]">
-              <span className={cn("rounded-full border px-4 py-1", palette.border, palette.accent)}>{badge}</span>
-              <span className={palette.subtle}>{subBadge}</span>
+          <header className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6 mt-4 mb-0">
+            <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em] mb-4">
+              {badge && (typeof badge === 'string' ? <span className={cn("rounded-full border px-4 py-1", palette.border, palette.accent)}>{badge}</span> : badge)}
+              {subBadge && (typeof subBadge === 'string' ? <span className={palette.subtle}>{subBadge}</span> : subBadge)}
             </div>
             <div className="space-y-6">
               <h1 className="text-4xl font-semibold leading-[1.3] tracking-tight sm:text-5xl md:text-6xl">
@@ -498,7 +503,7 @@ export function HeroMonochrome({
         )}
 
         {steps && steps.length > 0 && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative mt-0">
             {steps.map((step, index) => (
               <React.Fragment key={step.title}>
                 <div
@@ -525,7 +530,7 @@ export function HeroMonochrome({
                     <span className={cn("block text-sm uppercase tracking-widest font-black text-brand-gold mb-3", palette.subtle)}>
                       Step {index + 1}
                     </span>
-                    <h3 className="block text-2xl md:text-3xl font-black tracking-tight text-gray-900 dark:text-white relative z-10 leading-tight">
+                    <h3 className={cn("block text-2xl md:text-3xl font-black tracking-tight relative z-10 leading-tight", isDark ? "text-white" : "text-gray-900")}>
                       {step.title}
                     </h3>
                     <p className={cn("mt-4 text-base md:text-lg font-medium leading-relaxed relative z-10 text-gray-600", palette.subtle)}>
@@ -550,7 +555,7 @@ export function HeroMonochrome({
         )}
 
         {layout === "centered" && (
-          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={primaryButtonHref}
               className={cn(

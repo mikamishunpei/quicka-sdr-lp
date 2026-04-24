@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 
 export function ClinicHero() {
   return (
@@ -32,17 +32,45 @@ export function ClinicHero() {
         </div>
       </motion.div>
 
-      {/* 動画プレースホルダー */}
+      {/* ヒーロー動画 & UIオーバーレイ */}
       <motion.div 
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="w-full max-w-md mx-auto lg:max-w-none aspect-[4/5] sm:aspect-square lg:aspect-[4/5] xl:aspect-square bg-gray-200/50 rounded-[2rem] border border-gray-200 shadow-2xl overflow-hidden flex items-center justify-center relative"
+        className="w-full max-w-[460px] mx-auto lg:ml-auto lg:mr-0 aspect-[3/4] bg-gray-100 rounded-[2rem] border border-gray-200 shadow-2xl overflow-hidden relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-gray-100 to-white opacity-50" />
-        <p className="text-gray-400 font-bold tracking-widest uppercase relative z-10">
-          Hero Video Placeholder
-        </p>
+        <video
+          src="/hero_video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Top Left Badges */}
+        <div className="absolute top-6 left-6 flex flex-col gap-2 z-10">
+          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[13px] font-bold px-4 py-1.5 rounded-full border border-white/20 w-fit shadow-sm">
+            AIコンシェルジュ
+          </div>
+          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[13px] font-bold px-4 py-1.5 rounded-full border border-white/20 flex items-center gap-1.5 w-fit shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-brand-gold" fill="currentColor" />
+            24時間365日 自動対応
+          </div>
+        </div>
+        
+        {/* Bottom LINE Message Overlay */}
+        <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/90 backdrop-blur-xl border border-gray-100/50 rounded-2xl p-3 md:p-4 flex items-center gap-3 md:gap-4 z-10 shadow-lg">
+          <img 
+            src="/line_logo_official.png" 
+            alt="LINE"
+            className="w-[40px] h-[40px] md:w-[46px] md:h-[46px] object-cover rounded-[12px] md:rounded-[14px] shrink-0 shadow-md border border-black/5"
+          />
+          <div>
+            <div className="text-gray-900 font-bold text-[13px] md:text-[14px] mb-0.5">LINEご予約対応</div>
+            <div className="text-gray-600 font-medium text-[12px] md:text-[13px] leading-tight">〇〇様、ご希望の空き枠を確認いたしました。</div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
