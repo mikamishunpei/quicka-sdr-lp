@@ -2,8 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowRight, ArrowDown } from "lucide-react";
-
+// removed unused lucide-react imports
 const STYLE_ID = "hero1-animations";
 
 
