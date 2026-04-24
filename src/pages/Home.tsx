@@ -45,7 +45,7 @@ function Home() {
           
           <div className="hidden md:flex items-center gap-8 text-[15px] font-bold">
              <a href="/" className="text-white hover:text-white transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-white after:rounded-full">BtoB 営業支援</a>
-             <a href="/clinic" className="text-white/60 hover:text-white transition-colors">美容クリニック集客</a>
+             <a href="/clinic" className="text-white/60 hover:text-white transition-colors">自由診療クリニック</a>
           </div>
 
           <div>

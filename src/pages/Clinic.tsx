@@ -31,7 +31,7 @@ function Clinic() {
           
           <div className="hidden md:flex items-center gap-8 text-[15px] font-bold">
              <a href="/" className="text-gray-500 hover:text-gray-900 transition-colors">BtoB 営業支援</a>
-             <a href="/clinic" className="text-gray-900 hover:text-gray-900 transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-gray-900 after:rounded-full">美容クリニック集客</a>
+             <a href="/clinic" className="text-gray-900 hover:text-gray-900 transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-0.5 after:bg-gray-900 after:rounded-full">自由診療クリニック</a>
           </div>
 
           <div>
