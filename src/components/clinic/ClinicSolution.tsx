@@ -37,8 +37,8 @@ export function ClinicSolution() {
           imageSrc: "/step_1_invitation.png"
         },
         {
-          title: "一人ひとりに合わせた「個別フォロー」",
-          description: "全員に同じメッセージを一斉送信する時代は終わりました。AIが患者様それぞれの悩みや会話履歴を完全に記憶し、「今すぐではないお客様」に対しても時間をかけてパーソナライズされた関係構築を行います。",
+          title: "1to1の「パーソナライズ対応」",
+          description: "一斉送信ではなく、AIが一人ひとりの悩みや過去の会話を記憶して個別対応。「今すぐじゃない客」とも時間をかけて確かな信頼関係を構築します。",
           icon: <MessageCircle className="w-6 h-6" />,
           imageSrc: "/step_2_ai_concierge.png"
         },
