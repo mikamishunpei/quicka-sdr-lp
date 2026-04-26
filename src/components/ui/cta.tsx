@@ -63,6 +63,12 @@ export function Footer() {
             <li><a className="hover:text-white transition-colors" href="/zoom-guide">Zoom連携ガイド</a></li>
           </ul>
         </div>
+        <div>
+          <h4 className="font-bold mb-6 text-white text-sm tracking-wide">資料</h4>
+          <ul className="space-y-3 text-sm text-white/50">
+            <li><a className="hover:text-white transition-colors" href="/presentations/clinic/" target="_blank" rel="noopener noreferrer">クリニック向け提案資料 <span style={{fontSize: '0.8em'}}>↗</span></a></li>
+          </ul>
+        </div>
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 tracking-wide">
         <p>© 2026 Quicka Inc. All rights reserved.</p>
