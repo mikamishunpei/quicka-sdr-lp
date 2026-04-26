@@ -37,8 +37,8 @@ export function ClinicSolution() {
           imageSrc: "/step_1_invitation.png"
         },
         {
-          title: "24時間即レスの個別対応",
-          description: "専門知識を持ったAIが24時間体制でお悩みに寄り添い、信頼関係を築きながら自然な流れで来院へと誘導します。",
+          title: "一人ひとりに合わせた「個別フォロー」",
+          description: "全員に同じメッセージを一斉送信する時代は終わりました。AIが患者様それぞれの悩みや会話履歴を完全に記憶し、「今すぐではないお客様」に対しても時間をかけてパーソナライズされた関係構築を行います。",
           icon: <MessageCircle className="w-6 h-6" />,
           imageSrc: "/step_2_ai_concierge.png"
         },
