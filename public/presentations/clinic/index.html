@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicka for Beauty - 自由診療クリニック向け提案資料</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* ===========================================
+           CSS CUSTOM PROPERTIES (THEME)
+           =========================================== */
+      :root {
+        --bg-primary: #fdfbfb;
+        --bg-secondary: #ebedee;
+        --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        --text-primary: #111827;
+        --text-secondary: #4b5563;
+        --accent: #D4AF37;
+        --accent-glow: rgba(212, 175, 55, 0.2);
+
+        --font-display: "Shippori Mincho", serif;
+        --font-body: "Noto Sans JP", sans-serif;
+        --title-size: clamp(2rem, 5vw, 4.5rem);
+        --subtitle-size: clamp(1rem, 2vw, 1.5rem);
+        --body-size: clamp(0.9rem, 1.3vw, 1.2rem);
+
+        --slide-padding: clamp(2rem, 6vw, 5rem);
+        --content-gap: clamp(1.5rem, 3vw, 2.5rem);
+
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        --duration-normal: 0.8s;
+      }
+
+      /* ===========================================
+           BASE STYLES
+           =========================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--text-primary);
+        background: var(--bg-gradient);
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+      }
+
+      h1, h2, h3 {
+        font-family: var(--font-display);
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      /* ===========================================
+         VIEWPORT FITTING: MANDATORY BASE STYLES
+         =========================================== */
+      html, body {
+          height: 100%;
+          overflow-x: hidden;
+      }
+      html {
+          scroll-snap-type: y mandatory;
+          scroll-behavior: smooth;
+      }
+      .slide {
+          width: 100vw;
+          height: 100vh;
+          height: 100dvh;
+          overflow: hidden;
+          scroll-snap-align: start;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+      }
+      .slide-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          max-height: 100%;
+          overflow: hidden;
+          padding: var(--slide-padding);
+      }
+      :root {
+          --h2-size: clamp(1.5rem, 3.5vw, 3rem);
+          --h3-size: clamp(1.2rem, 2.5vw, 2rem);
+          --small-size: clamp(0.75rem, 1vw, 0.95rem);
+          --element-gap: clamp(0.5rem, 1vw, 1.5rem);
+      }
+      .card, .container, .content-box {
+          max-width: min(90vw, 1200px);
+          max-height: min(80vh, 800px);
+          margin: 0 auto;
+          width: 100%;
+      }
+      .feature-list, .bullet-list {
+          gap: clamp(0.6rem, 1.5vh, 1.5rem);
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+      }
+      .feature-list li, .bullet-list li {
+          font-size: var(--body-size);
+          line-height: 1.5;
+          position: relative;
+          padding-left: 2rem;
+      }
+      .bullet-list li::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: var(--accent);
+          font-size: 1.5em;
+          line-height: 1;
+          top: -0.1em;
+      }
+      .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+          gap: clamp(1rem, 2vw, 2rem);
+      }
+      img, .image-container {
+          max-width: 100%;
+          max-height: min(50vh, 400px);
+          object-fit: contain;
+      }
+      @media (max-height: 700px) {
+          :root {
+              --slide-padding: clamp(1rem, 3vw, 2rem);
+              --content-gap: clamp(0.6rem, 1.5vw, 1.5rem);
+              --title-size: clamp(1.5rem, 4.5vw, 3rem);
+              --h2-size: clamp(1.2rem, 3vw, 2.2rem);
+          }
+      }
+      @media (max-height: 600px) {
+          :root {
+              --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+              --content-gap: clamp(0.4rem, 1vw, 1rem);
+              --title-size: clamp(1.2rem, 4vw, 2.5rem);
+              --body-size: clamp(0.8rem, 1.2vw, 1.1rem);
+          }
+          .nav-dots, .keyboard-hint, .decorative {
+              display: none;
+          }
+      }
+      @media (max-height: 500px) {
+          :root {
+              --slide-padding: clamp(0.4rem, 2vw, 1rem);
+              --title-size: clamp(1.1rem, 3.5vw, 1.8rem);
+              --h2-size: clamp(1rem, 2.5vw, 1.5rem);
+              --body-size: clamp(0.75rem, 1vw, 1rem);
+          }
+      }
+      @media (max-width: 600px) {
+          :root {
+              --title-size: clamp(1.5rem, 7vw, 2.8rem);
+          }
+          .grid {
+              grid-template-columns: 1fr;
+          }
+      }
+      @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+              animation-duration: 0.01ms !important;
+              transition-duration: 0.2s !important;
+          }
+          html {
+              scroll-behavior: auto;
+          }
+      }
+
+      /* ===========================================
+           CUSTOM STYLES & ANIMATIONS
+           =========================================== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity var(--duration-normal) var(--ease-out-expo),
+          transform var(--duration-normal) var(--ease-out-expo);
+      }
+      .slide.visible .reveal {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal:nth-child(1) { transition-delay: 0.1s; }
+      .reveal:nth-child(2) { transition-delay: 0.2s; }
+      .reveal:nth-child(3) { transition-delay: 0.3s; }
+      .reveal:nth-child(4) { transition-delay: 0.4s; }
+      .reveal:nth-child(5) { transition-delay: 0.5s; }
+
+      .title-slide {
+        text-align: center;
+        align-items: center;
+      }
+      .title-slide h1 {
+        font-size: var(--title-size);
+        margin-bottom: var(--element-gap);
+        color: var(--text-primary);
+      }
+      .title-slide .subtitle {
+        font-size: var(--subtitle-size);
+        color: var(--accent);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--content-gap);
+      }
+      
+      .brand-mark {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 1.2rem;
+        font-family: var(--font-display);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .brand-mark::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      .slide h2 {
+        font-size: var(--h2-size);
+        margin-bottom: var(--content-gap);
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+      .slide h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: var(--accent);
+      }
+      .title-slide h2::after {
+        display: none;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: var(--content-gap);
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+      }
+      
+      .card h3 {
+        font-size: var(--h3-size);
+        color: var(--accent);
+        margin-bottom: var(--element-gap);
+      }
+      
+      .large-number {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 6rem);
+        line-height: 1;
+        color: rgba(212, 175, 55, 0.15);
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        font-weight: 700;
+        pointer-events: none;
+      }
+
+      .highlight {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      /* Abstract decorative elements */
+      .decorative-circle {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: -1;
+        opacity: 0.4;
+      }
+      .circle-1 {
+        top: -10%;
+        right: -5%;
+        width: 40vw;
+        height: 40vw;
+        background: rgba(212, 175, 55, 0.2);
+      }
+      .circle-2 {
+        bottom: -10%;
+        left: -10%;
+        width: 30vw;
+        height: 30vw;
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      /* Nav Dots */
+      .nav-dots {
+        position: fixed;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 100;
+      }
+      .nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--text-secondary);
+        opacity: 0.3;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .nav-dot.active {
+        opacity: 1;
+        background: var(--accent);
+        transform: scale(1.5);
+      }
+
+      /* Edit Toggle */
+      .edit-hotzone {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        z-index: 10000;
+        cursor: pointer;
+      }
+      .edit-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: var(--bg-primary);
+        border: 1px solid var(--accent);
+        color: var(--text-primary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+        z-index: 10001;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      .edit-toggle:hover {
+        transform: scale(1.1);
+      }
+      .edit-toggle.show,
+      .edit-toggle.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .edit-toggle.active {
+        background: var(--accent);
+        color: white;
+      }
+      
+      .edit-banner {
+        position: fixed;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent);
+        color: white;
+        padding: 8px 24px;
+        border-radius: 20px 20px 0 0;
+        font-size: 14px;
+        font-weight: bold;
+        transition: bottom 0.3s ease;
+        z-index: 10000;
+        pointer-events: none;
+      }
+      .edit-banner.show {
+        bottom: 0;
+      }
+      
+      [contenteditable="true"] {
+        outline: 1px dashed rgba(212, 175, 55, 0.5);
+        outline-offset: 4px;
+        border-radius: 4px;
+        transition: outline-color 0.2s ease, background-color 0.2s ease;
+      }
+      [contenteditable="true"]:focus {
+        outline: 2px solid var(--accent);
+        background: rgba(255, 255, 255, 0.5);
+      }
+      
+      .center-content {
+        align-items: center;
+        text-align: center;
+      }
+      .center-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .lead-text {
+        font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+        color: var(--text-primary);
+        font-weight: 500;
+        margin-bottom: var(--content-gap);
+      }
+      
+      .quote-box {
+        border-left: 4px solid var(--accent);
+        padding-left: 1.5rem;
+        margin: var(--content-gap) 0;
+        font-style: italic;
+        color: var(--text-secondary);
+      }
+      
+      .price-box {
+        background: var(--text-primary);
+        color: white;
+        padding: clamp(1.5rem, 3vw, 3rem);
+        border-radius: 16px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .price-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--accent);
+      }
+      .price-value {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.2;
+        color: var(--accent);
+        margin: 1rem 0;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+        color: #9ca3af;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Edit UI -->
+    <div class="edit-hotzone"></div>
+    <button class="edit-toggle" id="editToggle" title="Edit mode (E)">✏️</button>
+    <div class="edit-banner" id="editBanner">編集中 (Ctrl+S で保存)</div>
+
+    <!-- Navigation dots generated by JS -->
+    <nav class="nav-dots"></nav>
+
+    <!-- Slide 1: Title -->
+    <section class="slide title-slide">
+      <div class="decorative-circle circle-1"></div>
+      <div class="decorative-circle circle-2"></div>
+      <div class="slide-content">
+        <div class="reveal subtitle">美容クリニックの新しい集客と接客のモデル</div>
+        <h1 class="reveal">Quicka for Beauty</h1>
+      </div>
+    </section>
+
+    <!-- Slide 2: Overview -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">Quickaとは？</h2>
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+          <div class="left-col">
+            <div class="card reveal" style="margin-bottom: 2rem;">
+              <p class="lead-text" style="font-size: clamp(1rem, 1.5vw, 1.3rem);">
+                先生のクリニックの治療方針をすべて記憶し、<br/>
+                24時間365日、LINE上で患者様の不安に寄り添い、<br/>
+                予約を取ってくる<span class="highlight">AIコンシェルジュ</span>です。
+              </p>
+            </div>
+            <ul class="bullet-list reveal" style="font-size: clamp(0.85rem, 1.2vw, 1.1rem);">
+              <li>「今すぐ予約したい5%のお客様」だけでなく、「検討中の残り95%のお客様」への個別相談・自動追客まで実行</li>
+              <li>設定や返信をスタッフ様が行う必要はありません</li>
+              <li>本当に人間と会話しているレベルで賢く、登録者全員を自動でナーチャリングします</li>
+            </ul>
+          </div>
+          <div class="right-col reveal" style="display: flex; justify-content: center;">
+            <div style="position: relative; width: 100%; max-width: 320px; aspect-ratio: 3/4; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 6px solid rgba(255, 255, 255, 0.8);">
+              <video src="hero_video.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+              
+              <!-- Simulated UI overlay for premium feel -->
+              <div style="position: absolute; bottom: 16px; left: 16px; right: 16px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="width: 36px; height: 36px; background: #06C755; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 20px;">L</div>
+                <div>
+                  <div style="font-size: 12px; font-weight: bold; color: #111827;">LINEご予約対応</div>
+                  <div style="font-size: 10px; color: #4b5563;">〇〇様、ご希望の空き枠を確認いたしました。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Problems -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">クリニックの現状と課題</h2>
+        <div class="card-grid">
+          <div class="card reveal relative">
+            <span class="large-number">01</span>
+            <h3 style="min-height: 3em;">新規CPAの<br/>高騰</h3>
+            <p>現在、美容業界全体で新規の獲得単価（CPA）が異常に高騰し、<span class="highlight">「1人呼ぶのに5〜7万円かかる」</span>状況に。<br/><br/>せっかく集めたLINE登録者を確実に来院まで引き上げる仕組みが急務です。</p>
+          </div>
+          <div class="card reveal relative">
+            <span class="large-number">02</span>
+            <h3 style="min-height: 3em;">スタッフ様の<br/>業務負担</h3>
+            <p>個別相談の返信や、しばらく来院していない方への追客メッセージ。<br/><br/>これらを「人間のスタッフ」が対応するには<span class="highlight">限界があり、現場の大きな負担</span>となっています。</p>
+          </div>
+          <div class="card reveal relative">
+            <span class="large-number">03</span>
+            <h3 style="min-height: 3em;">顧客リストの<br/>取りこぼし</h3>
+            <p>一度来院された既存患者様や、LINE登録しただけの「今はまだ検討中」という見込み客。<br/><br/>せっかくのリストに対して継続的な関係構築ができず、<span class="highlight">「穴の空いたバケツ」のように機会を損失</span>しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Insight -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container center-content">
+        <div class="reveal" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+          <p style="font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.8; font-weight: bold; color: var(--text-primary);">
+            もし仮に、この放置されてしまっている<span class="highlight" style="font-size: 1.2em;">95%</span>の患者様に対して、<br/><br/>
+            <span style="display: inline-block; padding: 2.5rem 3rem; background: rgba(255, 255, 255, 0.95); border: 2px solid var(--accent); border-radius: 24px; box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15); font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: 0.05em;">
+              <span style="color: var(--accent);">「深夜でも1秒で不安を解消し、</span><br/>
+              過去のリストにも自動で最適な声かけをして、<br/>
+              <span style="color: var(--accent);">予約を確保してくれる仕組み」</span>
+            </span><br/><br/>
+            があったとしたら？
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Catch Basin Strategy -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <div class="reveal" style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: clamp(1.4rem, 3vw, 2.2rem); font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--text-primary); word-break: keep-all; line-height: 1.4;">
+            利益を最大化する「<span class="highlight">最強の受け皿</span>」
+          </h2>
+          <p style="font-size: clamp(0.9rem, 1.5vw, 1.1rem); color: var(--text-secondary); line-height: 1.6; word-break: keep-all;">
+            既存客を放置したままの「バケツの穴が空いた状態」での広告は無駄になります
+          </p>
+        </div>
+        
+        <!-- 3-Column Steps -->
+        <div class="reveal" style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0.8rem; align-items: stretch; width: 100%; max-width: 1150px; margin: 0 auto;">
+          
+          <!-- STEP 1 -->
+          <div style="background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 36px; height: 36px; background: var(--text-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">1</div>
+            <div style="font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem;">攻略の鍵</div>
+            <div style="font-size: 0.95rem; font-weight: bold; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">「再来院」にかかるコストは<br/>新規集客のたった<span style="font-size: 1.3em; color: var(--accent);">1/5</span></div>
+            <!-- Visual (Height 200px) -->
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 2rem; height: 200px; width: 100%; margin: 0.5rem 0;">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-weight: bold;">新規集客</div>
+                <div style="width: 70px; height: 160px; background: #e5e7eb; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center;">
+                  <span style="font-size: 1.6rem; font-weight: bold; color: var(--text-secondary);">5倍</span>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem; font-weight: bold;">再来院</div>
+                <div style="width: 70px; height: 32px; background: var(--accent); border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(212,175,55,0.4);">
+                  <span style="font-size: 1.1rem; font-weight: bold; color: white;">1/5</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: auto; line-height: 1.5;">
+              利益を伸ばす鍵は、新規より<br/><span class="highlight">既存患者様のリピート</span>にある
+            </div>
+          </div>
+
+          <!-- Arrow 1→2 -->
+          <div class="animated-arrow" style="display: flex; align-items: center; padding: 0 0.4rem; color: var(--accent);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </div>
+
+          <!-- STEP 2 -->
+          <div style="background: rgba(255,255,255,0.6); border: 2px dashed rgba(0,0,0,0.08); border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 36px; height: 36px; background: var(--text-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">2</div>
+            <div style="font-size: 1.2rem; font-weight: bold; color: #ef4444; margin-bottom: 0.4rem;">「人力対応」の壁</div>
+            
+            <ul style="font-size: 0.9rem; font-weight: bold; color: var(--text-primary); margin-bottom: 1rem; text-align: left; padding-left: 1.2rem; margin-top: 0; line-height: 1.5;">
+              <li>個別対応は物理的に不可能</li>
+              <li>一斉送信は関係構築に不向き</li>
+            </ul>
+
+            <!-- Visual (Height 200px) -->
+            <div style="display: flex; align-items: center; justify-content: center; height: 200px; width: 100%; margin: 0.5rem 0;">
+              <div style="width: 100%; max-width: 260px; height: 180px; border-radius: 16px; overflow: hidden; border: 2px solid rgba(0, 0, 0, 0.4); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); background: white;">
+                <img src="illustration_staff.png" alt="対応に苦しむスタッフ" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.15);">
+              </div>
+            </div>
+            
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: auto; line-height: 1.5;">
+              人間のスタッフでは<br/>物理的に限界がある
+            </div>
+          </div>
+
+          <!-- Arrow 2→3 -->
+          <div class="animated-arrow" style="display: flex; align-items: center; padding: 0 0.4rem; color: var(--accent);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </div>
+
+          <!-- STEP 3 -->
+          <div style="background: var(--text-primary); color: white; border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; box-shadow: 0 15px 30px rgba(212,175,55,0.2); border: 1px solid rgba(212,175,55,0.3); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); animation: sweep 3s infinite;"></div>
+            
+            <div style="width: 36px; height: 36px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem; position: relative; z-index: 2;">3</div>
+            <div style="font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; position: relative; z-index: 2;">究極の解決策</div>
+            <div style="font-size: 0.9rem; font-weight: bold; color: rgba(255,255,255,0.9); margin-bottom: 1.2rem; position: relative; z-index: 2;">「最強の受け皿」を用意する</div>
+            
+            <!-- Visual (Height 200px) -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; height: 200px; width: 100%; margin: 0.5rem 0; position: relative; z-index: 2;">
+              <!-- Real LINE icon -->
+              <div style="width: 90px; height: 90px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 20px rgba(6,199,85,0.3); background: white;">
+                <img src="line-icon.svg" alt="LINE" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              
+              <div style="font-size: 1.8rem; color: rgba(255,255,255,0.4); font-weight: bold; margin: 0 0.2rem;">+</div>
+              
+              <!-- Circular Video -->
+              <div style="width: 90px; height: 90px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.9); flex-shrink: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.6);">
+                <video src="hero_video.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%;"></video>
+              </div>
+            </div>
+            
+            <div style="font-size: 0.95rem; line-height: 1.6; font-weight: bold; color: var(--accent); position: relative; z-index: 2; text-align: center; margin-top: auto; background: rgba(0,0,0,0.25); padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(212,175,55,0.4); white-space: nowrap; letter-spacing: -0.02em;">
+              「広告より先に、最強の受け皿を」<br/>これが利益最大化の鉄則です。
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        @keyframes sweep {
+          0% { left: -100%; }
+          50% { left: 200%; }
+          100% { left: 200%; }
+        }
+        @keyframes pulseArrow {
+          0%, 100% { transform: translateX(0); opacity: 0.8; }
+          50% { transform: translateX(6px); opacity: 1; }
+        }
+        .animated-arrow {
+          animation: pulseArrow 1.5s infinite ease-in-out;
+        }
+      </style>
+    </section>
+
+    <!-- Slide 5: Merit 1 -->
+    <section class="slide">
+      <div class="decorative-circle circle-1"></div>
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">メリット ①</h2>
+        <div class="card reveal relative">
+          <span class="large-number" style="font-size: 8rem; top: -2rem;">1</span>
+          <h3 style="font-size: var(--h2-size);">無限スケール</h3>
+          <p class="lead-text" style="margin-top: 1rem;">労働基準法、完全ガン無視のトップカウンセラー。</p>
+          <ul class="bullet-list" style="margin-top: 2rem;">
+            <li>夜中2時でも、同時に1,000人から相談が来ても、全員に1秒で個別返信</li>
+            <li>AIが患者様の画像（写真）を見て事前相談にも対応可能</li>
+            <li>どれだけ広告を踏まれて相談が増えても、スタッフ様を一切疲弊させません</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Merit 2 -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">メリット ②</h2>
+        <div class="card reveal relative">
+          <span class="large-number" style="font-size: 8rem; top: -2rem;">2</span>
+          <h3 style="font-size: var(--h2-size);">全リストの完全記憶と自動営業</h3>
+          <p class="lead-text" style="margin-top: 1rem;">広告費ゼロで過去のリストから予約が湧き出します。</p>
+          <ul class="bullet-list" style="margin-top: 2rem;">
+            <li>過去にLINE登録した数千人のリスト全員の情報を完璧に記憶</li>
+            <li>『最後に来院した日』や『お悩み』を把握</li>
+            <li>AIの方からベストなタイミングで個別フォローを自動実行</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Merit 3 -->
+    <section class="slide">
+      <div class="decorative-circle circle-2"></div>
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">メリット ③</h2>
+        <div class="card reveal relative">
+          <span class="large-number" style="font-size: 8rem; top: -2rem;">3</span>
+          <h3 style="font-size: var(--h2-size);">圧倒的なブランドイメージ向上</h3>
+          <p class="lead-text" style="margin-top: 1rem;">患者様にとっての「心理的第一候補」へ。</p>
+          <ul class="bullet-list" style="margin-top: 2rem;">
+            <li>患者様が夜中に不安で連絡した時、どこよりも早く対応</li>
+            <li>自分専属のコンシェルジュのように丁寧に寄り添う接客体験</li>
+            <li>資本力のある大手クリニックとの明確な差別化を実現</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Slide 9: ROI -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">投資対効果（ROI）シミュレーション</h2>
+        <p class="reveal" style="margin-bottom: 2rem;">夜間の取りこぼしによる「見えない損失」を防ぐだけでも、大きな利益を生み出します。</p>
+        
+        <div class="grid reveal">
+          <div class="card">
+            <h3>📈 売上の底上げ</h3>
+            <p>深夜の即レスや画像相談で取りこぼしを防ぎ、月にたった1〜2件でも新規予約を拾い上げれば、それだけで<span class="highlight">10万円以上のプラス</span>に。<br/><br/>さらに過去の休眠リストからの掘り起こしも自動で行うため、予約数は毎月底上げされます。</p>
+          </div>
+          <div class="card">
+            <h3>💰 コスト削減と成約率UP</h3>
+            <p>スタッフ様が毎日行っていたLINE返信業務がゼロになり、<span class="highlight">月10万円以上の人件費削減</span>に。<br/><br/>空いた時間を『目の前の患者様のクロージング』に回せるため、成約率そのものが大きく向上します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Offer -->
+    <section class="slide">
+      <div class="decorative-circle circle-1"></div>
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container center-content">
+        <h2 class="reveal">特別アンバサダーのご提案</h2>
+        <p class="reveal lead-text" style="margin-bottom: 2rem;">
+          まずは『〇〇クリニック様でQuickaを使ってこれだけ予約が増えた！』<br/>
+          という圧倒的な成功事例を一緒に作りませんか？
+        </p>
+        
+        <div class="price-box reveal" style="max-width: 1000px; width: 100%; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem);">
+          <h3 style="color: rgba(255,255,255,0.9); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-family: var(--font-body); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1rem; display: inline-block;">最初の3院限定・テスト導入キャンペーン</h3>
+          <div style="display: flex; justify-content: space-evenly; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <div style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 0.5rem; font-weight: bold;">初期費用構築費</div>
+              <div class="strikethrough" style="font-size: 1.2rem;">通常 50万円</div>
+              <div class="price-value" style="margin-top: 0.5rem; color: white;">完全無料</div>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+              <div style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 0.5rem; font-weight: bold;">システム利用料（初月）</div>
+              <div class="strikethrough" style="font-size: 1.2rem;">通常 月額10万円</div>
+              <div class="price-value" style="margin-top: 0.5rem; color: white;">完全無料</div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="reveal" style="margin-top: 2rem;">
+          1ヶ月間、完全に無料でAI相談の効果を試していただき、もし1ヶ月で効果を感じなければそのまま解約していただいて構いません。<br/>先生に金銭的なリスクは1円もありません。
+        </p>
+      </div>
+    </section>
+
+
+
+    <script>
+      /* ===========================================
+           SLIDE PRESENTATION CONTROLLER
+           =========================================== */
+      class SlidePresentation {
+        constructor() {
+          this.slides = document.querySelectorAll(".slide");
+          this.currentSlide = 0;
+          this.isAnimating = false;
+          
+          this.setupIntersectionObserver();
+          this.setupKeyboardNav();
+          this.setupTouchNav();
+          this.setupWheelNav();
+          this.setupNavDots();
+          this.goToSlide(0);
+        }
+
+        setupIntersectionObserver() {
+          const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Update current slide index based on intersection
+                this.slides.forEach((slide, index) => {
+                  if (slide === entry.target) {
+                    this.currentSlide = index;
+                    this.updateNavDots();
+                  }
+                });
+              }
+            });
+          }, options);
+
+          this.slides.forEach(slide => observer.observe(slide));
+        }
+
+        goToSlide(index) {
+          if (index < 0 || index >= this.slides.length || this.isAnimating) return;
+          this.isAnimating = true;
+          this.slides[index].scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => { this.isAnimating = false; }, 800);
+        }
+
+        setupKeyboardNav() {
+          document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable')) return;
+            
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+              e.preventDefault();
+              this.goToSlide(this.currentSlide + 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+              e.preventDefault();
+              this.goToSlide(this.currentSlide - 1);
+            }
+          });
+        }
+
+        setupTouchNav() {
+          let touchStartY = 0;
+          document.addEventListener('touchstart', e => {
+            touchStartY = e.changedTouches[0].screenY;
+          }, {passive: true});
+          
+          document.addEventListener('touchend', e => {
+            const touchEndY = e.changedTouches[0].screenY;
+            const diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 50) {
+              if (diff > 0) this.goToSlide(this.currentSlide + 1);
+              else this.goToSlide(this.currentSlide - 1);
+            }
+          }, {passive: true});
+        }
+
+        setupWheelNav() {
+          let lastWheelTime = 0;
+          document.addEventListener('wheel', (e) => {
+            const now = Date.now();
+            if (now - lastWheelTime < 800) return; // throttle
+            
+            if (Math.abs(e.deltaY) > 20) {
+              lastWheelTime = now;
+              if (e.deltaY > 0) this.goToSlide(this.currentSlide + 1);
+              else this.goToSlide(this.currentSlide - 1);
+            }
+          }, {passive: false});
+        }
+
+        setupNavDots() {
+          const container = document.querySelector('.nav-dots');
+          if (!container) return;
+          container.innerHTML = "";
+          
+          this.slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'nav-dot';
+            dot.addEventListener('click', () => this.goToSlide(index));
+            container.appendChild(dot);
+          });
+          this.updateNavDots();
+        }
+
+        updateNavDots() {
+          const dots = document.querySelectorAll('.nav-dot');
+          if (!dots.length) return;
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentSlide);
+          });
+        }
+      }
+
+      /* ===========================================
+           INLINE EDITOR (Opt-in via Phase 1)
+           =========================================== */
+      class PresentationEditor {
+        constructor() {
+          this.isActive = false;
+          this.setupEventListeners();
+        }
+
+        setupEventListeners() {
+          // Edit Toggle UI
+          const hotzone = document.querySelector(".edit-hotzone");
+          const editToggle = document.getElementById("editToggle");
+          if (!hotzone || !editToggle) return;
+
+          let hideTimeout = null;
+
+          hotzone.addEventListener("mouseenter", () => {
+            clearTimeout(hideTimeout);
+            editToggle.classList.add("show");
+          });
+          hotzone.addEventListener("mouseleave", () => {
+            hideTimeout = setTimeout(() => {
+              if (!this.isActive) editToggle.classList.remove("show");
+            }, 400);
+          });
+          editToggle.addEventListener("mouseenter", () => {
+            clearTimeout(hideTimeout);
+          });
+          editToggle.addEventListener("mouseleave", () => {
+            hideTimeout = setTimeout(() => {
+              if (!this.isActive) editToggle.classList.remove("show");
+            }, 400);
+          });
+
+          // Toggle Actions
+          editToggle.addEventListener("click", () => this.toggleEditMode());
+          hotzone.addEventListener("click", () => {
+            if (!this.isActive) this.toggleEditMode();
+          });
+
+          // Keyboard Shortcuts
+          document.addEventListener("keydown", (e) => {
+            const isEditingText = e.target.getAttribute("contenteditable");
+            if ((e.key === "e" || e.key === "E") && !isEditingText && !e.ctrlKey && !e.metaKey) {
+              this.toggleEditMode();
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === "s" && this.isActive) {
+              e.preventDefault();
+              this.exportFile();
+            }
+            if (e.key === "Escape" && this.isActive) {
+              this.toggleEditMode();
+            }
+          });
+        }
+
+        toggleEditMode() {
+          this.isActive = !this.isActive;
+          const editToggle = document.getElementById("editToggle");
+          const banner = document.getElementById("editBanner");
+          
+          if (this.isActive) {
+            document.body.classList.add("edit-active");
+            editToggle.classList.add("active", "show");
+            banner.classList.add("show");
+            
+            // Make all text elements editable
+            const textElements = document.querySelectorAll("h1, h2, h3, p, li, .lead-text, .subtitle, .brand-mark, .large-number, .price-value, .strikethrough, .quote-box");
+            textElements.forEach(el => {
+              // Ignore empty structural elements or script/style
+              if (el.tagName !== "SCRIPT" && el.tagName !== "STYLE") {
+                el.setAttribute("contenteditable", "true");
+              }
+            });
+          } else {
+            document.body.classList.remove("edit-active");
+            editToggle.classList.remove("active");
+            banner.classList.remove("show");
+            
+            const editableEls = document.querySelectorAll("[contenteditable]");
+            editableEls.forEach(el => el.removeAttribute("contenteditable"));
+            
+            // Allow hotzone to hide the button
+            setTimeout(() => {
+              if (!this.isActive && !document.querySelector('.edit-hotzone:hover')) {
+                editToggle.classList.remove("show");
+              }
+            }, 400);
+          }
+        }
+
+        exportFile() {
+          // Temporarily strip edit state
+          const editableEls = Array.from(document.querySelectorAll('[contenteditable]'));
+          editableEls.forEach(el => el.removeAttribute('contenteditable'));
+          document.body.classList.remove('edit-active');
+
+          const editToggle = document.getElementById('editToggle');
+          const editBanner = document.getElementById('editBanner');
+          editToggle?.classList.remove('active', 'show');
+          editBanner?.classList.remove('show');
+
+          // Add doctype and get full HTML
+          const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+
+          // Restore edit state
+          document.body.classList.add('edit-active');
+          editableEls.forEach(el => el.setAttribute('contenteditable', 'true'));
+          editToggle?.classList.add('active', 'show');
+          editBanner?.classList.add('show');
+
+          // Trigger download
+          const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'quicka_beauty_presentation.html';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(a.href);
+          
+          // Show brief success feedback
+          editBanner.textContent = "保存しました！";
+          setTimeout(() => {
+            editBanner.textContent = "編集中 (Ctrl+S で保存)";
+          }, 2000);
+        }
+      }
+
+      // Initialize
+      document.addEventListener('DOMContentLoaded', () => {
+        new SlidePresentation();
+        window.editor = new PresentationEditor();
+      });
+    </script>
+  </body>
+</html>
