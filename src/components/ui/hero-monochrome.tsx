@@ -529,7 +529,7 @@ export function HeroMonochrome({
                     <span className={cn("block text-sm uppercase tracking-widest font-black text-brand-gold mb-3", palette.subtle)}>
                       Step {index + 1}
                     </span>
-                    <h3 className={cn("block text-2xl md:text-3xl font-black tracking-tight relative z-10 leading-tight", isDark ? "text-white" : "text-gray-900")}>
+                    <h3 className={cn("block text-xl sm:text-2xl lg:text-xl xl:text-2xl font-black tracking-tighter relative z-10 leading-tight whitespace-nowrap", isDark ? "text-white" : "text-gray-900")}>
                       {step.title}
                     </h3>
                     <p className={cn("mt-4 text-base md:text-lg font-medium leading-relaxed relative z-10 text-gray-600", palette.subtle)}>
