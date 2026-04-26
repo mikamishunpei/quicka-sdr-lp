@@ -37,7 +37,7 @@ export function ClinicSolution() {
           imageSrc: "/step_1_invitation.png"
         },
         {
-          title: "1to1の「パーソナライズ対応」",
+          title: "自分だけの専属カウンセラー",
           description: "一斉送信ではなく、AIが一人ひとりの悩みや過去の会話を記憶して個別対応。「今すぐじゃない客」とも時間をかけて確かな信頼関係を構築します。",
           icon: <MessageCircle className="w-6 h-6" />,
           imageSrc: "/step_2_ai_concierge.png"
