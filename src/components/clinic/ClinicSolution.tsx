@@ -31,8 +31,8 @@ export function ClinicSolution() {
       layout="centered"
       steps={[
         {
-          title: "眠れる95%の「資産化」",
-          description: "LINEに登録しただけで放置されている「検討中」の95%のお客様。この『穴の空いたバケツ』状態を未然に防ぎ、すでに抱えているリストから確実に来院を創出します。",
+          title: "休眠リストの「再活性化」",
+          description: "LINEに登録したまま、色を失い放置されている「休眠顧客」たち。AIが一人ひとりの温度感に合わせて適切なタイミングでアプローチし、眠っているリストを確実な来院（資産）へと変えます。",
           icon: <Megaphone className="w-6 h-6" />,
           imageSrc: "/step_1_invitation.png"
         },
