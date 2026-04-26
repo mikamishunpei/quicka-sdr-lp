@@ -8,8 +8,8 @@ export function ClinicSolution() {
     <HeroMonochrome
       title={
         <>
-          「LINE誘導」だけでは、もう勝てない。<br />
-          利益を最大化する「最強の受け皿」へ。
+          「LINE誘導」で終わらせない。<br />
+          利益を生む「最強の受け皿」へ。
         </>
       }
       description={
