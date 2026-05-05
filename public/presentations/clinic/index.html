@@ -70,13 +70,14 @@
           scroll-behavior: smooth;
       }
       .slide {
-          width: 100vw;
+          width: 100vw; /* Keep slide viewport sized */
           height: 100vh;
           height: 100dvh;
           overflow: hidden;
           scroll-snap-align: start;
           display: flex;
-          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           position: relative;
       }
       .slide-content {
@@ -495,22 +496,23 @@
 
     <!-- Slide 2: Overview -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
         <h2 class="reveal">Quickaとは？</h2>
         <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
           <div class="left-col">
             <div class="card reveal" style="margin-bottom: 2rem;">
-              <p class="lead-text" style="font-size: clamp(1rem, 1.5vw, 1.3rem);">
+              <p class="lead-text" style="font-size: clamp(1rem, 1.5vw, 1.3rem); margin: 0;">
                 先生のクリニックの治療方針をすべて記憶し、<br/>
                 24時間365日、LINE上で患者様の不安に寄り添い、<br/>
                 予約を取ってくる<span class="highlight">AIコンシェルジュ</span>です。
               </p>
             </div>
             <ul class="bullet-list reveal" style="font-size: clamp(0.85rem, 1.2vw, 1.1rem);">
-              <li>「今すぐ予約したい5%のお客様」だけでなく、「検討中の残り95%のお客様」への個別相談・自動追客まで実行</li>
-              <li>設定や返信をスタッフ様が行う必要はありません</li>
-              <li>本当に人間と会話しているレベルで賢く、登録者全員を自動でナーチャリングします</li>
+              <li>現在運用中の公式LINEアカウントにすぐ連携可能です</li>
+              <li>追加の広告費なしで、既存のLINEリストから予約を生み出します</li>
+              <li>今だけ完全無料で導入可能。リスクゼロでお試しいただけます</li>
             </ul>
           </div>
           <div class="right-col reveal" style="display: flex; justify-content: center;">
@@ -529,10 +531,12 @@
           </div>
         </div>
       </div>
+    
     </section>
 
     <!-- Slide 3: Problems -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
         <h2 class="reveal">クリニックの現状と課題</h2>
@@ -544,27 +548,29 @@
           </div>
           <div class="card reveal relative">
             <span class="large-number">02</span>
-            <h3 style="min-height: 3em;">スタッフ様の<br/>業務負担</h3>
-            <p>個別相談の返信や、しばらく来院していない方への追客メッセージ。<br/><br/>これらを「人間のスタッフ」が対応するには<span class="highlight">限界があり、現場の大きな負担</span>となっています。</p>
-          </div>
-          <div class="card reveal relative">
-            <span class="large-number">03</span>
             <h3 style="min-height: 3em;">顧客リストの<br/>取りこぼし</h3>
             <p>一度来院された既存患者様や、LINE登録しただけの「今はまだ検討中」という見込み客。<br/><br/>せっかくのリストに対して継続的な関係構築ができず、<span class="highlight">「穴の空いたバケツ」のように機会を損失</span>しています。</p>
           </div>
+          <div class="card reveal relative">
+            <span class="large-number">03</span>
+            <h3 style="min-height: 3em;">スタッフ様の<br/>業務負担</h3>
+            <p>個別相談の返信や、しばらく来院していない方への追客メッセージ。<br/><br/>これらを「人間のスタッフ」が対応するには<span class="highlight">限界があり、現場の大きな負担</span>となっています。</p>
+          </div>
         </div>
       </div>
+    
     </section>
 
     <!-- Slide 4: Insight -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container center-content">
         <div class="reveal" style="max-width: 1000px; margin: 0 auto; text-align: center;">
           <p style="font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.8; font-weight: bold; color: var(--text-primary);">
-            もし仮に、この放置されてしまっている<span class="highlight" style="font-size: 1.2em;">95%</span>の患者様に対して、<br/><br/>
+            もし仮に、LINEに登録された<span class="highlight" style="font-size: 1.2em;">すべて</span>の患者様に対して、<br/><br/>
             <span style="display: inline-block; padding: 2.5rem 3rem; background: rgba(255, 255, 255, 0.95); border: 2px solid var(--accent); border-radius: 24px; box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15); font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: 0.05em;">
-              <span style="color: var(--accent);">「深夜でも1秒で不安を解消し、</span><br/>
+              <span style="color: var(--accent);">「深夜でも即レスで不安を解消し、</span><br/>
               過去のリストにも自動で最適な声かけをして、<br/>
               <span style="color: var(--accent);">予約を確保してくれる仕組み」</span>
             </span><br/><br/>
@@ -572,10 +578,12 @@
           </p>
         </div>
       </div>
+    
     </section>
 
     <!-- Slide 5: Catch Basin Strategy -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
         <div class="reveal" style="margin-top: 2rem; margin-bottom: 1.5rem;">
@@ -591,15 +599,15 @@
         <div class="reveal" style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0.8rem; align-items: stretch; width: 100%; max-width: 1150px; margin: 0 auto;">
           
           <!-- STEP 1 -->
-          <div style="background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <div style="background: rgba(255,255,255,0.6); border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; padding: 1.2rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <div style="width: 36px; height: 36px; background: var(--text-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">1</div>
             <div style="font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem;">攻略の鍵</div>
             <div style="font-size: 0.95rem; font-weight: bold; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">「再来院」にかかるコストは<br/>新規集客のたった<span style="font-size: 1.3em; color: var(--accent);">1/5</span></div>
-            <!-- Visual (Height 200px) -->
-            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 2rem; height: 200px; width: 100%; margin: 0.5rem 0;">
+            <!-- Visual (Height 170px) -->
+            <div style="display: flex; align-items: flex-end; justify-content: center; gap: 2rem; height: 170px; width: 100%; margin: 0.5rem 0;">
               <div style="display: flex; flex-direction: column; align-items: center;">
                 <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-weight: bold;">新規集客</div>
-                <div style="width: 70px; height: 160px; background: #e5e7eb; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 70px; height: 140px; background: #e5e7eb; border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: center;">
                   <span style="font-size: 1.6rem; font-weight: bold; color: var(--text-secondary);">5倍</span>
                 </div>
               </div>
@@ -624,18 +632,18 @@
           </div>
 
           <!-- STEP 2 -->
-          <div style="background: rgba(255,255,255,0.6); border: 2px dashed rgba(0,0,0,0.08); border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <div style="background: rgba(255,255,255,0.6); border: 2px dashed rgba(0,0,0,0.08); border-radius: 24px; padding: 1.2rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <div style="width: 36px; height: 36px; background: var(--text-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">2</div>
             <div style="font-size: 1.2rem; font-weight: bold; color: #ef4444; margin-bottom: 0.4rem;">「人力対応」の壁</div>
             
             <ul style="font-size: 0.9rem; font-weight: bold; color: var(--text-primary); margin-bottom: 1rem; text-align: left; padding-left: 1.2rem; margin-top: 0; line-height: 1.5;">
-              <li>個別対応は物理的に不可能</li>
               <li>一斉送信は関係構築に不向き</li>
+              <li>個別対応は物理的に不可能</li>
             </ul>
 
-            <!-- Visual (Height 200px) -->
-            <div style="display: flex; align-items: center; justify-content: center; height: 200px; width: 100%; margin: 0.5rem 0;">
-              <div style="width: 100%; max-width: 260px; height: 180px; border-radius: 16px; overflow: hidden; border: 2px solid rgba(0, 0, 0, 0.4); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); background: white;">
+            <!-- Visual (Height 170px) -->
+            <div style="display: flex; align-items: center; justify-content: center; height: 170px; width: 100%; margin: 0.5rem 0;">
+              <div style="width: 100%; max-width: 260px; height: 170px; border-radius: 16px; overflow: hidden; border: 2px solid rgba(0, 0, 0, 0.4); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); background: white;">
                 <img src="illustration_staff.png" alt="対応に苦しむスタッフ" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transform: scale(1.15);">
               </div>
             </div>
@@ -654,15 +662,15 @@
           </div>
 
           <!-- STEP 3 -->
-          <div style="background: var(--text-primary); color: white; border-radius: 24px; padding: 1.5rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; box-shadow: 0 15px 30px rgba(212,175,55,0.2); border: 1px solid rgba(212,175,55,0.3); position: relative; overflow: hidden;">
+          <div style="background: var(--text-primary); color: white; border-radius: 24px; padding: 1.2rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; box-shadow: 0 15px 30px rgba(212,175,55,0.2); border: 1px solid rgba(212,175,55,0.3); position: relative; overflow: hidden;">
             <div style="position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); animation: sweep 3s infinite;"></div>
             
             <div style="width: 36px; height: 36px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem; position: relative; z-index: 2;">3</div>
             <div style="font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; position: relative; z-index: 2;">究極の解決策</div>
-            <div style="font-size: 0.9rem; font-weight: bold; color: rgba(255,255,255,0.9); margin-bottom: 1.2rem; position: relative; z-index: 2;">「最強の受け皿」を用意する</div>
+            <div style="font-size: clamp(0.75rem, 1.2vw, 0.85rem); font-weight: bold; color: rgba(255,255,255,0.9); margin-bottom: 1.2rem; position: relative; z-index: 2; line-height: 1.4; word-break: keep-all; letter-spacing: -0.03em;">AIによる「最強の受け皿」で<br/>個別対応の全自動化を実現する</div>
             
-            <!-- Visual (Height 200px) -->
-            <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; height: 200px; width: 100%; margin: 0.5rem 0; position: relative; z-index: 2;">
+            <!-- Visual (Height 170px) -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; height: 170px; width: 100%; margin: 0.5rem 0; position: relative; z-index: 2;">
               <!-- Real LINE icon -->
               <div style="width: 90px; height: 90px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 20px rgba(6,199,85,0.3); background: white;">
                 <img src="line-icon.svg" alt="LINE" style="width: 100%; height: 100%; object-fit: contain;">
@@ -676,7 +684,7 @@
               </div>
             </div>
             
-            <div style="font-size: 0.95rem; line-height: 1.6; font-weight: bold; color: var(--accent); position: relative; z-index: 2; text-align: center; margin-top: auto; background: rgba(0,0,0,0.25); padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(212,175,55,0.4); white-space: nowrap; letter-spacing: -0.02em;">
+            <div style="width: 100%; box-sizing: border-box; font-size: clamp(0.7rem, 1vw, 0.85rem); line-height: 1.6; font-weight: bold; color: var(--accent); position: relative; z-index: 2; text-align: center; margin-top: auto; background: rgba(0,0,0,0.25); padding: 0.6rem 0.2rem; border-radius: 12px; border: 1px solid rgba(212,175,55,0.4); letter-spacing: -0.04em; white-space: nowrap;">
               「広告より先に、最強の受け皿を」<br/>これが利益最大化の鉄則です。
             </div>
           </div>
@@ -696,10 +704,235 @@
           animation: pulseArrow 1.5s infinite ease-in-out;
         }
       </style>
+    
+    </section>
+
+    <!-- Slide: Quicka Revenue Cycle -->
+    <section class="slide">
+
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">Quickaが生む収益サイクル</h2>
+        <p class="reveal" style="font-size: clamp(0.85rem, 1.1vw, 0.95rem); color: var(--text-secondary); line-height: 1.5; margin-top: -0.5rem; margin-bottom: 2rem;">
+          一度「友だち追加」された患者様を、システムが自動で育成し、リピート・クロスセルへと導きます。
+        </p>
+
+
+        <div class="reveal" style="display: grid; grid-template-columns: auto 1fr; gap: clamp(1rem, 2vw, 2rem); align-items: center; width: 100%; max-width: 1100px; margin: -0.5rem auto 0;">
+
+          <!-- LEFT: Features -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+            <!-- Features Card -->
+            <div style="background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%); border: 1.5px solid rgba(212,175,55,0.25); border-radius: 16px; padding: 1.5rem 1.8rem; box-shadow: 0 4px 16px rgba(0,0,0,0.04); width: max-content;">
+              <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1rem;">🔧 サイクルを支える主要機能</div>
+              
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🤖</div>
+                  <div>
+                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">AI自動応答</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">24時間即レス・画像対応</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🧠</div>
+                  <div>
+                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">長期記憶＆興味プロフィール</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">患者ごとに刺さる提案を蓄積</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">📊</div>
+                  <div>
+                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">スコアリング＆CRM</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">温度感を可視化・自動ステータス管理</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🔔</div>
+                  <div>
+                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">自動リマインド＆掘り起こし</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">休眠・メンテ時期を自律判断</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🙋</div>
+                  <div>
+                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">有人エスカレーション</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">重要案件はスタッフへ即時通知</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Cycle Diagram -->
+          <div style="position: relative; width: 100%; aspect-ratio: 2 / 1; max-width: 800px; margin: 0 auto;">
+
+            <!-- SVG Ring & Arrows -->
+            <svg viewBox="0 0 840 420" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible;" fill="none">
+              <defs>
+                <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d4af37" stop-opacity="0.12"/>
+                  <stop offset="50%" stop-color="#d4af37" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#d4af37" stop-opacity="0.12"/>
+                </linearGradient>
+                <filter id="ring-glow">
+                  <feGaussianBlur stdDeviation="6" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+              </defs>
+
+              <!-- Background orbit circle (Center: 420, 210, Radius: 140) -->
+              <circle cx="420" cy="210" r="140" stroke="url(#ring-grad)" stroke-width="2.5" stroke-dasharray="6 4" filter="url(#ring-glow)"/>
+
+              <!-- Radial Connectors from circle to icons -->
+              <path d="M 420 70 L 420 57" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M 420 350 L 420 363" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M 541 140 L 553 133" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M 541 280 L 553 287" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M 299 280 L 287 287" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M 299 140 L 287 133" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
+            </svg>
+
+            <!-- Center Badge -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; text-align: center;">
+              <div style="width: 115px; height: 115px; border-radius: 50%; background: linear-gradient(135deg, #ffffff 0%, #f9fdfa 100%); border: 3px solid #06C755; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 6px 20px rgba(6, 199, 85, 0.18);">
+                <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #06C755; color: white; font-size: 0.55rem; font-weight: 800; padding: 2px 10px; border-radius: 10px; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(6, 199, 85, 0.3);">ENTRY</div>
+                <img src="add-friend-icon.png" alt="友だち追加" style="width: 54px; height: 54px; object-fit: contain; margin-bottom: 2px; margin-top: 6px;">
+                <div style="font-size: 0.75rem; font-weight: 800; color: #06C755; letter-spacing: 0.5px;">友だち追加</div>
+              </div>
+            </div>
+
+            <!-- Node 1: Top (自動ヒアリング) -->
+            <div style="position: absolute; top: 8.33%; left: 50%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">📝</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">1</div>
+            </div>
+            <div style="position: absolute; top: -3%; left: 50%; transform: translate(-50%, -100%); z-index: 4; text-align: center; min-width: 220px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">自動ヒアリング</div>
+            </div>
+
+            <!-- Node 2: Top Right (スコアリング＆来院) -->
+            <div style="position: absolute; top: 29.16%; left: 68.04%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">📅</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">2</div>
+            </div>
+            <div style="position: absolute; top: 29.16%; left: 74%; transform: translateY(-50%); z-index: 4; text-align: left; min-width: 190px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">スコアリング＆予約</div>
+            </div>
+
+            <!-- Node 3: Bottom Right (来院後フォロー) -->
+            <div style="position: absolute; top: 70.83%; left: 68.04%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">💖</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">3</div>
+            </div>
+            <div style="position: absolute; top: 70.83%; left: 74%; transform: translateY(-50%); z-index: 4; text-align: left; min-width: 190px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">来院後フォロー</div>
+            </div>
+
+            <!-- Node 4: Bottom (定期メンテ案内) -->
+            <div style="position: absolute; top: 91.66%; left: 50%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🔄</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">4</div>
+            </div>
+            <div style="position: absolute; top: 103%; left: 50%; transform: translateX(-50%); z-index: 4; text-align: center; min-width: 220px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">定期メンテ案内</div>
+            </div>
+
+            <!-- Node 5: Bottom Left (休眠掘り起こし) -->
+            <div style="position: absolute; top: 70.83%; left: 31.96%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🎁</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">5</div>
+            </div>
+            <div style="position: absolute; top: 70.83%; left: 26%; transform: translate(-100%, -50%); z-index: 4; text-align: right; min-width: 190px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">休眠掘り起こし</div>
+            </div>
+
+            <!-- Node 6: Top Left (クロスセル提案) -->
+            <div style="position: absolute; top: 29.16%; left: 31.96%; transform: translate(-50%, -50%); z-index: 5;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🏆</div>
+              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">6</div>
+            </div>
+            <div style="position: absolute; top: 29.16%; left: 26%; transform: translate(-100%, -50%); z-index: 4; text-align: right; min-width: 190px;">
+              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">クロスセル提案</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <!-- Slide: チャンスを逃さないAI (Live Demo) -->
+    <section class="slide">
+
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal" style="display: flex; align-items: center; gap: 1rem;">
+          チャンスを逃さないAI
+          <span style="font-size: clamp(0.7rem, 0.9vw, 0.85rem); padding: 0.3rem 0.8rem; background: var(--accent); color: white; border-radius: 100px; font-weight: bold; letter-spacing: 0.1em; transform: translateY(-2px); box-shadow: 0 2px 8px rgba(212,175,55,0.3);">LIVE DEMO</span>
+        </h2>
+        <p class="reveal" style="margin-bottom: clamp(1.5rem, 3vw, 2rem); font-size: clamp(0.95rem, 1.3vw, 1.15rem); color: var(--text-primary); font-weight: bold; line-height: 1.6;">
+          「AIの返信で、本当に患者様からの信頼が得られるの？」<br/>
+          <span style="color: var(--text-secondary); font-size: 0.9em; font-weight: normal;">論より証拠。ぜひお手元のスマートフォンで、Quickaの<span class="highlight">「人間のような自然な接客」</span>をご体感ください。</span>
+        </p>
+
+        <div class="reveal" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(1.5rem, 3vw, 2.5rem); align-items: center;">
+          <!-- Left: QR Placeholder for Demo -->
+          <div class="card" style="padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 2px dashed rgba(212,175,55,0.4); background: rgba(212,175,55,0.02);">
+            <div style="width: clamp(140px, 18vw, 180px); aspect-ratio: 1; background: white; border-radius: 12px; padding: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <img src="demo-qr.png" alt="デモアカウントQRコード" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <p style="font-weight: bold; color: var(--text-primary); margin-bottom: 0.5rem; font-size: clamp(0.9rem, 1.1vw, 1rem);">デモアカウントを追加</p>
+            <p style="font-size: clamp(0.75rem, 0.9vw, 0.85rem); color: var(--text-secondary); line-height: 1.6;">
+              ご自身の言葉で、自由に質問や<br/>悩みを送ってみてください。
+            </p>
+          </div>
+
+          <!-- Right: What to test -->
+          <div>
+            <h3 style="font-size: clamp(0.9rem, 1.2vw, 1.1rem); color: var(--accent); margin-bottom: 1rem; border-bottom: 1px solid rgba(212,175,55,0.2); padding-bottom: 0.5rem;">デモでご確認いただきたい3つのポイント</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 0.8rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
+                <span style="font-size: 1.5rem; line-height: 1;">⚡</span>
+                <div>
+                  <div style="font-weight: bold; font-size: clamp(0.85rem, 1vw, 0.95rem); margin-bottom: 0.2rem;">圧倒的な「即レス」対応</div>
+                  <p style="font-size: clamp(0.75rem, 0.9vw, 0.85rem); color: var(--text-secondary);">深夜でも1秒で返信。患者様の「今すぐ知りたい」熱量を逃しません。</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 0.8rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
+                <span style="font-size: 1.5rem; line-height: 1;">🧠</span>
+                <div>
+                  <div style="font-weight: bold; font-size: clamp(0.85rem, 1vw, 0.95rem); margin-bottom: 0.2rem;">マニュアル感のない「自然な会話」</div>
+                  <p style="font-size: clamp(0.75rem, 0.9vw, 0.85rem); color: var(--text-secondary);">複雑な質問や、複数の悩みが混ざった文章でも、文脈を理解して丁寧に寄り添います。</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 0.8rem; background: rgba(255,255,255,0.6); border-radius: 8px;">
+                <span style="font-size: 1.5rem; line-height: 1;">📸</span>
+                <div>
+                  <div style="font-weight: bold; font-size: clamp(0.85rem, 1vw, 0.95rem); margin-bottom: 0.2rem;">画像解析による「個別提案」</div>
+                  <p style="font-size: clamp(0.75rem, 0.9vw, 0.85rem); color: var(--text-secondary);">気になる箇所の写真を送ってみてください。AIが状態を解読し、適切なアドバイスを行います。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </section>
 
     <!-- Slide 5: Merit 1 -->
     <section class="slide">
+
       <div class="decorative-circle circle-1"></div>
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
@@ -715,10 +948,12 @@
           </ul>
         </div>
       </div>
+    
     </section>
 
     <!-- Slide 6: Merit 2 -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
         <h2 class="reveal">メリット ②</h2>
@@ -733,10 +968,12 @@
           </ul>
         </div>
       </div>
+    
     </section>
 
     <!-- Slide 7: Merit 3 -->
     <section class="slide">
+
       <div class="decorative-circle circle-2"></div>
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
@@ -752,12 +989,137 @@
           </ul>
         </div>
       </div>
+    
+    </section>
+
+
+
+    <!-- Slide: AI Long-Term Memory & Cross-Sell -->
+    <section class="slide">
+
+      <div class="decorative-circle circle-2"></div>
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">AIの「長期記憶」が生む複利効果</h2>
+        <p class="reveal" style="font-size: clamp(0.85rem, 1.1vw, 0.95rem); color: var(--text-secondary); line-height: 1.5; margin-top: -0.5rem; margin-bottom: 0.8rem;">
+          患者様との会話や画像のやり取りを重ねるほど、AIは一人ひとりの<span class="highlight">「興味プロフィール」を長期記憶として蓄積</span>します。
+        </p>
+
+        <div class="reveal" style="display: grid; grid-template-columns: 1.2fr 0.9fr; gap: clamp(1.2rem, 2vw, 2rem); align-items: stretch; width: 100%; max-width: 1100px; margin: 0 auto;">
+          
+          <!-- Left: Compounding Graph -->
+          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; background: rgba(255,255,255,0.9); border: 1px solid rgba(212,175,55,0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.08); width: 100%;">
+            <div style="font-weight: bold; font-size: clamp(0.85rem, 1vw, 0.95rem); color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+              <span>📈 AI長期記憶が生む収益の複利効果</span>
+            </div>
+            <div style="position: relative; width: 100%; height: 260px;">
+              <svg viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; overflow: visible; font-family: 'Inter', sans-serif;">
+                <!-- Gradients -->
+                <defs>
+                  <linearGradient id="curveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#d4af37" stop-opacity="0.3" />
+                    <stop offset="50%" stop-color="#d4af37" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#b5952f" stop-opacity="1" />
+                  </linearGradient>
+                  <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#d4af37" stop-opacity="0.2" />
+                    <stop offset="100%" stop-color="#d4af37" stop-opacity="0.0" />
+                  </linearGradient>
+                  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Axes -->
+                <line x1="40" y1="260" x2="480" y2="260" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                <line x1="40" y1="260" x2="40" y2="20" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                
+                <!-- Axis Labels -->
+                <text x="32" y="28" text-anchor="end" font-size="11" font-weight="bold" fill="rgba(0,0,0,0.4)">収益</text>
+                <text x="480" y="275" text-anchor="end" font-size="11" font-weight="bold" fill="rgba(0,0,0,0.4)">時間経過</text>
+
+                <!-- Grid lines -->
+                <line x1="40" y1="200" x2="480" y2="200" stroke="rgba(0,0,0,0.05)" stroke-width="1" stroke-dasharray="4" />
+                <line x1="40" y1="140" x2="480" y2="140" stroke="rgba(0,0,0,0.05)" stroke-width="1" stroke-dasharray="4" />
+                <line x1="40" y1="80" x2="480" y2="80" stroke="rgba(0,0,0,0.05)" stroke-width="1" stroke-dasharray="4" />
+
+                <!-- Area under curve -->
+                <path d="M 60 260 Q 280 260 450 80 L 450 260 Z" fill="url(#areaGradient)" />
+
+                <!-- Curve -->
+                <path d="M 60 260 Q 280 260 450 80" fill="none" stroke="url(#curveGradient)" stroke-width="5" stroke-linecap="round" filter="url(#glow)" />
+
+                <!-- Data Points & Labels -->
+                
+                <!-- Point 1 -->
+                <g transform="translate(60, 260)">
+                  <circle cx="0" cy="0" r="5" fill="white" stroke="#d4af37" stroke-width="3" />
+                  <line x1="8" y1="-12" x2="20" y2="-35" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="2" />
+                  <text x="25" y="-40" text-anchor="start" font-size="12" font-weight="bold" fill="var(--text-primary)">1ヶ月目</text>
+                  <text x="25" y="-25" text-anchor="start" font-size="10" fill="var(--text-secondary)">即レス＆信頼構築</text>
+                </g>
+
+                <!-- Point 2 -->
+                <g transform="translate(290, 205)">
+                  <circle cx="0" cy="0" r="6" fill="white" stroke="#d4af37" stroke-width="3" />
+                  <line x1="-8" y1="-12" x2="-25" y2="-40" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="2" />
+                  <text x="-30" y="-45" text-anchor="end" font-size="13" font-weight="bold" fill="var(--text-primary)">2〜3ヶ月目</text>
+                  <text x="-30" y="-30" text-anchor="end" font-size="11" fill="var(--text-secondary)">記憶に基づく自動追客</text>
+                </g>
+
+                <!-- Point 3 -->
+                <g transform="translate(450, 80)">
+                  <circle cx="0" cy="0" r="8" fill="#d4af37" stroke="white" stroke-width="2" filter="url(#glow)" />
+                  <line x1="-10" y1="0" x2="-35" y2="0" stroke="#d4af37" stroke-width="1.5" />
+                  <rect x="-210" y="-30" width="175" height="60" rx="8" fill="rgba(255,255,255,0.8)" stroke="rgba(212,175,55,0.4)" filter="drop-shadow(0 4px 10px rgba(212,175,55,0.1))" />
+                  <text x="-122.5" y="-10" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--text-primary)">3ヶ月目以降</text>
+                  <text x="-122.5" y="8" text-anchor="middle" font-size="12" font-weight="bold" fill="#d4af37">永続的な自動収益化</text>
+                  <text x="-122.5" y="22" text-anchor="middle" font-size="9" fill="var(--text-secondary)">休眠掘り起こし ＋ メンテ案内</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Right: Explanation -->
+          <div class="card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: center; background: rgba(255,255,255,0.9); border: 1px solid rgba(212,175,55,0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.08); height: 100%;">
+            <h3 style="color: var(--accent); font-weight: bold; font-size: clamp(1.1rem, 1.4vw, 1.4rem); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              💡 なぜ右肩上がりになるのか？
+            </h3>
+            
+            <div style="font-weight: bold; font-size: 1.15rem; color: var(--text-primary); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px dashed rgba(212,175,55,0.3);">
+              顧客の<span style="font-size: 1.3em; color: var(--accent);">「記憶が貯まる」</span>と…
+            </div>
+            
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.8rem;">
+              <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="font-size: 1.4rem; margin-top: -0.2rem;">🎯</div>
+                <div>
+                  <div style="font-weight: bold; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.4rem;">「その人に刺さる」個別提案に進化</div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">画一的な一斉配信ではなく、一人ひとりの悩みやフェーズに合わせた最適なアプローチが自動で可能になります。</div>
+                </div>
+              </li>
+              
+              <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="font-size: 1.4rem; margin-top: -0.2rem;">💰</div>
+                <div>
+                  <div style="font-weight: bold; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.4rem;">1to1の丁寧な追客コストが「ゼロ」に</div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">本来なら莫大な手間と人件費がかかる個別追客を、AIが24時間<span class="highlight">コストゼロで永続的に実行</span>。利益率が劇的に向上します。</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    
     </section>
 
 
 
     <!-- Slide 9: ROI -->
     <section class="slide">
+
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container">
         <h2 class="reveal">投資対効果（ROI）シミュレーション</h2>
@@ -774,10 +1136,14 @@
           </div>
         </div>
       </div>
+    
     </section>
+
+
 
     <!-- Slide 9: Offer -->
     <section class="slide">
+
       <div class="decorative-circle circle-1"></div>
       <div class="brand-mark">Quicka</div>
       <div class="slide-content container center-content">
@@ -807,6 +1173,7 @@
           1ヶ月間、完全に無料でQuickaの効果を試していただき、もし1ヶ月で効果を感じなければそのまま解約していただいて構いません。<br/>先生に金銭的なリスクは1円もありません。
         </p>
       </div>
+    
     </section>
 
 
