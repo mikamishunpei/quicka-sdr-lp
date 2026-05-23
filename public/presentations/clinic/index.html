@@ -494,6 +494,142 @@
       </div>
     </section>
 
+    <!-- Slide 2: Industry Problem -->
+    <section class="slide">
+      <div class="brand-mark">Quicka</div>
+      <div class="slide-content container">
+        <h2 class="reveal">美容医療マーケティングの現状と課題</h2>
+        
+        <div class="reveal" style="text-align: center; margin-bottom: 1.5rem;">
+          <p style="font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: bold; color: var(--text-primary); line-height: 1.6;">
+            「公式LINEへの誘導」は常識になったが、<span style="color: #ef4444;">LINE内接客・追客の仕組みが整備されておらず</span><br/>
+            実態は<span class="highlight" style="font-size: 1.1em; border-bottom: 3px solid var(--accent);">「今すぐ予約したい5%」のための受付窓口</span>に過ぎない
+          </p>
+        </div>
+
+        <div class="reveal" style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 800px; margin: 0 auto;">
+          
+          <!-- Top Node: The LINE List -->
+          <div style="background: white; border: 2px solid rgba(0,0,0,0.1); border-radius: 100px; padding: 1rem 3rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; z-index: 2; width: 80%;">
+            <div style="font-size: 0.9rem; font-weight: bold; color: var(--text-secondary); margin-bottom: 0.4rem;">CPA 5〜7万円/人を支払って獲得した</div>
+            <div style="font-size: 1.4rem; font-weight: bold; color: #06C755; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              <img src="line-logo-official.png" alt="LINE" style="width: 28px; height: 28px; object-fit: contain;">
+              公式LINE 登録リスト
+            </div>
+          </div>
+
+          <!-- Flow arrows container -->
+          <div style="display: flex; width: 100%; justify-content: center; position: relative; height: 40px;">
+             <!-- Center vertical line out of the top node -->
+             <div style="position: absolute; width: 2px; height: 20px; background: rgba(0,0,0,0.2); top: 0; left: 50%;"></div>
+             <!-- Horizontal connecting line -->
+             <div style="position: absolute; width: 54%; height: 2px; background: rgba(0,0,0,0.2); top: 20px; left: 16%;"></div>
+             <!-- Left Branch line -->
+             <div style="position: absolute; width: 2px; height: 20px; background: #06C755; left: 16%; top: 20px;"></div>
+             <!-- Right Branch line -->
+             <div style="position: absolute; width: 2px; height: 20px; background: #ef4444; right: 30%; top: 20px;"></div>
+             <!-- Arrow heads -->
+             <div style="position: absolute; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #06C755; left: calc(16% - 5px); top: 40px;"></div>
+             <div style="position: absolute; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #ef4444; right: calc(30% - 5px); top: 40px;"></div>
+          </div>
+
+          <!-- Split Branches -->
+          <div style="display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 1.5rem; width: 100%; margin-top: 8px;">
+            
+            <!-- Left: 5% Success -->
+            <div style="background: rgba(255, 255, 255, 0.8); border-top: 4px solid #06C755; border-radius: 0 0 16px 16px; padding: 1.2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative;">
+              <div style="font-size: 3rem; font-weight: 900; color: rgba(6, 199, 85, 0.15); line-height: 1; font-family: var(--font-display); position: absolute; top: 10px; right: 10px;">5%</div>
+              <div style="font-size: 1rem; font-weight: bold; color: var(--text-primary); margin-bottom: 0.8rem; position: relative; z-index: 2;">今すぐ予約したい<br/><span style="font-size: 1.2em; color: #06C755;">顕在層</span></div>
+              
+              <div style="background: rgba(6, 199, 85, 0.05); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(6, 199, 85, 0.2); position: relative; z-index: 2; padding-bottom: 0.5rem;">
+                <div style="font-size: 0.85rem; line-height: 1.4; color: var(--text-primary); font-weight: bold;">
+                  予約受付窓口として機能。<br/>
+                  無事に来院へ。
+                </div>
+                
+                <!-- Success Animation Graphic (Avatar to Calendar) -->
+                <style>
+                  @keyframes slideToCalendar {
+                    0% { transform: translateX(-30px); opacity: 0; }
+                    20% { opacity: 1; }
+                    80% { transform: translateX(20px); opacity: 1; }
+                    100% { transform: translateX(30px); opacity: 0; }
+                  }
+                  @keyframes pulseCalendar {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.1); color: #06C755; }
+                  }
+                  .avatar-icon {
+                    animation: slideToCalendar 3s infinite;
+                    color: var(--text-primary);
+                  }
+                  .calendar-icon {
+                    animation: pulseCalendar 3s infinite;
+                  }
+                </style>
+                <div style="margin-top: 0.8rem; position: relative; height: 45px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 2px solid rgba(6, 199, 85, 0.2); border-radius: 12px; background: rgba(255,255,255,0.8);">
+                  <div style="display: flex; justify-content: center; align-items: center; width: 100%; position: relative;">
+                    <!-- Avatar moving right -->
+                    <svg class="avatar-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="position: absolute; left: 15%;">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <!-- Small Arrow -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 45%;">
+                      <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                    <!-- Calendar -->
+                    <svg class="calendar-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06C755" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; right: 15%; background: white; z-index: 2;">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: 95% Wasted -->
+            <div style="background: rgba(255, 255, 255, 0.8); border-top: 4px solid #ef4444; border-radius: 0 0 16px 16px; padding: 1.2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative;">
+              <div style="font-size: 3.5rem; font-weight: 900; color: rgba(239, 68, 68, 0.1); line-height: 1; font-family: var(--font-display); position: absolute; top: 10px; right: 10px;">95%</div>
+              <div style="font-size: 1rem; font-weight: bold; color: var(--text-primary); margin-bottom: 0.8rem; position: relative; z-index: 2;">迷っている潜在層<br/>過去の既存顧客</div>
+              
+              <div style="background: rgba(239, 68, 68, 0.05); padding: 1rem; border-radius: 8px; border: 1px dashed rgba(239, 68, 68, 0.4); position: relative; z-index: 2; padding-bottom: 0.5rem;">
+                <div style="font-size: 0.9rem; line-height: 1.5; color: var(--text-primary); font-weight: bold;">
+                  個別対応されず放置。<br/>
+                  <span style="color: #ef4444; display: inline-block; margin-top: 0.5rem; background: rgba(239, 68, 68, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">莫大な広告費が無駄に…</span>
+                </div>
+                
+                <!-- Accumulation Graphic -->
+                <style>
+                  @keyframes dropAndStack {
+                    0% { transform: translateY(-15px); opacity: 0; }
+                    20% { transform: translateY(0); opacity: 1; }
+                    80% { transform: translateY(0); opacity: 1; }
+                    100% { transform: translateY(0); opacity: 0; }
+                  }
+                  .drop-icon {
+                    animation: dropAndStack 4s infinite;
+                  }
+                  .drop-icon:nth-child(1) { animation-delay: 0s; fill: rgba(239, 68, 68, 0.4); }
+                  .drop-icon:nth-child(2) { animation-delay: 1s; fill: rgba(239, 68, 68, 0.6); }
+                  .drop-icon:nth-child(3) { animation-delay: 2s; fill: rgba(239, 68, 68, 0.8); }
+                  .drop-icon:nth-child(4) { animation-delay: 3s; fill: #ef4444; }
+                </style>
+                <div style="margin-top: 1rem; position: relative; height: 50px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; border-bottom: 3px solid rgba(239, 68, 68, 0.3); border-left: 3px solid rgba(239, 68, 68, 0.3); border-right: 3px solid rgba(239, 68, 68, 0.3); border-radius: 0 0 12px 12px; background: rgba(255,255,255,0.5);">
+                  <div style="display: flex; gap: 4px; position: relative; bottom: 4px; justify-content: center; align-items: center; padding: 0 5px;">
+                    <svg class="drop-icon" width="20" height="20" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <svg class="drop-icon" width="20" height="20" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <svg class="drop-icon" width="20" height="20" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <svg class="drop-icon" width="20" height="20" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <div style="font-size: 0.75rem; color: #ef4444; font-weight: bold; margin-left: 4px;">リストだけが毎月蓄積...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Slide 2: Overview -->
     <section class="slide">
 
@@ -528,33 +664,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    
-    </section>
-
-    <!-- Slide 3: Problems -->
-    <section class="slide">
-
-      <div class="brand-mark">Quicka</div>
-      <div class="slide-content container">
-        <h2 class="reveal">クリニックの現状と課題</h2>
-        <div class="card-grid">
-          <div class="card reveal relative">
-            <span class="large-number">01</span>
-            <h3 style="min-height: 3em;">新規CPAの<br/>高騰</h3>
-            <p>現在、美容業界全体で新規の獲得単価（CPA）が異常に高騰し、<span class="highlight">「1人呼ぶのに5〜7万円かかる」</span>状況に。<br/><br/>せっかく集めたLINE登録者を確実に来院まで引き上げる仕組みが急務です。</p>
-          </div>
-          <div class="card reveal relative">
-            <span class="large-number">02</span>
-            <h3 style="min-height: 3em;">顧客リストの<br/>取りこぼし</h3>
-            <p>一度来院された既存患者様や、LINE登録しただけの「今はまだ検討中」という見込み客。<br/><br/>せっかくのリストに対して継続的な関係構築ができず、<span class="highlight">「穴の空いたバケツ」のように機会を損失</span>しています。</p>
-          </div>
-          <div class="card reveal relative">
-            <span class="large-number">03</span>
-            <h3 style="min-height: 3em;">スタッフ様の<br/>業務負担</h3>
-            <p>個別相談の返信や、しばらく来院していない方への追客メッセージ。<br/><br/>これらを「人間のスタッフ」が対応するには<span class="highlight">限界があり、現場の大きな負担</span>となっています。</p>
           </div>
         </div>
       </div>
@@ -707,166 +816,214 @@
     
     </section>
 
-    <!-- Slide: Quicka Revenue Cycle -->
-    <section class="slide">
+    <!-- Slide 6: Quicka AI Flow -->
+    <section class="slide" style="padding: 0;">
+      <div class="brand-mark" style="z-index: 20;">Quicka</div>
+      <div class="slide-content" style="max-width: 100%; padding: 0; position: relative; background: var(--bg-gradient);">
+        
+        <h2 class="reveal" style="text-align: center; margin-bottom: 2rem;">Quickaが生む「自動収益サイクル」</h2>
 
-      <div class="brand-mark">Quicka</div>
-      <div class="slide-content container">
-        <h2 class="reveal">Quickaが生む収益サイクル</h2>
-        <p class="reveal" style="font-size: clamp(0.85rem, 1.1vw, 0.95rem); color: var(--text-secondary); line-height: 1.5; margin-top: -0.5rem; margin-bottom: 2rem;">
-          一度「友だち追加」された患者様を、システムが自動で育成し、リピート・クロスセルへと導きます。
-        </p>
+        <!-- Horizontal Cycle Layout (Premium Glassmorphism) -->
+        <style>
+        .ai-cycle-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 20px;
+            padding: 1.8rem 1.5rem;
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .ai-cycle-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1), inset 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+        .ai-cycle-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(135deg, var(--accent), #b48505);
+            color: white;
+            font-weight: 900;
+            font-size: 0.9rem;
+            padding: 4px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            letter-spacing: 1px;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .ai-cycle-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: white;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .ai-cycle-title {
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+        .ai-cycle-text {
+            font-size: 0.85rem;
+            color: #4b5563;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        .ai-cycle-highlight {
+            color: #b45309;
+            font-weight: 900;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+        .ai-cycle-trigger-box {
+            background: #f9fafb;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-top: 1rem;
+        }
+        .ai-cycle-trigger-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #374151;
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+        }
+        .ai-cycle-trigger-item:last-child {
+            margin-bottom: 0;
+        }
+        .ai-cycle-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(212, 175, 55, 0.6);
+            margin: 0 -0.5rem;
+            z-index: 1;
+        }
+        </style>
 
-
-        <div class="reveal" style="display: grid; grid-template-columns: auto 1fr; gap: clamp(1rem, 2vw, 2rem); align-items: center; width: 100%; max-width: 1100px; margin: -0.5rem auto 0;">
-
-          <!-- LEFT: Features -->
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-
-            <!-- Features Card -->
-            <div style="background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%); border: 1.5px solid rgba(212,175,55,0.25); border-radius: 16px; padding: 1.5rem 1.8rem; box-shadow: 0 4px 16px rgba(0,0,0,0.04); width: max-content;">
-              <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1rem;">🔧 サイクルを支える主要機能</div>
-              
-              <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <div style="display: flex; align-items: center; gap: 0.8rem;">
-                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🤖</div>
-                  <div>
-                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">AI自動応答</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">24時間即レス・画像対応</div>
-                  </div>
+        <div class="tailwind-wrapper reveal" style="position: relative; max-width: 1200px; margin: 0 auto; padding-bottom: 5rem; width: 100%;">
+            
+            <!-- Horizontal Flex Container -->
+            <div style="display: flex; align-items: stretch; position: relative; z-index: 2;">
+                
+                <!-- Step 1 -->
+                <div class="ai-cycle-card">
+                    <div class="ai-cycle-number">STEP 01</div>
+                    <div class="ai-cycle-icon">🧠</div>
+                    <div class="ai-cycle-title">顧客情報の蓄積・記憶</div>
+                    <div class="ai-cycle-text">
+                        日々のLINE相談やカルテ情報をAIが解析。従来の「年齢・性別」だけでなく、<span class="ai-cycle-highlight">「痛みが怖い」「バレたくない」等の心理的特性</span>まで自動で長期記憶します。
+                    </div>
+                    <!-- Added bottom visual to balance height -->
+                    <div style="margin-top: auto; padding-top: 1.5rem;">
+                        <div style="font-size: 0.75rem; color: #6b7280; font-weight: bold; margin-bottom: 0.5rem;">AIが記憶する「患者ごとの文脈」:</div>
+                        <div style="background: rgba(249, 250, 251, 0.8); border: 1px solid rgba(229, 231, 235, 1); border-radius: 8px; padding: 0.6rem; font-size: 0.7rem; color: #4b5563; line-height: 1.6; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);">
+                            <span style="color: #b45309; font-weight: 900; margin-right: 4px;">[推測]</span> 極度に痛みを恐れている<br/>
+                            <span style="color: #3b82f6; font-weight: 900; margin-right: 4px;">[方針]</span> 次回は無痛治療を中心に提案
+                        </div>
+                    </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.8rem;">
-                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🧠</div>
-                  <div>
-                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">長期記憶＆興味プロフィール</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">患者ごとに刺さる提案を蓄積</div>
-                  </div>
+                <div class="ai-cycle-arrow" style="z-index: 3;"><div style="background: white; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(212, 175, 55, 0.3);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></div>
+
+                <!-- Step 2 -->
+                <div class="ai-cycle-card">
+                    <div class="ai-cycle-number">STEP 02</div>
+                    <div class="ai-cycle-icon">⚡</div>
+                    <div class="ai-cycle-title">AI自動検知（トリガー）</div>
+                    <div class="ai-cycle-text">
+                        絶好のアプローチタイミングを24時間監視し、追客を自動発動させます。
+                    </div>
+                    <div class="ai-cycle-trigger-box" style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: auto;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem; color: #ef4444; font-weight: 900; font-size: 0.85rem;"><span style="font-size: 1rem;">🔥</span> 見込み客を逃さない</div>
+                            <div style="color: #4b5563; font-size: 0.75rem; padding-left: 1.4rem; font-weight: bold;">サイト再訪など熱量スコア上昇を即座に検知</div>
+                        </div>
+                        <div style="border-top: 1px dashed rgba(212, 175, 55, 0.4);"></div>
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem; color: #3b82f6; font-weight: 900; font-size: 0.85rem;"><span style="font-size: 1rem;">⏳</span> 休眠客の掘り起こし</div>
+                            <div style="color: #4b5563; font-size: 0.75rem; padding-left: 1.4rem; font-weight: bold;">会話途絶から30日経過した絶妙なタイミング</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.8rem;">
-                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">📊</div>
-                  <div>
-                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">スコアリング＆CRM</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">温度感を可視化・自動ステータス管理</div>
-                  </div>
+                <div class="ai-cycle-arrow" style="z-index: 3;"><div style="background: white; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(212, 175, 55, 0.3);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></div>
+
+                <!-- Step 3 -->
+                <div class="ai-cycle-card">
+                    <div class="ai-cycle-number">STEP 03</div>
+                    <div class="ai-cycle-icon">💬</div>
+                    <div class="ai-cycle-title">究極の1to1配信</div>
+                    <div class="ai-cycle-text">
+                        従来のセグメント配信ではありません。<br/>
+                        <div style="display: flex; justify-content: flex-end; margin: 0.8rem 0;">
+                            <div style="background: #06C755; color: white; padding: 0.6rem 0.8rem; border-radius: 16px 16px 0 16px; font-size: 0.75rem; font-weight: bold; line-height: 1.5; max-width: 95%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative;">
+                                「A様、お仕事の状況はいかがですか？以前『絶対にバレたくない』と仰っていましたが…」
+                                <div style="position: absolute; right: -6px; bottom: 0; width: 0; height: 0; border-left: 10px solid #06C755; border-top: 10px solid transparent;"></div>
+                            </div>
+                        </div>
+                        まるで<span class="ai-cycle-highlight">専任カウンセラーが自然な会話を再開</span>するかのような、圧倒的に人間らしいメッセージを自動生成します。
+                    </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.8rem;">
-                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🔔</div>
-                  <div>
-                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">自動リマインド＆掘り起こし</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">休眠・メンテ時期を自律判断</div>
-                  </div>
+                <div class="ai-cycle-arrow" style="z-index: 3;"><div style="background: white; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(212, 175, 55, 0.3);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></div>
+
+                <!-- Step 4 -->
+                <div class="ai-cycle-card">
+                    <div class="ai-cycle-number">STEP 04</div>
+                    <div class="ai-cycle-icon">🔄</div>
+                    <div class="ai-cycle-title">来院 ＆ アフターフォロー</div>
+                    <div class="ai-cycle-text">
+                        深い理解による提案で【来院】を獲得。さらに来院後もAIが「ダウンタイムはいかがですか？」と自動ケアし、<span class="ai-cycle-highlight">次の施術や定期メンテへ</span>繋げます。
+                    </div>
+                    <!-- Added bottom visual to balance height -->
+                    <div style="margin-top: auto; padding-top: 1.5rem;">
+                        <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.02)); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 8px; padding: 0.8rem; text-align: center; box-shadow: inset 0 2px 4px rgba(255,255,255,0.5);">
+                            <div style="margin-bottom: 0.2rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto;"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                            </div>
+                            <div style="font-size: 0.85rem; font-weight: 900; color: #b45309;">LTV（生涯顧客価値）が<br/>永続的に向上</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.8rem;">
-                  <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">🙋</div>
-                  <div>
-                    <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.2;">有人エスカレーション</div>
-                    <div style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;">重要案件はスタッフへ即時通知</div>
-                  </div>
+            </div>
+
+            <!-- Cycle Return Arrow (Underneath) -->
+            <div style="position: absolute; bottom: 10px; left: 12%; width: 76%; height: 60px; border-bottom: 2px dashed rgba(212, 175, 55, 0.8); border-left: 2px dashed rgba(212, 175, 55, 0.8); border-right: 2px dashed rgba(212, 175, 55, 0.8); border-radius: 0 0 16px 16px; z-index: 1;">
+                <!-- Arrowhead pointing up at the left side -->
+                <div style="position: absolute; top: -14px; left: -14px; color: #b45309; background: #f8f9fa; border-radius: 50%; padding: 2px; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: Cycle Diagram -->
-          <div style="position: relative; width: 100%; aspect-ratio: 2 / 1; max-width: 800px; margin: 0 auto;">
-
-            <!-- SVG Ring & Arrows -->
-            <svg viewBox="0 0 840 420" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible;" fill="none">
-              <defs>
-                <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#d4af37" stop-opacity="0.12"/>
-                  <stop offset="50%" stop-color="#d4af37" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="#d4af37" stop-opacity="0.12"/>
-                </linearGradient>
-                <filter id="ring-glow">
-                  <feGaussianBlur stdDeviation="6" result="blur"/>
-                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-                </filter>
-              </defs>
-
-              <!-- Background orbit circle (Center: 420, 210, Radius: 140) -->
-              <circle cx="420" cy="210" r="140" stroke="url(#ring-grad)" stroke-width="2.5" stroke-dasharray="6 4" filter="url(#ring-glow)"/>
-
-              <!-- Radial Connectors from circle to icons -->
-              <path d="M 420 70 L 420 57" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-              <path d="M 420 350 L 420 363" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-              <path d="M 541 140 L 553 133" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-              <path d="M 541 280 L 553 287" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-              <path d="M 299 280 L 287 287" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-              <path d="M 299 140 L 287 133" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" stroke-dasharray="3 2" />
-            </svg>
-
-            <!-- Center Badge -->
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; text-align: center;">
-              <div style="width: 115px; height: 115px; border-radius: 50%; background: linear-gradient(135deg, #ffffff 0%, #f9fdfa 100%); border: 3px solid #06C755; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 6px 20px rgba(6, 199, 85, 0.18);">
-                <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #06C755; color: white; font-size: 0.55rem; font-weight: 800; padding: 2px 10px; border-radius: 10px; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(6, 199, 85, 0.3);">ENTRY</div>
-                <img src="add-friend-icon.png" alt="友だち追加" style="width: 54px; height: 54px; object-fit: contain; margin-bottom: 2px; margin-top: 6px;">
-                <div style="font-size: 0.75rem; font-weight: 800; color: #06C755; letter-spacing: 0.5px;">友だち追加</div>
-              </div>
+                <!-- Label -->
+                <div style="position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 16px; color: #b45309; font-weight: bold; font-size: 0.85rem; letter-spacing: 0.5px; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    🔄 新たな会話・来院データを自動蓄積し、次のサイクルへ
+                </div>
             </div>
 
-            <!-- Node 1: Top (自動ヒアリング) -->
-            <div style="position: absolute; top: 8.33%; left: 50%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">📝</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">1</div>
-            </div>
-            <div style="position: absolute; top: -3%; left: 50%; transform: translate(-50%, -100%); z-index: 4; text-align: center; min-width: 220px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">自動ヒアリング</div>
-            </div>
-
-            <!-- Node 2: Top Right (スコアリング＆来院) -->
-            <div style="position: absolute; top: 29.16%; left: 68.04%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">📅</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">2</div>
-            </div>
-            <div style="position: absolute; top: 29.16%; left: 74%; transform: translateY(-50%); z-index: 4; text-align: left; min-width: 190px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">スコアリング＆予約</div>
-            </div>
-
-            <!-- Node 3: Bottom Right (来院後フォロー) -->
-            <div style="position: absolute; top: 70.83%; left: 68.04%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">💖</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">3</div>
-            </div>
-            <div style="position: absolute; top: 70.83%; left: 74%; transform: translateY(-50%); z-index: 4; text-align: left; min-width: 190px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">来院後フォロー</div>
-            </div>
-
-            <!-- Node 4: Bottom (定期メンテ案内) -->
-            <div style="position: absolute; top: 91.66%; left: 50%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🔄</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">4</div>
-            </div>
-            <div style="position: absolute; top: 103%; left: 50%; transform: translateX(-50%); z-index: 4; text-align: center; min-width: 220px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">定期メンテ案内</div>
-            </div>
-
-            <!-- Node 5: Bottom Left (休眠掘り起こし) -->
-            <div style="position: absolute; top: 70.83%; left: 31.96%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🎁</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">5</div>
-            </div>
-            <div style="position: absolute; top: 70.83%; left: 26%; transform: translate(-100%, -50%); z-index: 4; text-align: right; min-width: 190px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">休眠掘り起こし</div>
-            </div>
-
-            <!-- Node 6: Top Left (クロスセル提案) -->
-            <div style="position: absolute; top: 29.16%; left: 31.96%; transform: translate(-50%, -50%); z-index: 5;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: white; border: 2.5px solid #d4af37; box-shadow: 0 4px 12px rgba(212,175,55,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">🏆</div>
-              <div style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #e8c84a); color: white; font-size: 0.6rem; font-weight: bold; display: flex; align-items: center; justify-content: center; border: 2px solid white;">6</div>
-            </div>
-            <div style="position: absolute; top: 29.16%; left: 26%; transform: translate(-100%, -50%); z-index: 4; text-align: right; min-width: 190px;">
-              <div style="font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1.2;">クロスセル提案</div>
-            </div>
-
-          </div>
         </div>
       </div>
-    
     </section>
 
     <!-- Slide: チャンスを逃さないAI (Live Demo) -->
