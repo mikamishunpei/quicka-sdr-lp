@@ -1027,33 +1027,32 @@
     </section>
 
     <!-- Slide: Competitor Comparison -->
-    <section class="slide">
+    <section class="slide" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
       <div class="brand-mark">Quicka</div>
-      <div class="slide-content container">
-        <h2 class="reveal" style="margin-bottom: 0.5rem;">競合・代替手段との比較</h2>
-        <p class="reveal" style="font-size: clamp(0.95rem, 1.2vw, 1.1rem); color: var(--text-secondary); line-height: 1.6; margin-bottom: 3rem; text-align: center;">
+      <div class="slide-content container" style="max-height: 100%; display: flex; flex-direction: column;">
+        <h2 class="reveal" style="margin-bottom: 0.2rem; margin-top: 0;">競合・代替手段との比較</h2>
+        <p class="reveal" style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: var(--text-secondary); line-height: 1.4; margin-bottom: 1rem; text-align: center;">
           患者様に寄り添う「1to1のパーソナライズ対応」を実現するための、現実的なコスト比較です。
         </p>
 
-        <div class="reveal" style="padding-bottom: 1rem; width: 100%; max-width: 1000px; margin: 0 auto;">
+        <div class="reveal" style="width: 100%; max-width: 1000px; margin: 0 auto; overflow: hidden;">
           <style>
             .compare-table {
               width: 100%;
               border-collapse: separate;
               border-spacing: 0;
               background: white;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+              border-radius: 12px;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.06);
               border: 1px solid rgba(0,0,0,0.08);
             }
             .compare-table th, .compare-table td {
-              padding: 1.6rem 1.2rem;
+              padding: 0.7rem 0.8rem;
               text-align: center;
               border-bottom: 1px solid rgba(0,0,0,0.06);
               border-right: 1px solid rgba(0,0,0,0.06);
-              font-size: 1rem;
-              line-height: 1.5;
+              font-size: 0.85rem;
+              line-height: 1.3;
             }
             .compare-table th:last-child, .compare-table td:last-child {
               border-right: none;
@@ -1065,7 +1064,7 @@
               background: #f8fafc;
               font-weight: 800;
               color: var(--text-primary);
-              font-size: 1.1rem;
+              font-size: 0.9rem;
               vertical-align: middle;
             }
             .compare-table tbody th {
@@ -1073,7 +1072,8 @@
               font-weight: 800;
               text-align: left;
               color: var(--text-secondary);
-              padding-left: 2rem;
+              padding-left: 1.5rem;
+              width: 18%;
             }
             .col-quicka {
               background: rgba(212, 175, 55, 0.04) !important;
@@ -1082,43 +1082,43 @@
             .col-quicka-header {
               background: linear-gradient(135deg, var(--accent), #b48505) !important;
               color: white !important;
-              box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+              box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
               position: relative;
               z-index: 2;
-              border-radius: 0 20px 0 0;
+              border-radius: 0 12px 0 0;
             }
             .cell-highlight {
               color: #ef4444;
               font-weight: bold;
-              font-size: 1.1rem;
+              font-size: 0.95rem;
             }
             .quicka-highlight {
               color: #b45309;
               font-weight: 900;
-              font-size: 1.3rem;
+              font-size: 1.1rem;
             }
             .sub-text {
-              font-size: 0.8rem;
+              font-size: 0.7rem;
               color: #64748b;
               display: block;
-              margin-top: 0.3rem;
+              margin-top: 0.1rem;
               font-weight: normal;
             }
             .quicka-sub-text {
-              font-size: 0.85rem;
+              font-size: 0.75rem;
               color: #b45309;
               display: block;
-              margin-top: 0.3rem;
+              margin-top: 0.1rem;
               font-weight: bold;
             }
           </style>
           <table class="compare-table">
             <thead>
               <tr>
-                <th style="width: 25%;">比較ポイント</th>
-                <th style="width: 25%;">① 人力<br/><span class="sub-text">（専任カウンセラー）</span></th>
-                <th style="width: 25%;">② LINE運用代行<br/><span class="sub-text">（1to1フルサポート）</span></th>
-                <th style="width: 25%;" class="col-quicka-header"><span style="font-size: 1.3em;">✨ Quicka</span><br/><span style="font-size: 0.8rem; color: rgba(255,255,255,0.9); font-weight: normal;">（AIコンシェルジュ）</span></th>
+                <th>比較ポイント</th>
+                <th style="width: 27%;">① 人力<br/><span class="sub-text">（専任カウンセラー）</span></th>
+                <th style="width: 27%;">② LINE運用代行<br/><span class="sub-text">（1to1フルサポート）</span></th>
+                <th style="width: 28%;" class="col-quicka-header"><span style="font-size: 1.1em;">✨ Quicka</span><br/><span style="font-size: 0.7rem; color: rgba(255,255,255,0.9); font-weight: normal;">（AIコンシェルジュ）</span></th>
               </tr>
             </thead>
             <tbody>
@@ -1126,7 +1126,7 @@
                 <th>初期費用</th>
                 <td>50万円〜<span class="sub-text">（採用・教育費）</span></td>
                 <td>30万円〜100万円<span class="sub-text">（初期構築費）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.5rem;">0円</div><span class="quicka-sub-text">（完全無料導入）</span></td>
+                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.2rem;">0円</div><span class="quicka-sub-text">（完全無料導入）</span></td>
               </tr>
               <tr>
                 <th>月額費用</th>
@@ -1148,15 +1148,16 @@
               </tr>
               <tr>
                 <th>導入リスク</th>
-                <td><span style="color:#ef4444; font-weight:bold; font-size: 1.1rem;">高</span><span class="sub-text">（採用難・教育の手間）</span></td>
-                <td><span style="color:#ef4444; font-weight:bold; font-size: 1.1rem;">高</span><span class="sub-text">（費用対効果が不明瞭）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.3rem;">ゼロ</div><span class="quicka-sub-text">（即日稼働）</span></td>
+                <td><span style="color:#ef4444; font-weight:bold; font-size: 0.95rem;">高</span><span class="sub-text">（採用難・教育の手間）</span></td>
+                <td><span style="color:#ef4444; font-weight:bold; font-size: 0.95rem;">高</span><span class="sub-text">（費用対効果が不明瞭）</span></td>
+                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.1rem;">ゼロ</div><span class="quicka-sub-text">（即日稼働）</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
+
 
 
 
