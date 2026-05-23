@@ -1027,15 +1027,15 @@
     </section>
 
     <!-- Slide: Competitor Comparison -->
-    <section class="slide" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
-      <div class="brand-mark">Quicka</div>
-      <div class="slide-content container" style="max-height: 100%; display: flex; flex-direction: column;">
-        <h2 class="reveal" style="margin-bottom: 0.2rem; margin-top: 0;">競合・代替手段との比較</h2>
-        <p class="reveal" style="font-size: clamp(0.8rem, 1vw, 0.9rem); color: var(--text-secondary); line-height: 1.4; margin-bottom: 1rem; text-align: center;">
-          患者様に寄り添う「1to1のパーソナライズ対応」を実現するための、現実的なコスト比較です。
+    <section class="slide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; padding: 0 2rem;">
+      <div class="brand-mark" style="top: 1rem;">Quicka</div>
+      <div class="slide-content container" style="max-height: 100%; display: flex; flex-direction: column; justify-content: center; padding-top: 1rem; width: 100%;">
+        <h2 class="reveal" style="margin-bottom: 0.2rem; margin-top: 0; font-size: clamp(1.4rem, 2vw, 1.8rem);">競合・代替手段との比較</h2>
+        <p class="reveal" style="font-size: clamp(0.7rem, 0.9vw, 0.85rem); color: var(--text-secondary); line-height: 1.2; margin-bottom: 0.5rem; text-align: center;">
+          患者様に寄り添う「1to1対応」を実現するための現実的なコスト比較です。
         </p>
 
-        <div class="reveal" style="width: 100%; max-width: 1000px; margin: 0 auto; overflow: hidden;">
+        <div class="reveal" style="width: 100%; max-width: 1000px; margin: 0 auto;">
           <style>
             .compare-table {
               width: 100%;
@@ -1045,14 +1045,16 @@
               border-radius: 12px;
               box-shadow: 0 10px 30px rgba(0,0,0,0.06);
               border: 1px solid rgba(0,0,0,0.08);
+              table-layout: fixed;
             }
             .compare-table th, .compare-table td {
-              padding: 0.7rem 0.8rem;
+              padding: 0.5rem 0.5rem;
               text-align: center;
               border-bottom: 1px solid rgba(0,0,0,0.06);
               border-right: 1px solid rgba(0,0,0,0.06);
-              font-size: 0.85rem;
-              line-height: 1.3;
+              font-size: 0.8rem;
+              line-height: 1.2;
+              vertical-align: middle;
             }
             .compare-table th:last-child, .compare-table td:last-child {
               border-right: none;
@@ -1064,16 +1066,14 @@
               background: #f8fafc;
               font-weight: 800;
               color: var(--text-primary);
-              font-size: 0.9rem;
-              vertical-align: middle;
+              font-size: 0.85rem;
             }
             .compare-table tbody th {
               background: #f8fafc;
               font-weight: 800;
               text-align: left;
               color: var(--text-secondary);
-              padding-left: 1.5rem;
-              width: 18%;
+              padding-left: 1rem;
             }
             .col-quicka {
               background: rgba(212, 175, 55, 0.04) !important;
@@ -1090,73 +1090,72 @@
             .cell-highlight {
               color: #ef4444;
               font-weight: bold;
-              font-size: 0.95rem;
+              font-size: 0.85rem;
             }
             .quicka-highlight {
               color: #b45309;
               font-weight: 900;
-              font-size: 1.1rem;
+              font-size: 1rem;
             }
             .sub-text {
-              font-size: 0.7rem;
+              font-size: 0.65rem;
               color: #64748b;
-              display: block;
-              margin-top: 0.1rem;
               font-weight: normal;
+              margin-left: 0.2rem;
             }
             .quicka-sub-text {
-              font-size: 0.75rem;
+              font-size: 0.7rem;
               color: #b45309;
-              display: block;
-              margin-top: 0.1rem;
               font-weight: bold;
+              margin-left: 0.2rem;
             }
           </style>
           <table class="compare-table">
             <thead>
               <tr>
-                <th>比較ポイント</th>
-                <th style="width: 27%;">① 人力<br/><span class="sub-text">（専任カウンセラー）</span></th>
-                <th style="width: 27%;">② LINE運用代行<br/><span class="sub-text">（1to1フルサポート）</span></th>
-                <th style="width: 28%;" class="col-quicka-header"><span style="font-size: 1.1em;">✨ Quicka</span><br/><span style="font-size: 0.7rem; color: rgba(255,255,255,0.9); font-weight: normal;">（AIコンシェルジュ）</span></th>
+                <th style="width: 18%;">比較ポイント</th>
+                <th style="width: 26%;">① 人力 <span class="sub-text">(専任)</span></th>
+                <th style="width: 28%;">② LINE運用代行 <span class="sub-text">(1to1委託)</span></th>
+                <th style="width: 28%;" class="col-quicka-header"><span style="font-size: 1.1em;">✨ Quicka</span> <span style="font-size: 0.65rem; color: rgba(255,255,255,0.9); font-weight: normal;">(AIコンシェルジュ)</span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th>初期費用</th>
-                <td>50万円〜<span class="sub-text">（採用・教育費）</span></td>
-                <td>30万円〜100万円<span class="sub-text">（初期構築費）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.2rem;">0円</div><span class="quicka-sub-text">（完全無料導入）</span></td>
+                <td>50万円〜 <span class="sub-text">(採用費等)</span></td>
+                <td>30万〜100万円 <span class="sub-text">(構築費)</span></td>
+                <td class="col-quicka"><span class="quicka-highlight" style="font-size: 1.1rem;">0円</span> <span class="quicka-sub-text">(完全無料)</span></td>
               </tr>
               <tr>
                 <th>月額費用</th>
-                <td><div class="cell-highlight">20万円〜30万円</div><span class="sub-text">（給与＋社保）</span></td>
-                <td><div class="cell-highlight">50万円〜100万円以上</div><span class="sub-text">（有人チャット委託）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight">15万円</div><span class="quicka-sub-text">（システム利用料のみ）</span></td>
+                <td><span class="cell-highlight">20万〜30万円</span> <span class="sub-text">(給与等)</span></td>
+                <td><span class="cell-highlight">50万〜100万円上</span> <span class="sub-text">(外注費)</span></td>
+                <td class="col-quicka"><span class="quicka-highlight">15万円</span> <span class="quicka-sub-text">(システム料のみ)</span></td>
               </tr>
               <tr>
                 <th>対応スピード</th>
-                <td>営業時間内のみ<span class="sub-text">（夜間は対応不可）</span></td>
-                <td>営業時間内・遅延あり<span class="sub-text">（オペレーター次第）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight">1秒（24時間対応）</div><span class="quicka-sub-text">（夜間・休日も逃さない）</span></td>
+                <td>営業時間内 <span class="sub-text">(夜間不可)</span></td>
+                <td>遅延あり <span class="sub-text">(人間次第)</span></td>
+                <td class="col-quicka"><span class="quicka-highlight">1秒</span> <span class="quicka-sub-text">(24時間・即レス)</span></td>
               </tr>
               <tr>
                 <th>休眠掘り起こし</th>
-                <td>物理的に不可能<span class="sub-text">（一斉送信が限界）</span></td>
-                <td>画一的な一斉配信<span class="sub-text">（ブロック率上昇）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight">個別トークを自動再開</div><span class="quicka-sub-text">（パーソナライズ配信）</span></td>
+                <td>不可能 <span class="sub-text">(一斉送信のみ)</span></td>
+                <td>一斉配信 <span class="sub-text">(ブロック増)</span></td>
+                <td class="col-quicka"><span class="quicka-highlight">個別トーク再開</span> <span class="quicka-sub-text">(自動)</span></td>
               </tr>
               <tr>
                 <th>導入リスク</th>
-                <td><span style="color:#ef4444; font-weight:bold; font-size: 0.95rem;">高</span><span class="sub-text">（採用難・教育の手間）</span></td>
-                <td><span style="color:#ef4444; font-weight:bold; font-size: 0.95rem;">高</span><span class="sub-text">（費用対効果が不明瞭）</span></td>
-                <td class="col-quicka"><div class="quicka-highlight" style="font-size: 1.1rem;">ゼロ</div><span class="quicka-sub-text">（即日稼働）</span></td>
+                <td><span style="color:#ef4444; font-weight:bold;">高</span> <span class="sub-text">(採用難・教育)</span></td>
+                <td><span style="color:#ef4444; font-weight:bold;">高</span> <span class="sub-text">(費用対効果不明)</span></td>
+                <td class="col-quicka"><span class="quicka-highlight">ゼロ</span> <span class="quicka-sub-text">(即日稼働)</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
+
 
 
 
