@@ -4,7 +4,7 @@ import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
 import { cn } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
-import { Briefcase, CheckCheck, Database, Server, Plus } from "lucide-react";
+import { Briefcase, CheckCheck, Database, Server, Plus, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
@@ -21,22 +21,22 @@ const plans = [
     features: [
       { text: "自然流入へのAI即レス (無制限)", icon: <CheckCheck size={20} /> },
       { text: "AI営業マンの育成 (RAG学習)", icon: <Server size={20} /> },
-      { text: "パーソナライズ動画の即時合成", icon: <Database size={20} /> },
+      { text: "専用ダッシュボード / CRM機能", icon: <Database size={20} /> },
     ],
     includes: [
       "月額基本料金に含まれるもの:",
-      "専用ダッシュボード / CRM機能",
+      "パーソナライズ動画の即時合成",
       "自社データ解析・タグ自動生成",
       "導入までのオンボーディング支援",
     ],
   },
   {
-    name: "ハイブリッド・スタンダード",
-    description: "守りの即レスに加え、攻めの新規開拓も完全にAIに任せたい企業様へ",
+    name: "ハイブリッド (送信成功課金)",
+    description: "守りの即レスに加え、攻めの新規開拓も自動化したい企業様へ",
     price: 150000,
     yearlyPrice: 150000,
     priceLabel: "〜 (初月)",
-    subPriceText: "内訳: 月額 3万円 ＋ クレジット 12万円",
+    subPriceText: "内訳: 月額3万円 ＋ クレジット12万円",
     buttonText: "一番人気のプランで始める",
     buttonVariant: "default" as const,
     popular: true,
@@ -54,24 +54,26 @@ const plans = [
     ],
   },
   {
-    name: "ハイブリッド・グロース",
-    description: "毎月大量の新規リードを獲得し、一気に売上を拡大したい企業様へ",
-    price: 330000,
-    yearlyPrice: 330000,
-    priceLabel: "〜 (初月)",
-    subPriceText: "内訳: 月額 3万円 ＋ クレジット 30万円",
-    buttonText: "このプランで始める",
+    name: "完全成果報酬 (アポ獲得課金)",
+    description: "アポが取れるまで費用ゼロ。ノーリスクで新規開拓を始めたい企業様へ",
+    price: 150000,
+    yearlyPrice: 150000,
+    displayPrice: "15,000",
+    priceLabel: "/ 1アポ",
+    subPriceText: "※初期構築費として別途5万円",
+    buttonText: "テスト枠の空きを確認する",
     buttonVariant: "outline" as const,
+    isPerformanceBased: true,
     features: [
-      { text: "インバウンド特化の全機能", icon: <CheckCheck size={20} /> },
-      { text: "新規開拓 10,000クレジット付与", icon: <Briefcase size={20} /> },
-      { text: "送信成功分のみ消費・無期限繰越", icon: <Server size={20} /> },
+      { text: "アポ獲得時のみ自動決済 (Stripe)", icon: <Zap size={20} /> },
+      { text: "インバウンド特化の全機能込み", icon: <CheckCheck size={20} /> },
+      { text: "送信数無制限 (システムが自動調整)", icon: <Briefcase size={20} /> },
     ],
     includes: [
-      "スタンダードの全機能に加え:",
-      "業界特化テンプレートの独自開発",
-      "専任コンサルタントによる改善提案",
-      "エンタープライズ級のAPI利用枠",
+      "成果報酬プランの適用条件:",
+      "専用カレンダー経由のアポのみ対象",
+      "クレジットカードの事前登録必須",
+      "※月間テスト枠に上限があります",
     ],
   },
 ];
@@ -109,7 +111,7 @@ const PricingSwitch = ({
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             />
           )}
-          <span className="relative">月額定額 ＋ クレジット制</span>
+          <span className="relative">テストマーケティング特別プラン</span>
         </button>
       </div>
     </div>
@@ -153,7 +155,7 @@ export const Pricing = () => {
             staggerDuration={0.1}
             textClassName="justify-center text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black"
           >
-            守りと攻めのハイブリッド課金
+            リスクゼロのAI営業導入
           </VerticalCutReveal>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -162,8 +164,8 @@ export const Pricing = () => {
             transition={{ delay: 0.3 }}
             className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            自然流入への即レス（守り）は<strong className="text-gray-900">月額固定</strong>で無制限に対応。<br className="hidden md:block" />
-            新規開拓（攻め）は、送信が成功した分だけを消費する<strong className="text-gray-900">買い切りクレジット</strong>でノーリスクに自動化します。
+            お客様の導入ハードルを極限まで下げるため、3つのアプローチをご用意しました。<br className="hidden md:block" />
+            特に「アポ獲得ごとの完全成果報酬プラン」は、パイロット期間のみの特別枠となります。
           </motion.p>
           <PricingSwitch onSwitch={(v) => setIsYearly(v === "1")} />
         </div>
@@ -186,7 +188,9 @@ export const Pricing = () => {
                   "relative flex flex-col h-full overflow-hidden transition-all duration-300",
                   plan.popular
                     ? "border-orange-500 shadow-xl shadow-orange-500/10 scale-105 z-10"
-                    : "border-gray-200 hover:border-gray-300 hover:shadow-lg mt-0 lg:mt-4"
+                    : plan.isPerformanceBased 
+                      ? "border-blue-300 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 mt-0 lg:mt-4" 
+                      : "border-gray-200 hover:border-gray-300 hover:shadow-lg mt-0 lg:mt-4"
                 )}
               >
                 {plan.popular && (
@@ -194,7 +198,12 @@ export const Pricing = () => {
                     圧倒的推奨
                   </div>
                 )}
-                <CardHeader className={cn("text-center pb-6 border-b border-gray-100", plan.popular ? "pt-12" : "pt-8")}>
+                {plan.isPerformanceBased && !plan.popular && (
+                  <div className="absolute top-0 right-0 left-0 bg-blue-500 text-white text-center text-sm font-semibold py-1">
+                    最強のオファー
+                  </div>
+                )}
+                <CardHeader className={cn("text-center pb-6 border-b border-gray-100", plan.popular || plan.isPerformanceBased ? "pt-12" : "pt-8")}>
                   <h3 className="text-xl font-bold mb-3">{plan.name}</h3>
                   <p className="text-gray-500 text-sm h-10 px-2 leading-relaxed">{plan.description}</p>
                   
@@ -202,14 +211,20 @@ export const Pricing = () => {
                     <div className="flex items-end justify-center gap-1 mb-1">
                       <span className="text-gray-500 font-semibold mb-2">¥</span>
                       <span className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-                        <NumberFlow
-                          value={isYearly ? plan.yearlyPrice : plan.price}
-                          format={{ style: "decimal" }}
-                        />
+                        {plan.displayPrice ? (
+                          plan.displayPrice
+                        ) : (
+                          <NumberFlow
+                            value={isYearly ? plan.yearlyPrice : plan.price}
+                            format={{ style: "decimal" }}
+                          />
+                        )}
                       </span>
                       <span className="text-gray-500 font-medium mb-2 ml-1 whitespace-nowrap">{plan.priceLabel}</span>
                     </div>
-                    <p className="text-xs font-medium text-orange-600 bg-orange-50 inline-block px-3 py-1 rounded-full mt-2">
+                    <p className={cn("text-xs font-medium inline-block px-3 py-1 rounded-full mt-2", 
+                      plan.isPerformanceBased ? "text-blue-700 bg-blue-50" : "text-orange-600 bg-orange-50"
+                    )}>
                       {plan.subPriceText}
                     </p>
                   </div>
@@ -219,7 +234,7 @@ export const Pricing = () => {
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className={cn("flex-shrink-0", i === 0 ? "text-green-500" : "text-orange-500")}>
+                        <div className={cn("flex-shrink-0", plan.isPerformanceBased ? "text-blue-500" : (i === 0 ? "text-green-500" : "text-orange-500"))}>
                           {feature.icon}
                         </div>
                         <span className="text-gray-800 font-medium">{feature.text}</span>
@@ -254,7 +269,9 @@ export const Pricing = () => {
                         "w-full py-4 rounded-xl font-bold transition-all duration-200 shadow-sm",
                         plan.buttonVariant === "default"
                           ? "bg-gray-900 text-white hover:bg-black hover:shadow-md"
-                          : "bg-white text-gray-900 border border-gray-200 hover:border-gray-400 hover:bg-gray-50"
+                          : plan.isPerformanceBased
+                            ? "bg-blue-50 text-blue-700 border-2 border-blue-200 hover:bg-blue-500 hover:text-white"
+                            : "bg-white text-gray-900 border border-gray-200 hover:border-gray-400 hover:bg-gray-50"
                       )}
                     >
                       {plan.buttonText}
