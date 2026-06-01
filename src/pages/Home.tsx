@@ -4,7 +4,7 @@ import { SolutionSection } from '@/components/ui/solution';
 import { HowItWorksSection } from '@/components/ui/feature';
 
 import { ComparisonSection } from '@/components/ui/comparison';
-import { PricingSection } from '@/components/ui/pricing';
+import PricingSection from '@/components/PricingSection';
 import { FinalCTA, Footer } from '@/components/ui/cta';
 
 function Home() {
