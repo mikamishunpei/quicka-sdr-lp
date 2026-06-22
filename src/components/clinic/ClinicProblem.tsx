@@ -103,8 +103,8 @@ export function ClinicProblem() {
             <div className="flex-1 relative w-full aspect-square lg:aspect-[4/5] max-w-lg mx-auto lg:max-w-none">
               <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border border-gray-700 rotate-2 hover:rotate-0 transition-transform duration-500 bg-gray-800">
                 <img 
-                  src="/clinic-show-window.png" 
-                  alt="比較サイトでの値引き合戦の様子" 
+                  src="/presentations/clinic/illustration_staff.png" 
+                  alt="目の前の業務とLINE対応に追われるスタッフ" 
                   className="absolute inset-0 w-full h-full object-cover object-center" 
                 />
               </div>
