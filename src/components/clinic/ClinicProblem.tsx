@@ -101,24 +101,13 @@ export function ClinicProblem() {
             
             {/* Right content (Illustration) */}
             <div className="flex-1 relative w-full aspect-square lg:aspect-[4/5] max-w-lg mx-auto lg:max-w-none">
-              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border border-gray-700 rotate-2 hover:rotate-0 transition-transform duration-500 bg-gray-800 flex flex-col items-center justify-center p-6 lg:p-10">
-                <div className="w-full rounded-2xl overflow-hidden border border-gray-600 shadow-2xl relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent z-10 pointer-events-none"></div>
-                  <img 
-                    src="/clinic-staff-vertical.png" 
-                    alt="目の前の業務とLINE対応に追われるスタッフ" 
-                    className="w-full h-auto object-cover relative z-0" 
-                  />
-                </div>
-                <div className="mt-8 lg:mt-10 text-center">
-                  <div className="inline-flex items-center justify-center gap-2 bg-red-500/10 border border-red-500/20 text-red-400 font-bold px-4 py-1.5 rounded-full text-sm mb-4">
-                    <AlertCircle className="w-4 h-4" />
-                    「人力対応」の限界
-                  </div>
-                  <p className="text-gray-300 text-sm lg:text-base font-bold leading-relaxed">
-                    日々の業務とLINE対応の両立は<br />人間のスタッフでは物理的に不可能です
-                  </p>
-                </div>
+              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border border-gray-700 rotate-2 hover:rotate-0 transition-transform duration-500 bg-gray-800">
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent z-10 pointer-events-none"></div>
+                <img 
+                  src="/clinic-staff-vertical.png" 
+                  alt="目の前の業務とLINE対応に追われるスタッフ" 
+                  className="absolute inset-0 w-full h-full object-cover object-center relative z-0" 
+                />
               </div>
             </div>
           </div>
