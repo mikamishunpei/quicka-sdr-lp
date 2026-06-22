@@ -12,17 +12,20 @@ export function ClinicHero() {
         transition={{ duration: 0.5 }}
         className="text-left"
       >
-        <p className="text-brand-gold font-bold tracking-widest text-sm mb-6 uppercase">
-          美容クリニック特化型 AIコンシェルジュ
-        </p>
-        <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-black text-gray-900 tracking-tight leading-[1.2] mb-8">
-          完全手離れで「予約」を増やす<br />
-          <span className="text-brand-gold">御院専属のAIコンシェルジュ。</span>
+        <h1 className="text-5xl md:text-[5.5rem] font-black text-gray-900 tracking-tighter leading-[1.1] mb-8">
+          御院専属の<br />
+          <span className="text-brand-gold">AIコンシェルジュ。</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-bold">
-          深夜2時のお問い合わせにも即時対応。<br />
-          ホームページからの離脱を防ぎ、確実な予約へと導きます。
-        </p>
+        
+        <div className="mb-12">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-4 border-b border-gray-300 inline-block">
+            完全手離れで「予約」を増やす
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 leading-[1.7] font-bold">
+            深夜2時のお問い合わせにも即時対応。<br />
+            ホームページからの離脱を防ぎ、確実な予約へと導きます。
+          </p>
+        </div>
         
         <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
           <a href="/contact" className="bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors flex items-center gap-2">
