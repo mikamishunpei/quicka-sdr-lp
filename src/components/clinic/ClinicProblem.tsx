@@ -44,8 +44,7 @@ export function ClinicProblem() {
             LINE運用の現状と課題
           </p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
-            せっかく集めたLINEリスト、<br />
-            「宝の持ち腐れ」になっていませんか？
+            LINE運用を見直しませんか？
           </h2>
         </motion.div>
 
@@ -61,10 +60,10 @@ export function ClinicProblem() {
             <div className="flex-1 flex flex-col justify-center relative z-10 w-full">
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-bold mb-10">
                 <p>
-                  目の前の業務で手一杯になり、<br className="hidden xl:block" />集客の要であるLINE運用が疎かになっていませんか？
+                  「公式LINEへの誘導」は行っているが、<br className="hidden xl:block" />肝心なLINE内での接客・追客の仕組みが整備されておらず、
                 </p>
                 <p className="text-white text-xl leading-relaxed">
-                  定型文の自動応答と一斉配信だけの運用では、<br className="hidden xl:block" /><span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block mt-1 xl:mt-2">せっかくお金をかけて集めた友達リストを来院に繋げられません。</span>
+                  <span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block">せっかく集めた友達リストを来院に繋げられていない。</span>
                 </p>
               </div>
 
