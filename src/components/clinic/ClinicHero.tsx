@@ -16,8 +16,8 @@ export function ClinicHero() {
           美容クリニック特化型 AIコンシェルジュ
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-black text-gray-900 tracking-tight leading-[1.2] mb-8">
-          御院専属の、<br />
-          <span className="text-brand-gold">AIコンシェルジュ。</span>
+          完全手離れで「予約」を増やす<br />
+          <span className="text-brand-gold">御院専属のAIコンシェルジュ。</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed font-bold">
           深夜2時のお問い合わせにも即時対応。<br />
