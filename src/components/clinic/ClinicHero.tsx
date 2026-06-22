@@ -5,7 +5,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function ClinicHero() {
   return (
-    <div className="flex-1 max-w-7xl mx-auto px-6 pt-20 pb-24 relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <div className="flex-1 max-w-7xl mx-auto px-6 pt-20 pb-24 relative z-10 grid lg:grid-cols-[1.2fr_0.8fr] xl:grid-cols-[1.35fr_0.65fr] gap-12 lg:gap-8 items-center">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -15,7 +15,7 @@ export function ClinicHero() {
         <p className="text-brand-gold font-bold tracking-widest text-sm mb-6 uppercase">
           美容クリニック特化型 AIコンシェルジュ
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.3] md:leading-[1.2] mb-8">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.3] md:leading-[1.2] mb-8 whitespace-nowrap tracking-tighter">
           完全手離れで「予約」を増やす<br />
           御院専属の<span className="text-brand-gold">AIコンシェルジュ。</span>
         </h1>
