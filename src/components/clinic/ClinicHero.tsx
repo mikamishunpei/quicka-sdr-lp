@@ -20,9 +20,25 @@ export function ClinicHero() {
           御院専属の<span className="text-brand-gold">AIコンシェルジュ。</span>
         </h1>
         
-        <div className="mb-12 border-t-2 border-gray-100 pt-6">
-          <p className="text-lg md:text-xl text-gray-600 leading-[1.7] font-bold">
-            御院の全知識を兼ね備えたLINE運用担当者です。
+        <div className="mb-12 border-t-2 border-gray-100 pt-6 max-w-[500px]">
+          <ul className="space-y-3 mb-6">
+            {[
+              "休眠リストへの定期アプローチ",
+              "深夜・休日の予約・問合せ対応",
+              "来院後の丁寧なフォローアップ"
+            ].map((item, i) => (
+              <li key={i} className="flex items-center gap-3 text-lg md:text-[1.15rem] font-bold text-gray-800">
+                <div className="flex items-center justify-center w-5 h-5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold shrink-0">
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="text-base md:text-[1.05rem] text-gray-600 leading-relaxed font-bold">
+            この3つの業務を完全に自動化。スタッフの手を一切煩わせることなく確実な予約へと導く、御院の全知識を兼ね備えたLINE運用担当者です。
           </p>
         </div>
         
