@@ -12,15 +12,17 @@ export function ClinicHero() {
         transition={{ duration: 0.5 }}
         className="text-left"
       >
-        <h1 className="text-5xl md:text-[5.5rem] font-black text-gray-900 tracking-tighter leading-[1.1] mb-8">
-          御院専属の<br />
-          <span className="text-brand-gold">AIコンシェルジュ。</span>
+        <h1 className="font-black text-gray-900 tracking-tight mb-8">
+          <span className="block text-2xl md:text-3xl lg:text-[2.2rem] mb-4 text-gray-800 leading-snug">
+            完全手離れで「予約」を増やす
+          </span>
+          <span className="block text-5xl md:text-[5rem] lg:text-[5.5rem] leading-[1.1] tracking-tighter">
+            御院専属の<br />
+            <span className="text-brand-gold">AIコンシェルジュ。</span>
+          </span>
         </h1>
         
-        <div className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 pb-4 border-b border-gray-300 inline-block">
-            完全手離れで「予約」を増やす
-          </h2>
+        <div className="mb-12 border-t-2 border-gray-100 pt-6">
           <p className="text-lg md:text-xl text-gray-600 leading-[1.7] font-bold">
             深夜2時のお問い合わせにも即時対応。<br />
             ホームページからの離脱を防ぎ、確実な予約へと導きます。
