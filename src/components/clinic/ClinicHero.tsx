@@ -12,14 +12,12 @@ export function ClinicHero() {
         transition={{ duration: 0.5 }}
         className="text-left"
       >
-        <h1 className="font-black text-gray-900 tracking-tight mb-8">
-          <span className="block text-2xl md:text-3xl lg:text-[2.2rem] mb-4 text-gray-800 leading-snug">
-            完全手離れで「予約」を増やす
-          </span>
-          <span className="block text-5xl md:text-[5rem] lg:text-[5.5rem] leading-[1.1] tracking-tighter">
-            御院専属の<br />
-            <span className="text-brand-gold">AIコンシェルジュ。</span>
-          </span>
+        <p className="text-brand-gold font-bold tracking-widest text-sm mb-6 uppercase">
+          美容クリニック特化型 AIコンシェルジュ
+        </p>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.3] md:leading-[1.2] mb-8">
+          完全手離れで「予約」を増やす<br />
+          御院専属の<span className="text-brand-gold">AIコンシェルジュ。</span>
         </h1>
         
         <div className="mb-12 border-t-2 border-gray-100 pt-6">
