@@ -44,8 +44,8 @@ export function ClinicProblem() {
             LINE運用の現状と課題
           </p>
           <h2 className="text-3xl md:text-[2.5rem] lg:text-[2.8rem] xl:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
-            目の前の業務で手一杯で、<br />
-            集客の要であるLINEが疎かになっていませんか？
+            日々の業務に追われ、<br />
+            LINE対応が疎かになっていませんか？
           </h2>
         </motion.div>
 
