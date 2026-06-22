@@ -38,7 +38,8 @@ export function ClinicHero() {
             ))}
           </ul>
           <p className="text-base md:text-[1.05rem] text-gray-600 leading-relaxed font-bold">
-            この3つの業務を完全に自動化。スタッフの手を一切煩わせることなく確実な予約へと導く、御院の全知識を兼ね備えたLINE運用担当者です。
+            スタッフの手を一切煩わせることなく、プロ以上のLINE運用ができる。<br />
+            御院の全知識を兼ね備え、24時間休まず働くLINE担当者です。
           </p>
         </div>
         
