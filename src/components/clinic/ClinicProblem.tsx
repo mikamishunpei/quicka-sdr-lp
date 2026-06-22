@@ -43,8 +43,9 @@ export function ClinicProblem() {
             <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
             LINE運用の現状と課題
           </p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
-            LINE運用を見直しませんか？
+          <h2 className="text-3xl md:text-[2.5rem] lg:text-[2.8rem] xl:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
+            目の前の業務で手一杯で、<br />
+            集客の要であるLINEが疎かになっていませんか？
           </h2>
         </motion.div>
 
