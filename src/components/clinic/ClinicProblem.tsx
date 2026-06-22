@@ -6,21 +6,21 @@ import { AlertCircle, Target, Users } from "lucide-react";
 const problems = [
   {
     icon: AlertCircle,
-    title: "広告費の「ドブ捨て」",
-    stat: "95%",
-    description: "広告で集めても、予約する5%以外はすべて離脱し掛け捨てに。",
+    title: "形骸化した「LINE運用」",
+    stat: "一斉配信のみ",
+    description: "日々の業務に追われ、個別チャットや的確なフォローができず、一方的なお知らせ配信に留まっている。",
   },
   {
     icon: Target,
-    title: "終わらない「価格競争」",
-    stat: "無限比較",
-    description: "常に他院と価格やメニューを比較され、値引き合戦で疲弊する。",
+    title: "見込み客の「熱量低下」",
+    stat: "他院への流出",
+    description: "せっかく登録してくれた美容感度の高い方も徐々に冷め、最終的には他院の割引広告へ流れてしまう。",
   },
   {
     icon: Users,
-    title: "「休眠客」の放置",
-    stat: "追客ゼロ",
-    description: "一度来院したきりの患者様に個別連絡する人手も時間もない。",
+    title: "膨大な「リストの死蔵」",
+    stat: "機会損失",
+    description: "高い広告費を無駄にしないためにLINEを始めたのに、増え続けるリストを来院に繋げられていない。",
   },
 ];
 
@@ -41,7 +41,7 @@ export function ClinicProblem() {
         >
           <p className="text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 flex items-center justify-center gap-2">
             <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-            美容業界の集客構造の限界
+            LINE運用の現状と課題
           </p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
             値引き合戦の大通りから<br />
@@ -61,10 +61,10 @@ export function ClinicProblem() {
             <div className="flex-1 flex flex-col justify-center relative z-10 w-full">
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-bold mb-10">
                 <p>
-                  大通りの「ショーウィンドウ」で他院と横並びになり、<br className="hidden xl:block" />「うちの方が安いですよ！」と通行人に声をかけ続ける集客。
+                  目の前の業務で手一杯になり、<br className="hidden xl:block" />集客の要であるLINE運用が疎かになっていませんか？
                 </p>
-                <p className="text-white text-xl">
-                  毎月高い広告費を払い、<span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block mt-1">新規客を奪い合い続けるモデル</span>は、もう限界です。
+                <p className="text-white text-xl leading-relaxed">
+                  定型文の自動応答と一斉配信だけの運用では、<br className="hidden xl:block" /><span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block mt-1 xl:mt-2">膨大なリストの多くを取りこぼしてしまいます。</span>
                 </p>
               </div>
 
