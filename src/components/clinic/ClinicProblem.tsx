@@ -44,8 +44,8 @@ export function ClinicProblem() {
             LINE運用の現状と課題
           </p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.4] md:leading-[1.3] mb-8 text-white">
-            値引き合戦の大通りから<br />
-            抜け出しませんか？
+            せっかく集めたLINEリスト、<br />
+            「宝の持ち腐れ」になっていませんか？
           </h2>
         </motion.div>
 
