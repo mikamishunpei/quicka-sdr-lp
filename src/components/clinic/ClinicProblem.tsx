@@ -64,7 +64,7 @@ export function ClinicProblem() {
                   目の前の業務で手一杯になり、<br className="hidden xl:block" />集客の要であるLINE運用が疎かになっていませんか？
                 </p>
                 <p className="text-white text-xl leading-relaxed">
-                  定型文の自動応答と一斉配信だけの運用では、<br className="hidden xl:block" /><span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block mt-1 xl:mt-2">膨大なリストの多くを取りこぼしてしまいます。</span>
+                  定型文の自動応答と一斉配信だけの運用では、<br className="hidden xl:block" /><span className="bg-brand-gold/20 text-brand-gold px-2 py-0.5 rounded-md inline-block mt-1 xl:mt-2">せっかくお金をかけて集めた友達リストを来院に繋げられません。</span>
                 </p>
               </div>
 
