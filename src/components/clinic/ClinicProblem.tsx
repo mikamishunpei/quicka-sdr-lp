@@ -105,7 +105,7 @@ export function ClinicProblem() {
                 <div className="w-full rounded-2xl overflow-hidden border border-gray-600 shadow-2xl relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent z-10 pointer-events-none"></div>
                   <img 
-                    src="/presentations/clinic/illustration_staff.png" 
+                    src="/clinic-staff-vertical.png" 
                     alt="目の前の業務とLINE対応に追われるスタッフ" 
                     className="w-full h-auto object-cover relative z-0" 
                   />
