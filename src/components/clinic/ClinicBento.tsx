@@ -160,7 +160,7 @@ const JourneyCard = () => (
     </div>
     <CardDescription className="mt-2 text-sm leading-relaxed text-gray-600 font-medium">
       「相談だけして離脱した」患者様のステータスを自動管理。<br />
-      数日後に「ダウンタイムの不安は解消されましたか？」など、前回の相談内容を踏まえた自然なメッセージ（Nudge）を自動送信し、来院へ引き上げます。
+      数日後に「以前お聞かせいただいた目元のお悩みについて、その後いかがでしょうか？」など、過去の会話内容を踏まえた自然なメッセージ（Nudge）を自動送信し、来院へ引き上げます。
     </CardDescription>
     <div className="mt-6 flex items-center gap-3">
       <div className="flex -space-x-3">
