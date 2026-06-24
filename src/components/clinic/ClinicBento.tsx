@@ -16,7 +16,6 @@ import {
   Zap,
   ShieldAlert,
   Clock,
-  ImageIcon,
   MessageCircle,
 } from "lucide-react";
 
@@ -103,16 +102,15 @@ const MainFeatureCard = () => (
   <Card className="relative h-full w-full overflow-hidden border-gray-200 shadow-sm bg-gradient-to-br from-gray-50 to-white">
     <div className="relative z-10 p-6 flex flex-col justify-center h-full">
       <div className="inline-flex items-center gap-2 rounded-full bg-brand-gold/10 px-3 py-1 text-xs font-bold text-brand-gold mb-4 border border-brand-gold/20 w-fit">
-        <ImageIcon className="h-3 w-3" />
-        <span>Visual RAG Pipeline</span>
+        <MessageCircle className="h-3 w-3" />
+        <span>Proactive Hearing</span>
       </div>
       <h3 className="text-2xl md:text-3xl font-black tracking-tight text-gray-900 leading-tight">
-        画像付きの事前相談で、<br />スムーズな診察へ。
+        「質問に答えるだけ」の<br />AIではありません。
       </h3>
       <p className="mt-4 text-sm font-medium text-gray-600 leading-relaxed">
-        患者様からの患部写真（シミやたるみ等）を受け取り、事前に必要な情報を丁寧にヒアリングします。<br /><br />
-        <span className="font-bold text-brand-gold">※AIが診断を行うことは決してありません。</span><br />
-        医師の診察へスムーズに繋げるための情報整理と自院メニューの案内に徹することで、医療リスクを完全に排除しながら患者様の来院ハードルを下げます。
+        患者様の「お悩み・予算・過去の施術歴」などを、自然なチャットの中で丁寧にヒアリングします。<br /><br />
+        単なる一問一答のbotではなく、潜在的なニーズを汲み取りながら最適なメニューを提案。プロのカウンセラーのような接客で、患者様をスムーズに予約へと導きます。
       </p>
     </div>
     
@@ -192,7 +190,7 @@ export function ClinicBento() {
             医療リスクを排除した、<br className="md:hidden" />安全で完全なAIソリューション。
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl md:mx-auto font-medium">
-            画像対応の事前ヒアリングから、既存メニューのAI化、安全なエスカレーションまで。<br className="hidden md:block" />
+            プロレベルの事前ヒアリングから、既存メニューのAI化、安全なエスカレーションまで。<br className="hidden md:block" />
             美容クリニックに特化した機能で、スタッフの負担と機会損失をゼロにします。
           </p>
         </div>
