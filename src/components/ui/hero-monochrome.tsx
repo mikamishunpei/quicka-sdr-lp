@@ -502,7 +502,10 @@ export function HeroMonochrome({
         )}
 
         {steps && steps.length > 0 && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative mt-0">
+          <div className={cn(
+            "grid grid-cols-1 gap-8 relative mt-0",
+            steps.length === 4 ? "md:grid-cols-2 lg:grid-cols-4" : "lg:grid-cols-3"
+          )}>
             {steps.map((step, index) => (
               <React.Fragment key={step.title}>
                 <div

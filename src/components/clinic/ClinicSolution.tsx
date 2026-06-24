@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroMonochrome } from "@/components/ui/hero-monochrome";
-import { Megaphone, MessageCircle, CalendarCheck } from "lucide-react";
+import { Zap, MousePointerClick, Gift, Bell } from "lucide-react";
 
 export function ClinicSolution() {
   return (
@@ -9,7 +9,7 @@ export function ClinicSolution() {
       title={
         <>
           AIでLINE運用を完全自動化<br />
-          来院に繋げる3つの機能
+          来院に繋げる4つの機能
         </>
       }
       description={
@@ -31,22 +31,24 @@ export function ClinicSolution() {
       layout="centered"
       steps={[
         {
-          title: "休眠リストの「再活性化」",
-          description: "LINEに登録したまま、色を失い放置されている「休眠顧客」たち。AIが一人ひとりの温度感に合わせて適切なタイミングでアプローチし、眠っているリストを確実な来院（資産）へと変えます。",
-          icon: <Megaphone className="w-6 h-6" />,
-          imageSrc: "/step_1_invitation.png"
+          title: "お問い合わせに即時返信",
+          description: "日々の質問やお問い合わせに、AIが24時間体制で即時返信。深夜のお問い合わせにも一瞬で対応し、見込み客の熱量を逃しません。",
+          icon: <Zap className="w-6 h-6 text-brand-gold" />
         },
         {
-          title: "自分だけの専属カウンセラー",
-          description: "一斉送信ではなく、AIが一人ひとりの悩みや過去の会話を記憶して個別対応。「今すぐじゃない客」とも時間をかけて確かな信頼関係を構築します。",
-          icon: <MessageCircle className="w-6 h-6" />,
-          imageSrc: "/step_2_ai_concierge.png"
+          title: "アクションを検知し話しかける",
+          description: "リッチメニューのタップなどの行動（アクション）をAIが自動検知。「何かお探しですか？」と、スタッフのような自然なトーンで話しかけます。",
+          icon: <MousePointerClick className="w-6 h-6 text-brand-gold" />
         },
         {
-          title: "接触頻度で信頼される",
-          description: "会話が途切れた際も、AIが最適なタイミングで個別フォローを送信。他院の広告が届かないクローズド空間で、比較されることなく「ここで受けたい」という確実な来院を実現します。",
-          icon: <CalendarCheck className="w-6 h-6" />,
-          imageSrc: "/step_3_conversion.png"
+          title: "専用の特別クーポンを発行",
+          description: "過去の会話内容を分析し、「〇〇でお悩みだった方へ」など、その人のためだけにパーソナライズされた特別なクーポンを自動で発行します。",
+          icon: <Gift className="w-6 h-6 text-brand-gold" />
+        },
+        {
+          title: "使用期限を自動リマインド",
+          description: "「クーポンの有効期限が明日までとなっております」など、適切なタイミングで期限をリマインド。忘れがちな特典の利用を促し、確実に来院へと繋げます。",
+          icon: <Bell className="w-6 h-6 text-brand-gold" />
         }
       ]}
       hideThemeToggle={true}
