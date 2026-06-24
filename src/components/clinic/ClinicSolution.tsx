@@ -8,8 +8,8 @@ export function ClinicSolution() {
     <HeroMonochrome
       title={
         <>
-          「LINE誘導」で終わらせない。<br />
-          利益を生む「最強の受け皿」へ。
+          AIでLINE運用を完全自動化<br />
+          来院に繋げる3つの機能
         </>
       }
       description={
