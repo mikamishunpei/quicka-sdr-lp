@@ -33,22 +33,26 @@ export function ClinicSolution() {
         {
           title: "お問い合わせに即時返信",
           description: "日々の質問やお問い合わせに、AIが24時間体制で即時返信。深夜のお問い合わせにも一瞬で対応し、見込み客の熱量を逃しません。",
-          icon: <Zap className="w-6 h-6 text-brand-gold" />
+          icon: <Zap className="w-6 h-6 text-brand-gold" />,
+          imageSrc: "/solution_step_1.png"
         },
         {
           title: "アクションを検知し話しかける",
           description: "リッチメニューのタップなどの行動（アクション）をAIが自動検知。「何かお探しですか？」と、スタッフのような自然なトーンで話しかけます。",
-          icon: <MousePointerClick className="w-6 h-6 text-brand-gold" />
+          icon: <MousePointerClick className="w-6 h-6 text-brand-gold" />,
+          imageSrc: "/solution_step_2.png"
         },
         {
           title: "専用の特別クーポンを発行",
           description: "過去の会話内容を分析し、「〇〇でお悩みだった方へ」など、その人のためだけにパーソナライズされた特別なクーポンを自動で発行します。",
-          icon: <Gift className="w-6 h-6 text-brand-gold" />
+          icon: <Gift className="w-6 h-6 text-brand-gold" />,
+          imageSrc: "/solution_step_3.png"
         },
         {
           title: "使用期限を自動リマインド",
           description: "「クーポンの有効期限が明日までとなっております」など、適切なタイミングで期限をリマインド。忘れがちな特典の利用を促し、確実に来院へと繋げます。",
-          icon: <Bell className="w-6 h-6 text-brand-gold" />
+          icon: <Bell className="w-6 h-6 text-brand-gold" />,
+          imageSrc: "/solution_step_4.png"
         }
       ]}
       hideThemeToggle={true}
