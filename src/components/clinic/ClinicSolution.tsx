@@ -11,11 +11,10 @@ export function ClinicSolution() {
           AIでLINE運用を完全自動化<br />
           来院に繋げる4つの機能
         </>
-      }
       description={
         <>
           Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
-          LINEリストを常に監視し、段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
+          段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
           プロでも不可能な24時間体制の個別対応を実現します。
         </>
       }
