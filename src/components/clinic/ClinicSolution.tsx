@@ -15,7 +15,8 @@ export function ClinicSolution() {
       description={
         <>
           Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
-          段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
+          段階的にアプローチが強力になる「何層にもわたる追客設計」により、<br />
+          獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
           プロでも不可能な24時間体制の個別対応を実現します。
         </>
       }
@@ -34,7 +35,7 @@ export function ClinicSolution() {
         {
           title: "お問い合わせに即時返信",
           targetStateEmoji: "🙎‍♀️",
-          targetStateText: "「今すぐ予約したい！」",
+          targetStateText: "「まずは聞いてみよう」",
           heatLevel: 3,
           description: "日々の質問やお問い合わせに、AIが24時間体制で即時返信。深夜のお問い合わせにも一瞬で対応し、見込み客の熱量を逃しません。",
           icon: <Zap className="w-6 h-6 text-brand-gold" />,
