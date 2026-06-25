@@ -15,7 +15,8 @@ export function ClinicSolution() {
       description={
         <>
           Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
-          LINEリストを常に監視し、プロでも不可能な24時間体制の個別対応を実現します。
+          LINEリストを常に監視し、段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
+          プロでも不可能な24時間体制の個別対応を実現します。
         </>
       }
       badge={
@@ -112,7 +113,7 @@ export function ClinicSolution() {
         },
         {
           title: "専用の特別クーポンを発行",
-          description: "過去の会話で関心や悩みを強く表していたメッセージを引用し、それに合わせた特別オファーを送信して休眠リードを強力に掘り起こします。Step 1〜4へと熱量が下がるリードに対しても、段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。",
+          description: "過去の会話で関心や悩みを強く表していたメッセージを引用し、それに合わせた特別オファーを送信して休眠リードを強力に掘り起こします。",
           icon: <Gift className="w-6 h-6 text-brand-gold" />,
           imageSrc: "/solution_step_3.png",
           isScreenshot: true,
