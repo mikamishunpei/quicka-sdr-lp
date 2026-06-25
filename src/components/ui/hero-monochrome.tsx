@@ -177,7 +177,18 @@ interface HeroMonochromeProps {
   primaryButtonText?: string;
   primaryButtonHref?: string;
   capabilities?: string[];
-  steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string; isScreenshot?: boolean; customContent?: React.ReactNode; hoverOverlayContent?: React.ReactNode }[];
+  steps?: { 
+    title: string; 
+    description: string; 
+    icon?: React.ReactNode; 
+    imageSrc?: string; 
+    isScreenshot?: boolean; 
+    customContent?: React.ReactNode; 
+    hoverOverlayContent?: React.ReactNode;
+    targetStateEmoji?: string;
+    targetStateText?: string;
+    heatLevel?: number;
+  }[];
   layout?: "split" | "centered";
   hideThemeToggle?: boolean;
   forceTheme?: "light" | "dark";
@@ -519,6 +530,25 @@ export function HeroMonochrome({
                 >
                   {(step.imageSrc || step.customContent) && (
                     <div className={cn("relative w-full aspect-square mb-6 overflow-hidden rounded-[1.25rem] border border-gray-100 dark:border-white/10 z-10 shadow-inner", step.isScreenshot ? "bg-[#e8efec]" : "")}>
+                      {/* Customer State Badge */}
+                      {step.targetStateText && (
+                        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-2.5 z-30 flex items-center gap-2.5 border border-white/50 transform rotate-2 hover:rotate-0 transition-transform">
+                          <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-xl shadow-inner flex-shrink-0">
+                            {step.targetStateEmoji}
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[10px] font-black text-slate-400 leading-tight">リードの状態</span>
+                            <span className="text-xs font-bold text-slate-800 leading-tight my-0.5">{step.targetStateText}</span>
+                            <div className="flex items-center gap-0.5">
+                              <span className="text-[9px] font-black text-slate-400 mr-0.5">熱量</span>
+                              {[...Array(3)].map((_, i) => (
+                                 <svg key={i} className={cn("w-2.5 h-2.5", i < (step.heatLevel || 0) ? "text-orange-500 fill-orange-500" : "text-slate-200 fill-slate-200")} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {step.isScreenshot ? (
                         <div className="relative w-[75%] h-[120%] mx-auto mt-[15%] bg-white rounded-[2rem] border-[8px] border-slate-800 shadow-2xl transform transition duration-700 ease-out group-hover:-translate-y-4 @container">
                            {/* Notch */}
