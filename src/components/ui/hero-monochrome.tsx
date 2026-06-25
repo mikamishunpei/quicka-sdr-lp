@@ -570,13 +570,6 @@ export function HeroMonochrome({
                     className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-brand-gold/15 opacity-70"
                     style={{ animationDelay: `${index * 0.35}s` }}
                   />
-                  {step.hoverOverlayContent && (
-                    <div className="absolute inset-0 z-50 bg-slate-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none flex items-center justify-center p-4 rounded-3xl">
-                      <div className="transform scale-75 translate-y-8 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-100 w-full drop-shadow-2xl">
-                         {step.hoverOverlayContent}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </React.Fragment>
             ))}

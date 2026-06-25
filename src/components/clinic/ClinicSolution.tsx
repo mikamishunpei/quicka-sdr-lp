@@ -149,7 +149,7 @@ export function ClinicSolution() {
           isScreenshot: true,
           customContent: (
             <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
-              {/* AI Message (Left) */}
+              {/* Normal AI Message (Left) */}
               <div className="flex items-start mt-[4cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
@@ -169,19 +169,16 @@ export function ClinicSolution() {
                   </div>
                 </div>
               </div>
-            </div>
-          ),
-          hoverOverlayContent: (
-            <div className="flex items-start">
-              <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#D9E2F1] flex-shrink-0 mr-3 flex items-center justify-center mt-1 shadow-md border-2 border-white">
-                <User className="w-6 h-6 md:w-8 md:h-8 text-white" />
-              </div>
-              <div className="bg-white rounded-3xl rounded-tl-none p-5 md:p-6 shadow-xl flex-1">
-                <div className="text-[14px] md:text-lg text-gray-800 leading-relaxed font-bold">
-                  【お知らせ】<br />
-                  しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、<span className="text-brand-gold">残り1週間</span>となっております！<br /><br />
-                  <span className="text-red-500 font-black">期限：6月24日 19:01まで</span><br /><br />
-                  ぜひこの機会にご相談やご予約をお待ちしております😊
+
+              {/* Hover Overlay inside Phone */}
+              <div className="absolute inset-0 z-50 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center px-[4cqw] py-[8cqw]">
+                <div className="bg-white rounded-[5cqw] rounded-tl-none p-[5cqw] w-full shadow-2xl transform scale-90 translate-y-4 group-hover:scale-100 group-hover:translate-y-0 transition-transform duration-500 ease-out delay-75">
+                  <div className="text-[4cqw] text-gray-800 leading-[1.7] font-bold">
+                    【お知らせ】<br />
+                    しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、<span className="text-brand-gold">残り1週間</span>となっております！<br /><br />
+                    <span className="text-red-500 font-black">期限：6月24日 19:01まで</span><br /><br />
+                    ぜひこの機会にご相談やご予約をお待ちしております😊
+                  </div>
                 </div>
               </div>
             </div>
