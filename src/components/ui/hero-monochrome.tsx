@@ -559,29 +559,50 @@ export function HeroMonochrome({
                     </div>
                   )}
 
-                  <div className="px-2 pb-2">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className={cn("block text-sm uppercase tracking-widest font-black text-brand-gold", palette.subtle)}>
-                        Step {index + 1}
-                      </span>
-                      {step.targetStateText && (
-                        <div className="flex items-center gap-1.5 bg-gray-50/80 rounded-full px-2.5 py-1 border border-gray-100">
-                          <span className="text-sm">{step.targetStateEmoji}</span>
-                          <span className="text-[11px] font-bold text-gray-600">{step.targetStateText}</span>
-                          <div className="flex gap-0.5 ml-0.5">
-                            {[...Array(3)].map((_, i) => (
-                               <svg key={i} className={cn("w-3 h-3", i < (step.heatLevel || 0) ? "text-orange-500 fill-orange-500" : "text-gray-200 fill-gray-200")} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                  <div className="px-3 pb-3">
+                    <span className={cn("block text-sm uppercase tracking-widest font-black text-brand-gold mb-3", palette.subtle)}>
+                      Step {index + 1}
+                    </span>
                     <h3 className={cn("block text-xl md:text-2xl lg:text-base xl:text-lg 2xl:text-xl font-black tracking-tighter relative z-10 leading-tight whitespace-nowrap", isDark ? "text-white" : "text-gray-900")}>
                       {step.title}
                     </h3>
-                    <p className={cn("mt-4 text-base md:text-lg font-medium leading-relaxed relative z-10 text-gray-600", palette.subtle)}>
+                    <p className={cn("mt-4 text-base md:text-sm lg:text-base font-medium leading-relaxed relative z-10 text-gray-600", palette.subtle)}>
                       {step.description}
                     </p>
+
+                    {/* Elegant Lead State Footer */}
+                    {step.targetStateText && (
+                      <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 relative z-10">
+                        <div className="flex items-center gap-3">
+                          <div className={cn(
+                            "w-9 h-9 rounded-full flex items-center justify-center text-lg shadow-sm border",
+                            step.heatLevel === 3 ? "bg-red-50 border-red-100" :
+                            step.heatLevel === 2 ? "bg-orange-50 border-orange-100" : 
+                            "bg-blue-50 border-blue-100"
+                          )}>
+                            {step.targetStateEmoji}
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Lead Status</span>
+                            <span className="text-xs font-bold text-slate-700">{step.targetStateText}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-end gap-1 h-4" title={`熱量レベル: ${step.heatLevel}/3`}>
+                          {[...Array(3)].map((_, i) => (
+                             <div 
+                               key={i} 
+                               className={cn(
+                                 "w-1.5 rounded-full transition-all duration-500",
+                                 i === 0 ? "h-2.5" : i === 1 ? "h-3.5" : "h-5",
+                                 i < (step.heatLevel || 0) 
+                                   ? (step.heatLevel === 3 ? "bg-red-500" : step.heatLevel === 2 ? "bg-orange-400" : "bg-blue-400")
+                                   : "bg-slate-200"
+                               )} 
+                             />
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <span
                     className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"
