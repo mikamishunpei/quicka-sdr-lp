@@ -572,34 +572,10 @@ export function HeroMonochrome({
 
                     {/* Elegant Lead State Footer */}
                     {step.targetStateText && (
-                      <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 relative z-10">
-                        <div className="flex items-center gap-3">
-                          <div className={cn(
-                            "w-9 h-9 rounded-full flex items-center justify-center text-lg shadow-sm border",
-                            step.heatLevel === 3 ? "bg-red-50 border-red-100" :
-                            step.heatLevel === 2 ? "bg-orange-50 border-orange-100" : 
-                            "bg-blue-50 border-blue-100"
-                          )}>
-                            {step.targetStateEmoji}
-                          </div>
-                          <div className="flex flex-col">
-                            <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">USER REACTION</span>
-                            <span className="text-xs font-bold text-slate-700">{step.targetStateText}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-end gap-1 h-4" title={`来院意欲: MAX`}>
-                          {[...Array(3)].map((_, i) => (
-                             <div 
-                               key={i} 
-                               className={cn(
-                                 "w-1.5 rounded-full transition-all duration-500",
-                                 i === 0 ? "h-2.5" : i === 1 ? "h-3.5" : "h-5",
-                                 i < (step.heatLevel || 0) 
-                                   ? (step.heatLevel === 3 ? "bg-red-500" : step.heatLevel === 2 ? "bg-orange-400" : "bg-blue-400")
-                                   : "bg-slate-200"
-                               )} 
-                             />
-                          ))}
+                      <div className="mt-6 pt-4 border-t border-slate-100 flex items-center relative z-10">
+                        <div className="flex flex-col">
+                          <span className="text-[10px] font-bold text-brand-gold tracking-widest mb-1">ユーザーの心理</span>
+                          <span className="text-sm font-bold text-slate-700">{step.targetStateText}</span>
                         </div>
                       </div>
                     )}
