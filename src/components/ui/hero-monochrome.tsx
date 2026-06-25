@@ -177,7 +177,7 @@ interface HeroMonochromeProps {
   primaryButtonText?: string;
   primaryButtonHref?: string;
   capabilities?: string[];
-  steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string; isScreenshot?: boolean }[];
+  steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string; isScreenshot?: boolean; customContent?: React.ReactNode }[];
   layout?: "split" | "centered";
   hideThemeToggle?: boolean;
   forceTheme?: "light" | "dark";
@@ -517,7 +517,7 @@ export function HeroMonochrome({
                     palette.highlight
                   )}
                 >
-                  {step.imageSrc && (
+                  {(step.imageSrc || step.customContent) && (
                     <div className={cn("relative w-full aspect-square mb-6 overflow-hidden rounded-[1.25rem] border border-gray-100 dark:border-white/10 z-10 shadow-inner", step.isScreenshot ? "bg-[#e8efec]" : "")}>
                       {step.isScreenshot ? (
                         <div className="relative w-[75%] h-[120%] mx-auto mt-[15%] bg-white rounded-[2rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden transform transition duration-700 ease-out group-hover:-translate-y-4">
@@ -525,11 +525,15 @@ export function HeroMonochrome({
                            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 bg-slate-800 rounded-b-2xl w-[40%] z-20 flex justify-center items-center">
                               <div className="w-8 h-1 bg-slate-900 rounded-full mt-0.5"></div>
                            </div>
-                           <img 
-                             src={step.imageSrc} 
-                             alt={step.title} 
-                             className="object-cover object-top w-full h-full pt-1" 
-                           />
+                           {step.customContent ? (
+                             step.customContent
+                           ) : (
+                             <img 
+                               src={step.imageSrc} 
+                               alt={step.title} 
+                               className="object-cover object-top w-full h-full pt-1" 
+                             />
+                           )}
                         </div>
                       ) : (
                         <img 

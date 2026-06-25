@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroMonochrome } from "@/components/ui/hero-monochrome";
-import { Zap, MousePointerClick, Gift, Bell } from "lucide-react";
+import { Zap, MousePointerClick, Gift, Bell, User } from "lucide-react";
 
 export function ClinicSolution() {
   return (
@@ -48,6 +48,36 @@ export function ClinicSolution() {
           icon: <Gift className="w-6 h-6 text-brand-gold" />,
           imageSrc: "/solution_step_3.png",
           isScreenshot: true,
+          customContent: (
+            <div className="w-full h-full bg-[#90B4D6] px-2 pt-8 pb-4 overflow-hidden relative">
+              <div className="flex items-start">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#D9E2F1] flex-shrink-0 mr-1.5 sm:mr-2 flex items-center justify-center mt-0.5">
+                  <User className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                </div>
+                
+                <div className="bg-white rounded-2xl rounded-tl-none flex-1 overflow-hidden shadow-sm">
+                  <div className="p-2 sm:p-3 border-b border-gray-100">
+                    <div className="flex items-center mb-1">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gray-200 overflow-hidden mr-2">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=100&h=100&fit=crop" alt="User" className="w-full h-full object-cover" />
+                      </div>
+                      <span className="font-bold text-gray-900 text-[10px] sm:text-xs">しゅんぺい</span>
+                    </div>
+                    <p className="text-[9px] sm:text-[11px] text-gray-600 pl-7 sm:pl-8 leading-snug">
+                      3万円以下でダウンタイムが短いやつを教えて欲しいです。
+                    </p>
+                  </div>
+                  
+                  <div className="p-2 sm:p-3 text-[9px] sm:text-[11px] text-gray-800 leading-relaxed font-medium">
+                    しゅんぺいさん<br />
+                    以前お話しされていた3万円以下のダウンタイムが短い施術について、その後状況いかがですか？😊<br /><br />
+                    より安心してご相談いただけるよう、今回特別にボトックスのみ50%OFFの枠をご案内できないか調整してみたのですが、いかがでしょうか？<br /><br />
+                    少しでも気になることやご不安な点がございましたら、お気軽にご相談ください😊
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
         },
         {
           title: "使用期限を自動リマインド",
