@@ -159,9 +159,9 @@ export function ClinicSolution() {
                   <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       【お知らせ】<br />
-                      しゅんぺい様、以前お渡しした「🎁 テスト用・初回来院クーポン」の有効期限が、残り1週間となっております！<br /><br />
+                      しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、残り1週間となっております！<br /><br />
                       期限：6月24日 19:01まで<br /><br />
-                      まだご利用がお済みでないようでしたら、ぜひこの機会にご相談やご予約をお待ちしております😊
+                      ぜひこの機会にご相談やご予約をお待ちしております😊
                     </div>
                   </div>
                   <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
