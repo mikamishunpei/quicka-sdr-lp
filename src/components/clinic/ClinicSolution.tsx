@@ -148,15 +148,18 @@ export function ClinicSolution() {
           imageSrc: "/solution_step_4.png",
           isScreenshot: true,
           customContent: (
-            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
+            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] rounded-t-[1.4rem] relative">
+              {/* Massive dark overlay triggered by group-hover */}
+              <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
+
               {/* Normal AI Message (Left) */}
-              <div className="flex items-start mt-[4cqw]">
+              <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.6] group-hover:-translate-y-[4cqw] group-hover:translate-x-[2cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
-                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm group-hover:shadow-2xl transition-shadow duration-700">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       【お知らせ】<br />
                       しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、残り1週間となっております！<br /><br />
@@ -164,20 +167,8 @@ export function ClinicSolution() {
                       ぜひこの機会にご相談やご予約をお待ちしております😊
                     </div>
                   </div>
-                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
+                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0 group-hover:opacity-0 transition-opacity duration-300">
                     7:01
-                  </div>
-                </div>
-              </div>
-
-              {/* Hover Overlay inside Phone */}
-              <div className="absolute inset-0 z-50 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center px-[4cqw] py-[8cqw]">
-                <div className="bg-white rounded-[5cqw] rounded-tl-none p-[5cqw] w-full shadow-2xl transform scale-90 translate-y-4 group-hover:scale-100 group-hover:translate-y-0 transition-transform duration-500 ease-out delay-75">
-                  <div className="text-[4cqw] text-gray-800 leading-[1.7] font-bold">
-                    【お知らせ】<br />
-                    しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、<span className="text-brand-gold">残り1週間</span>となっております！<br /><br />
-                    <span className="text-red-500 font-black">期限：6月24日 19:01まで</span><br /><br />
-                    ぜひこの機会にご相談やご予約をお待ちしております😊
                   </div>
                 </div>
               </div>
