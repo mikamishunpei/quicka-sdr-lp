@@ -46,7 +46,8 @@ export function ClinicSolution() {
           title: "専用の特別クーポンを発行",
           description: "過去の会話内容を分析し、「〇〇でお悩みだった方へ」など、その人のためだけにパーソナライズされた特別なクーポンを自動で発行します。",
           icon: <Gift className="w-6 h-6 text-brand-gold" />,
-          imageSrc: "/solution_step_3.png"
+          imageSrc: "/solution_step_3.png",
+          isScreenshot: true,
         },
         {
           title: "使用期限を自動リマインド",
