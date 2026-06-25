@@ -583,11 +583,11 @@ export function HeroMonochrome({
                             {step.targetStateEmoji}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Lead Status</span>
+                            <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">USER REACTION</span>
                             <span className="text-xs font-bold text-slate-700">{step.targetStateText}</span>
                           </div>
                         </div>
-                        <div className="flex items-end gap-1 h-4" title={`熱量レベル: ${step.heatLevel}/3`}>
+                        <div className="flex items-end gap-1 h-4" title={`来院意欲: MAX`}>
                           {[...Array(3)].map((_, i) => (
                              <div 
                                key={i} 

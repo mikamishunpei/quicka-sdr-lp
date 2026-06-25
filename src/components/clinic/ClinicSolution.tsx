@@ -34,8 +34,8 @@ export function ClinicSolution() {
       steps={[
         {
           title: "お問い合わせに即時返信",
-          targetStateEmoji: "🙎‍♀️",
-          targetStateText: "「まずは聞いてみよう」",
+          targetStateEmoji: "🙎‍♀️✨",
+          targetStateText: "「すぐに対応してくれて信頼できる！」",
           heatLevel: 3,
           description: "日々の質問やお問い合わせに、AIが24時間体制で即時返信。深夜のお問い合わせにも一瞬で対応し、見込み客の熱量を逃しません。",
           icon: <Zap className="w-6 h-6 text-brand-gold" />,
@@ -84,9 +84,9 @@ export function ClinicSolution() {
         },
         {
           title: "アクションを検知し話しかける",
-          targetStateEmoji: "🙎‍♀️",
-          targetStateText: "「とりあえず見ただけ…」",
-          heatLevel: 2,
+          targetStateEmoji: "🙎‍♀️💡",
+          targetStateText: "「ちょうど気になってたタイミング！」",
+          heatLevel: 3,
           description: "リッチメニューのタップなどの行動（アクション）をAIが自動検知。「何かお探しですか？」と、スタッフのような自然なトーンで話しかけます。",
           icon: <MousePointerClick className="w-6 h-6 text-brand-gold" />,
           imageSrc: "/solution_step_2.png",
@@ -120,9 +120,9 @@ export function ClinicSolution() {
         },
         {
           title: "専用の特別クーポンを発行",
-          targetStateEmoji: "🙎‍♀️💤",
-          targetStateText: "「すっかり忘れてた…」",
-          heatLevel: 1,
+          targetStateEmoji: "🙎‍♀️💖",
+          targetStateText: "「以前の相談、覚えていてくれた！」",
+          heatLevel: 3,
           description: "過去の会話で関心や悩みを強く表していたメッセージを引用し、それに合わせた特別オファーを送信して休眠リードを強力に掘り起こします。",
           icon: <Gift className="w-6 h-6 text-brand-gold" />,
           imageSrc: "/solution_step_3.png",
@@ -163,8 +163,8 @@ export function ClinicSolution() {
         },
         {
           title: "使用期限を自動リマインド",
-          targetStateEmoji: "🙎‍♀️✨",
-          targetStateText: "「期限切れるなら行く！」",
+          targetStateEmoji: "🙎‍♀️🏃‍♀️",
+          targetStateText: "「せっかくの機会だし、予約しよう！」",
           heatLevel: 3,
           description: "「クーポンの有効期限が明日までとなっております」など、適切なタイミングで期限をリマインド。忘れがちな特典の利用を促し、確実に来院へと繋げます。",
           icon: <Bell className="w-6 h-6 text-brand-gold" />,
