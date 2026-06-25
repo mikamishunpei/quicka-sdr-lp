@@ -11,6 +11,7 @@ export function ClinicSolution() {
           AIでLINE運用を完全自動化<br />
           来院に繋げる4つの機能
         </>
+      }
       description={
         <>
           Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
