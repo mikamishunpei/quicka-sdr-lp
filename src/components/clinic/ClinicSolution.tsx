@@ -153,7 +153,7 @@ export function ClinicSolution() {
               <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
 
               {/* Normal AI Message (Left) */}
-              <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.6] group-hover:-translate-y-[4cqw] group-hover:translate-x-[2cqw]">
+              <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[14cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
                 </div>
