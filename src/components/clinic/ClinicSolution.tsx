@@ -112,7 +112,7 @@ export function ClinicSolution() {
         },
         {
           title: "専用の特別クーポンを発行",
-          description: "過去の会話内容を分析し、「〇〇でお悩みだった方へ」など、その人のためだけにパーソナライズされた特別なクーポンを自動で発行します。",
+          description: "過去の会話で関心や悩みを強く表していたメッセージを引用し、それに合わせた特別オファーを送信して休眠リードを強力に掘り起こします。Step 1〜4へと熱量が下がるリードに対しても、段階的にアプローチが強力になる「何層にもわたる追客設計」により、獲得したリストを1件も無駄にしません。",
           icon: <Gift className="w-6 h-6 text-brand-gold" />,
           imageSrc: "/solution_step_3.png",
           isScreenshot: true,
