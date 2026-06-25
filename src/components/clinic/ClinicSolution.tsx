@@ -78,7 +78,31 @@ export function ClinicSolution() {
           title: "アクションを検知し話しかける",
           description: "リッチメニューのタップなどの行動（アクション）をAIが自動検知。「何かお探しですか？」と、スタッフのような自然なトーンで話しかけます。",
           icon: <MousePointerClick className="w-6 h-6 text-brand-gold" />,
-          imageSrc: "/solution_step_2.png"
+          imageSrc: "/solution_step_2.png",
+          isScreenshot: true,
+          customContent: (
+            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
+              {/* AI Message (Left) */}
+              <div className="flex items-start mt-[4cqw]">
+                <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
+                  <User className="w-[6cqw] h-[6cqw] text-white" />
+                </div>
+                
+                <div className="flex items-end max-w-[82cqw]">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                    <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
+                      しゅんぺい様<br />
+                      当クリニックのキャンペーンについてご確認いただきありがとうございます。<br /><br />
+                      キャンペーンの対象となる施術の詳細や効果など、少しでも気になる点がございましたら、いつでもお気軽にご相談ください😊
+                    </div>
+                  </div>
+                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
+                    11:39
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
         },
         {
           title: "専用の特別クーポンを発行",
