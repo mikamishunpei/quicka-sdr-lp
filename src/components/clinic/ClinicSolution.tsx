@@ -34,7 +34,45 @@ export function ClinicSolution() {
           title: "お問い合わせに即時返信",
           description: "日々の質問やお問い合わせに、AIが24時間体制で即時返信。深夜のお問い合わせにも一瞬で対応し、見込み客の熱量を逃しません。",
           icon: <Zap className="w-6 h-6 text-brand-gold" />,
-          imageSrc: "/solution_step_1.png"
+          imageSrc: "/solution_step_1.png",
+          isScreenshot: true,
+          customContent: (
+            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
+              {/* User Message (Right) */}
+              <div className="flex justify-end mb-[4cqw]">
+                <div className="flex items-end max-w-[85cqw]">
+                  <div className="mr-[1.5cqw] text-[2.5cqw] text-gray-600 text-right leading-tight mb-[1cqw] flex-shrink-0">
+                    既読<br/>16:29
+                  </div>
+                  <div className="bg-[#85E249] rounded-[4cqw] rounded-tr-none px-[3.5cqw] py-[2.5cqw] text-gray-900 shadow-sm">
+                    <p className="text-[3.5cqw] leading-[1.5] font-medium">
+                      肌のシミに悩んでいるんですが、どんな施術がおすすめですか？
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* AI Message (Left) */}
+              <div className="flex items-start">
+                <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
+                  <User className="w-[6cqw] h-[6cqw] text-white" />
+                </div>
+                
+                <div className="flex items-end max-w-[82cqw]">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                    <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
+                      しゅんぺい様、シミについてお悩みとのこと、ご相談いただきありがとうございます😊<br /><br />
+                      当院では、シミの種類や状態に合わせて様々な治療法をご用意しております。シミ取りレーザーや、エレクトロポレーションのシミ・くすみ・肝斑セットなどがございます。<br /><br />
+                      しゅんぺい様に最も適したプランをご提案させていただくため、差し支えなければ、どのようなシミが一番気になっていらっしゃるか、もう少し詳しく教えていただけますでしょうか？✨
+                    </div>
+                  </div>
+                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
+                    16:30
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
         },
         {
           title: "アクションを検知し話しかける",
