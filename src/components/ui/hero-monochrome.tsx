@@ -177,7 +177,7 @@ interface HeroMonochromeProps {
   primaryButtonText?: string;
   primaryButtonHref?: string;
   capabilities?: string[];
-  steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string; isScreenshot?: boolean; customContent?: React.ReactNode }[];
+  steps?: { title: string; description: string; icon?: React.ReactNode; imageSrc?: string; isScreenshot?: boolean; customContent?: React.ReactNode; hoverOverlayContent?: React.ReactNode }[];
   layout?: "split" | "centered";
   hideThemeToggle?: boolean;
   forceTheme?: "light" | "dark";
@@ -441,6 +441,13 @@ export function HeroMonochrome({
                       </div>
                       <span className="pointer-events-none absolute bottom-10 right-10 h-24 w-24 rounded-full border border-white/10 opacity-60 motion-safe:animate-[hero1-orbit_8s_linear_infinite]" />
                     </div>
+                    {step.hoverOverlayContent && (
+                      <div className="absolute inset-0 z-50 bg-slate-900/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none flex items-center justify-center p-6">
+                        <div className="transform scale-75 translate-y-8 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-100 w-full max-w-sm drop-shadow-2xl">
+                           {step.hoverOverlayContent}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <figcaption className={cn("flex items-center justify-between px-6 py-5 text-xs uppercase tracking-[0.35em]", palette.subtle)}>
                     <span>{imageCaption}</span>
@@ -570,6 +577,13 @@ export function HeroMonochrome({
                     className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-brand-gold/15 opacity-70"
                     style={{ animationDelay: `${index * 0.35}s` }}
                   />
+                  {step.hoverOverlayContent && (
+                    <div className="absolute inset-0 z-50 bg-slate-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none flex items-center justify-center p-4 rounded-3xl">
+                      <div className="transform scale-75 translate-y-8 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-100 w-full drop-shadow-2xl">
+                         {step.hoverOverlayContent}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </React.Fragment>
             ))}

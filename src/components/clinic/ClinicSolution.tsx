@@ -156,7 +156,7 @@ export function ClinicSolution() {
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
-                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm transform transition-all duration-700 ease-out group-hover:scale-110 group-hover:shadow-md origin-top-left">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       【お知らせ】<br />
                       しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、残り1週間となっております！<br /><br />
@@ -167,6 +167,21 @@ export function ClinicSolution() {
                   <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
                     7:01
                   </div>
+                </div>
+              </div>
+            </div>
+          ),
+          hoverOverlayContent: (
+            <div className="flex items-start">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#D9E2F1] flex-shrink-0 mr-3 flex items-center justify-center mt-1 shadow-md border-2 border-white">
+                <User className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </div>
+              <div className="bg-white rounded-3xl rounded-tl-none p-5 md:p-6 shadow-xl flex-1">
+                <div className="text-[14px] md:text-lg text-gray-800 leading-relaxed font-bold">
+                  【お知らせ】<br />
+                  しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、<span className="text-brand-gold">残り1週間</span>となっております！<br /><br />
+                  <span className="text-red-500 font-black">期限：6月24日 19:01まで</span><br /><br />
+                  ぜひこの機会にご相談やご予約をお待ちしております😊
                 </div>
               </div>
             </div>
