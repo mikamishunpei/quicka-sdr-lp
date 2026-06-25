@@ -121,7 +121,7 @@ export function ClinicSolution() {
               {/* Massive dark overlay triggered by group-hover */}
               <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
 
-              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.3] group-hover:-translate-y-[2cqw] group-hover:-translate-x-[12cqw]">
+              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.3] group-hover:-translate-y-[16cqw] group-hover:-translate-x-[12cqw]">
                 <div className="w-[12cqw] h-[12cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[7cqw] h-[7cqw] text-white" />
                 </div>
