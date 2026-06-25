@@ -56,7 +56,7 @@ export function ClinicSolution() {
               </div>
 
               {/* AI Message (Left) */}
-              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[20cqw]">
+              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.35] group-hover:-translate-y-[18cqw] group-hover:-translate-x-[16cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
                 </div>
