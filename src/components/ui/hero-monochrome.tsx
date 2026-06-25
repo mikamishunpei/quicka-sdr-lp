@@ -518,7 +518,7 @@ export function HeroMonochrome({
                   )}
                 >
                   {(step.imageSrc || step.customContent) && (
-                    <div className={cn("relative w-full aspect-square mb-6 rounded-[1.25rem] border border-gray-100 dark:border-white/10 z-10 shadow-inner", step.isScreenshot ? "bg-[#e8efec]" : "overflow-hidden")}>
+                    <div className={cn("relative w-full aspect-square mb-6 overflow-hidden rounded-[1.25rem] border border-gray-100 dark:border-white/10 z-10 shadow-inner", step.isScreenshot ? "bg-[#e8efec]" : "")}>
                       {step.isScreenshot ? (
                         <div className="relative w-[75%] h-[120%] mx-auto mt-[15%] bg-white rounded-[2rem] border-[8px] border-slate-800 shadow-2xl transform transition duration-700 ease-out group-hover:-translate-y-4 @container">
                            {/* Notch */}
