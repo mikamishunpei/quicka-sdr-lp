@@ -37,7 +37,10 @@ export function ClinicSolution() {
           imageSrc: "/solution_step_1.png",
           isScreenshot: true,
           customContent: (
-            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
+            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] rounded-t-[1.4rem] relative">
+              {/* Massive dark overlay triggered by group-hover */}
+              <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
+
               {/* User Message (Right) */}
               <div className="flex justify-end mb-[4cqw]">
                 <div className="flex items-end max-w-[85cqw]">
@@ -53,20 +56,20 @@ export function ClinicSolution() {
               </div>
 
               {/* AI Message (Left) */}
-              <div className="flex items-start">
+              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[20cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
-                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm group-hover:shadow-2xl transition-shadow duration-700">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       しゅんぺい様、シミについてお悩みとのこと、ご相談いただきありがとうございます😊<br /><br />
                       当院では、シミの種類や状態に合わせて様々な治療法をご用意しております。シミ取りレーザーや、エレクトロポレーションのシミ・くすみ・肝斑セットなどがございます。<br /><br />
                       しゅんぺい様に最も適したプランをご提案させていただくため、差し支えなければ、どのようなシミが一番気になっていらっしゃるか、もう少し詳しく教えていただけますでしょうか？✨
                     </div>
                   </div>
-                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
+                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0 group-hover:opacity-0 transition-opacity duration-300">
                     16:30
                   </div>
                 </div>
@@ -81,22 +84,25 @@ export function ClinicSolution() {
           imageSrc: "/solution_step_2.png",
           isScreenshot: true,
           customContent: (
-            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
+            <div className="w-full h-full bg-[#90B4D6] px-[3cqw] pt-[15cqw] pb-[4cqw] rounded-t-[1.4rem] relative">
+              {/* Massive dark overlay triggered by group-hover */}
+              <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
+
               {/* AI Message (Left) */}
-              <div className="flex items-start mt-[4cqw]">
+              <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[20cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[6cqw] h-[6cqw] text-white" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
-                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm group-hover:shadow-2xl transition-shadow duration-700">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       しゅんぺい様<br />
                       当クリニックのキャンペーンについてご確認いただきありがとうございます。<br /><br />
                       キャンペーンの対象となる施術の詳細や効果など、少しでも気になる点がございましたら、いつでもお気軽にご相談ください😊
                     </div>
                   </div>
-                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0">
+                  <div className="ml-[1.5cqw] text-[2.5cqw] text-gray-600 mb-[1cqw] flex-shrink-0 group-hover:opacity-0 transition-opacity duration-300">
                     11:39
                   </div>
                 </div>
@@ -111,13 +117,16 @@ export function ClinicSolution() {
           imageSrc: "/solution_step_3.png",
           isScreenshot: true,
           customContent: (
-            <div className="w-full h-full bg-[#90B4D6] px-[4cqw] pt-[15cqw] pb-[4cqw] overflow-hidden relative">
-              <div className="flex items-start">
+            <div className="w-full h-full bg-[#90B4D6] px-[4cqw] pt-[15cqw] pb-[4cqw] rounded-t-[1.4rem] relative">
+              {/* Massive dark overlay triggered by group-hover */}
+              <div className="absolute -inset-[1000px] bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-40 pointer-events-none" />
+
+              <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.3] group-hover:-translate-y-[2cqw] group-hover:-translate-x-[12cqw]">
                 <div className="w-[12cqw] h-[12cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw]">
                   <User className="w-[7cqw] h-[7cqw] text-white" />
                 </div>
                 
-                <div className="bg-white rounded-[4cqw] rounded-tl-none flex-1 overflow-hidden shadow-sm">
+                <div className="bg-white rounded-[4cqw] rounded-tl-none flex-1 overflow-hidden shadow-sm group-hover:shadow-2xl transition-shadow duration-700">
                   <div className="p-[3cqw] border-b border-gray-100">
                     <div className="flex items-center mb-[1cqw]">
                       <div className="w-[7cqw] h-[7cqw] rounded-full bg-gray-200 overflow-hidden mr-[2cqw]">
