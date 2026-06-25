@@ -156,7 +156,7 @@ export function ClinicSolution() {
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
-                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm">
+                  <div className="bg-white rounded-[4cqw] rounded-tl-none px-[3.5cqw] py-[3cqw] shadow-sm transform transition-all duration-700 ease-out group-hover:scale-110 group-hover:shadow-md origin-top-left">
                     <div className="text-[3.5cqw] text-gray-800 leading-[1.6] font-medium">
                       【お知らせ】<br />
                       しゅんぺい様、以前お渡しした「🎁 初回来院クーポン」の有効期限が、残り1週間となっております！<br /><br />
