@@ -26,7 +26,7 @@ export function ClinicComparison() {
           </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.3] mb-8 text-white">
             「ツール」の導入ではなく、<br />
-            <span className="text-brand-gold">「専属コンシェルジュ」</span>の採用です。
+            <span className="text-brand-gold">「専属コンシェルジュ」</span><br className="md:hidden" />の採用です。
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
             従来のツールは、スタッフ様自身が設定や返信作業を行うための「土台」に過ぎません。<br />

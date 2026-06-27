@@ -8,14 +8,14 @@ export function ClinicSolution() {
     <HeroMonochrome
       title={
         <>
-          AIでLINE運用を完全自動化<br />
-          来院に繋げる4つの機能
+          AIでLINE運用を<br className="md:hidden" />完全自動化<br />
+          来院に繋げる<br className="md:hidden" />4つの機能
         </>
       }
       description={
         <>
-          Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
-          段階的にアプローチが強力になる「何層にもわたる追客設計」により、<br />
+          Quickaは、御院のLINEアカウントに<br className="md:hidden" />無限に働くAIスタッフを配備。<br />
+          段階的にアプローチが強力になる<br className="md:hidden" />「何層にもわたる追客設計」により、<br />
           獲得したリストを1件も無駄にしません。<br className="hidden md:block" />
           プロでも不可能な24時間体制の個別対応を実現します。
         </>

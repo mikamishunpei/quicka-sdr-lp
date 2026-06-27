@@ -21,7 +21,7 @@ export function ClinicPricing() {
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed font-medium">
             「本当に予約が増えるのか？」<br />
-            その疑問にお答えするため、極限まで導入ハードルを下げました。
+            その疑問にお答えするため、<br className="md:hidden" />極限まで導入ハードルを下げました。
           </p>
         </motion.div>
 
