@@ -37,7 +37,7 @@ export function ClinicHero() {
               </li>
             ))}
           </ul>
-          <p className="text-base md:text-[1.05rem] text-gray-600 leading-relaxed font-bold text-center lg:text-left">
+          <p className="hidden md:block text-base md:text-[1.05rem] text-gray-600 leading-relaxed font-bold text-center lg:text-left">
             スタッフの手を一切煩わせることなく、<br className="md:hidden" />プロ以上のLINE運用ができる。<br />
             御院の全知識を兼ね備え、<br className="md:hidden" />24時間休まず働くLINE担当者です。
           </p>
