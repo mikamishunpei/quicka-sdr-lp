@@ -20,15 +20,15 @@ export function FinalCTA() {
           まずは体験してみてください
         </p>
         <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white tracking-tight leading-tight">
-          AIに営業されてみませんか？
+          AIコンシェルジュの実力を<br className="md:hidden" />体験しませんか？
         </h2>
         <p className="text-lg text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed tracking-wide">
-          御社のドメインを教えてください。10分以内に、あなた向けのパーソナライズ営業動画をお届けします。
+          実際にAIがどのように患者様とLINEで会話をするのか、<br className="hidden md:block" />無料でデモをお試しいただけます。
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-[#0a0d0c] px-10 py-5 rounded-full text-lg font-bold tracking-wide hover:scale-[1.03] transition-all shadow-2xl">
-            無料デモを体験する
-          </button>
+          <a href="/contact" className="bg-white text-[#0a0d0c] px-10 py-5 rounded-full text-lg font-bold tracking-wide hover:scale-[1.03] transition-all shadow-2xl flex items-center justify-center">
+            無料でAIを試してみる
+          </a>
         </div>
         <p className="text-xs text-white/30 mt-6 tracking-wide">
           契約不要・クレジットカード登録不要
@@ -45,7 +45,7 @@ export function Footer() {
         <div>
           <div className="text-2xl font-bold mb-4 tracking-tight text-white">Quicka</div>
           <p className="text-white/40 text-sm leading-relaxed tracking-wide">
-            営業のファーストタッチを再発明する
+            美容クリニックのLINE運用を完全自動化
           </p>
         </div>
         <div>

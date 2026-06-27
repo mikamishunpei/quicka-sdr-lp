@@ -15,7 +15,7 @@ export function ClinicHero() {
         <p className="text-brand-gold font-bold tracking-widest text-sm mb-6 uppercase">
           美容クリニック特化型 AIコンシェルジュ
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-black text-gray-900 tracking-tighter leading-[1.3] md:leading-[1.2] mb-8 whitespace-nowrap">
+        <h1 className="text-[7.5vw] sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-black text-gray-900 tracking-tighter leading-[1.3] md:leading-[1.2] mb-8">
           休眠リストを「予約」に変える<br />
           御院専属の<span className="text-brand-gold">AIコンシェルジュ。</span>
         </h1>
