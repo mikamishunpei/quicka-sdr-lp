@@ -278,7 +278,7 @@ export function HeroMonochrome({
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0, rootMargin: "100px" }
     );
 
     observer.observe(node);
