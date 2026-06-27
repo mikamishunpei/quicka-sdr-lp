@@ -10,12 +10,12 @@ export function ClinicHero() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-left @container w-full"
+        className="text-left"
       >
         <p className="text-brand-gold font-bold tracking-widest text-sm mb-6 uppercase">
           美容クリニック特化型 AIコンシェルジュ
         </p>
-        <h1 className="text-[7cqi] font-black text-gray-900 tracking-tighter leading-[1.3] md:leading-[1.2] mb-8 w-full">
+        <h1 className="text-[calc((100vw-48px)/14.5)] lg:text-[32px] xl:text-[48px] 2xl:text-[60px] font-black text-gray-900 tracking-tighter leading-[1.3] md:leading-[1.2] mb-8 w-full">
           <span className="whitespace-nowrap block">休眠リストを「予約」に変える</span>
           <span className="whitespace-nowrap block">御院専属の<span className="text-brand-gold">AIコンシェルジュ。</span></span>
         </h1>
