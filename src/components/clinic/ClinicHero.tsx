@@ -68,12 +68,12 @@ export function ClinicHero() {
         />
 
         {/* Top Left Badges */}
-        <div className="absolute top-6 left-6 flex flex-col gap-2 z-10">
-          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[13px] font-bold px-4 py-1.5 rounded-full border border-white/20 w-fit shadow-sm">
+        <div className="absolute top-3 left-3 md:top-6 md:left-6 flex flex-col gap-1.5 md:gap-2 z-10">
+          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[11px] md:text-[13px] font-bold px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/20 w-fit shadow-sm">
             AIコンシェルジュ
           </div>
-          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[13px] font-bold px-4 py-1.5 rounded-full border border-white/20 flex items-center gap-1.5 w-fit shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold" fill="currentColor" />
+          <div className="bg-black/40 backdrop-blur-md text-white/90 text-[11px] md:text-[13px] font-bold px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-white/20 flex items-center gap-1 md:gap-1.5 w-fit shadow-sm">
+            <Sparkles className="w-3 h-3 md:w-3.5 md:h-3.5 text-brand-gold" fill="currentColor" />
             24時間365日 自動対応
           </div>
         </div>
