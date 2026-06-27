@@ -14,10 +14,18 @@ export function ClinicSolution() {
       }
       description={
         <>
-          Quickaは、御院のLINEアカウントに<br className="md:hidden" />無限に働くAIスタッフを配備。<br />
-          段階的にアプローチが強力になる<br className="md:hidden" />「何層にもわたる追客設計」により、<br />
-          獲得したリストを1件も無駄にしません。<br />
-          プロでも不可能な24時間体制の個別対応を実現します。
+          <span className="hidden md:block">
+            Quickaは、御院のLINEアカウントに無限に働くAIスタッフを配備。<br />
+            段階的にアプローチが強力になる「何層にもわたる追客設計」により、<br />
+            獲得したリストを1件も無駄にしません。<br />
+            プロでも不可能な24時間体制の個別対応を実現します。
+          </span>
+          <span className="block md:hidden">
+            Quickaは、御院のLINEアカウントに<br />
+            無限に働くAIスタッフを配備。<br />
+            「何層にもわたる追客設計」により、<br />
+            獲得したリストを1件も無駄にしません。
+          </span>
         </>
       }
       badge={
