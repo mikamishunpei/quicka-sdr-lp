@@ -54,7 +54,7 @@ const aiTasks = [
 const FeatureTagsCard = () => (
   <Card className="relative h-full w-full overflow-hidden border-gray-200 shadow-sm hover:shadow-md transition-shadow">
     <div className="absolute inset-0 bg-gradient-to-r from-white via-white to-transparent z-10 w-2/3" />
-    <CardContent className="relative z-20 flex h-full items-center justify-center p-6 w-full md:w-1/2">
+    <CardContent className="relative z-20 flex h-full items-center justify-start md:justify-center p-6 w-full md:w-1/2">
       {/* AIアバター（動画） - テキストを削除し大きく表示 */}
       <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden shadow-xl shrink-0 border-4 border-white">
         <video
