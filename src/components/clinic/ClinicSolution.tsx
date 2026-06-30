@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroMonochrome } from "@/components/ui/hero-monochrome";
-import { Zap, MousePointerClick, Gift, Bell, User } from "lucide-react";
+import { Zap, MousePointerClick, Gift, Bell } from "lucide-react";
 
 export function ClinicSolution() {
   return (
