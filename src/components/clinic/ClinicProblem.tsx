@@ -6,7 +6,7 @@ import { AlertCircle, Target, Users } from "lucide-react";
 const problems = [
   {
     icon: AlertCircle,
-    title: "形骸化した「LINE運用」",
+    title: "ただの作業になった「LINE運用」",
     stat: "一斉配信のみ",
     description: "日々の業務に追われ、個別チャットや的確なフォローができず、一方的なお知らせ配信に留まっている。",
   },
