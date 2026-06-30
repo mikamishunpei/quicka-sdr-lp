@@ -71,7 +71,7 @@ export function ClinicSolution() {
               {/* AI Message (Left) */}
               <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.35] group-hover:-translate-y-[18cqw] group-hover:-translate-x-[16cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw] overflow-hidden">
-                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover" />
+                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover scale-[1.4] object-[center_20%]" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
@@ -107,7 +107,7 @@ export function ClinicSolution() {
               {/* AI Message (Left) */}
               <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[20cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw] overflow-hidden">
-                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover" />
+                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover scale-[1.4] object-[center_20%]" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
@@ -142,7 +142,7 @@ export function ClinicSolution() {
 
               <div className="flex items-start relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.3] group-hover:-translate-y-[16cqw] group-hover:-translate-x-[12cqw]">
                 <div className="w-[12cqw] h-[12cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw] overflow-hidden">
-                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover" />
+                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover scale-[1.4] object-[center_20%]" />
                 </div>
                 
                 <div className="bg-white rounded-[4cqw] rounded-tl-none flex-1 overflow-hidden shadow-sm group-hover:shadow-2xl transition-shadow duration-700">
@@ -186,7 +186,7 @@ export function ClinicSolution() {
               {/* Normal AI Message (Left) */}
               <div className="flex items-start mt-[4cqw] relative z-50 transform origin-top-left transition-all duration-700 ease-out group-hover:scale-[1.5] group-hover:-translate-y-[4cqw] group-hover:-translate-x-[20cqw]">
                 <div className="w-[10cqw] h-[10cqw] rounded-full bg-[#D9E2F1] flex-shrink-0 mr-[2cqw] flex items-center justify-center mt-[1cqw] overflow-hidden">
-                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover" />
+                  <img src="/hero_clinic_receptionist.png" alt="AI コンシェルジュ" className="w-full h-full object-cover scale-[1.4] object-[center_20%]" />
                 </div>
                 
                 <div className="flex items-end max-w-[82cqw]">
