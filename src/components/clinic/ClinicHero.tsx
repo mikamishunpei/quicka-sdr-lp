@@ -86,8 +86,8 @@ export function ClinicHero() {
             className="w-[40px] h-[40px] md:w-[46px] md:h-[46px] object-cover rounded-[12px] md:rounded-[14px] shrink-0 shadow-md border border-black/5"
           />
           <div>
-            <div className="text-gray-900 font-bold text-[13px] md:text-[14px] mb-0.5">LINEご予約対応</div>
-            <div className="text-gray-600 font-medium text-[12px] md:text-[13px] leading-tight">〇〇様、ご希望の空き枠を確認いたしました。</div>
+            <div className="text-gray-900 font-bold text-[13px] md:text-[14px] mb-0.5">アクション自動検知</div>
+            <div className="text-gray-600 font-medium text-[12px] md:text-[13px] leading-tight">〇〇様、キャンペーンについてご確認いただきありがとうございます。</div>
           </div>
         </div>
       </motion.div>
