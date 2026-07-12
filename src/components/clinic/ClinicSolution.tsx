@@ -36,7 +36,7 @@ export function ClinicSolution() {
           </span>
         </div>
       }
-      primaryButtonText="VIPラウンジを構築する"
+      primaryButtonText="無料で試す"
       primaryButtonHref="/contact"
       layout="centered"
       steps={[
