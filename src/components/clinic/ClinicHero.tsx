@@ -87,7 +87,7 @@ export function ClinicHero() {
           />
           <div>
             <div className="text-gray-900 font-bold text-[13px] md:text-[14px] mb-0.5">個別フォローアップ</div>
-            <div className="text-gray-600 font-medium text-[12px] md:text-[13px] leading-tight">〇〇様、以前お話しされていた3万円以下のダウンタイムが短い施術について、その後ご検討はいかがでしょうか？😊</div>
+            <div className="text-gray-600 font-medium text-[12px] md:text-[13px] leading-tight">以前お話しされていた3万円以下のダウンタイムが短い施術について、その後ご検討はいかがでしょうか？😊</div>
           </div>
         </div>
       </motion.div>
